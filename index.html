@@ -37,7 +37,7 @@ button,input,select{font:inherit} button{cursor:pointer}.app{max-width:920px;mar
 </div>
 <div class="app">
   <div class="top">
-    <div class="brand"><div class="logo">日</div><div><h1>DACO 일본어 코치</h1><small>초급 · 회사 실전 · N3 · 계정 동기화 · v5.0</small></div></div>
+    <div class="brand"><div class="logo">日</div><div><h1>DACO 일본어 코치</h1><small>초급 · 회사 실전 · N3 · 계정 동기화 · v5.1</small></div></div>
     <div class="accountStrip"><span id="cloudStatusBadge" class="cloudBadge off">☁ 로컬</span><button class="iconbtn hidden" id="adminBtn" onclick="DACOCloud.openAdmin()">🛡 관리자</button><button class="iconbtn hidden" id="cloudUserBtn" onclick="DACOCloud.openAccount()">👤 사용자</button><button class="iconbtn" id="installBtn">📲 설치</button><button class="iconbtn" id="settingsBtn">⚙ 설정</button></div>
   </div>
 
@@ -97,7 +97,13 @@ button,input,select{font:inherit} button{cursor:pointer}.app{max-width:920px;mar
 <div class="modal" id="passwordModal"><div class="modalbox" style="max-width:460px"><div style="display:flex;justify-content:space-between;align-items:center"><h3 style="margin:0">비밀번호 변경</h3><button class="iconbtn" onclick="DACOCloud.closeModal('passwordModal')">✕</button></div><div class="field"><label>현재 비밀번호</label><input id="currentPassword" type="password"></div><div class="field"><label>새 비밀번호</label><input id="newPassword" type="password" placeholder="4자 이상"></div><div id="passwordMsg" class="authMsg"></div><button class="bigbtn blue" style="width:100%" onclick="DACOCloud.changePassword()">변경하기</button></div></div>
 <div class="modal" id="adminModal"><div class="modalbox" style="max-width:980px"><div style="display:flex;justify-content:space-between;align-items:center"><div><h3 style="margin:0">🛡 관리자 메뉴</h3><small style="color:#64748b">사용자와 학습기록 현황</small></div><button class="iconbtn" onclick="DACOCloud.closeModal('adminModal')">✕</button></div><div id="adminWarning" class="setupWarn">초기 관리자 비밀번호가 admin이면 최초 로그인 후 반드시 변경하는 것을 권장합니다.</div><div id="adminSummary" class="adminCards"></div><div style="display:flex;justify-content:space-between;align-items:center;margin:14px 0 8px"><b>가입 사용자</b><button class="iconbtn" onclick="DACOCloud.loadAdminUsers()">↻ 새로고침</button></div><div id="adminUsers"></div></div></div>
 <div class="toast" id="toast"></div>
-<script src="./cloud-config.js"></script>
-<script src="./app.js"></script>
-<script src="./cloud-auth.js"></script>
+<script>
+window.DACO_CLOUD_CONFIG = {
+  supabaseUrl: "https://fhfrodheowzzsxphxgdr.supabase.co",
+  supabaseAnonKey: "sb_publishable_BTuvdybnCP8BJI4KYPf9bw_PhNHKOnR"
+};
+</script>
+<script src="./cloud-config.js?v=5.1.0"></script>
+<script src="./app.js?v=5.1.0"></script>
+<script src="./cloud-auth.js?v=5.1.0"></script>
 </body></html>

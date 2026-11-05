@@ -1,12 +1,12 @@
 (() => {
   'use strict';
-  const CFG=window.DACO_CLOUD_CONFIG||{};
+  const getCFG=()=>window.DACO_CLOUD_CONFIG||{};
   const EMAIL_DOMAIN='daco-jp.invalid';
   const SESSION_KEY='daco_jp_cloud_session_v1';
   let session=null,currentUser=null,currentProfile=null,authMode='login',syncTimer=null,lastRemotePull=0,syncing=false,localOnly=false,refreshing=null;
   const $=id=>document.getElementById(id);
   const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
-  const configReady=()=>/^https:\/\/.+\.supabase\.co$/i.test(String(CFG.supabaseUrl||''))&&!/PASTE_/i.test(String(CFG.supabaseAnonKey||''))&&String(CFG.supabaseAnonKey||'').length>20;
+  const configReady=()=>{const CFG=getCFG();return /^https:\/\/.+\.supabase\.co$/i.test(String(CFG.supabaseUrl||''))&&!/PASTE_/i.test(String(CFG.supabaseAnonKey||''))&&String(CFG.supabaseAnonKey||'').length>20};
   function msg(t,err=false){let e=$('authMsg');if(e){e.textContent=t||'';e.style.color=err?'#b91c1c':'#b45309'}}
   function normalizeUsername(v){return String(v||'').trim().toLowerCase()}
   function validateUsername(v){return /^[a-z0-9_]{3,20}$/.test(v)}
@@ -20,10 +20,10 @@
   function loadSession(){try{return JSON.parse(localStorage.getItem(SESSION_KEY)||'null')}catch(_){return null}}
   function setSessionFromResponse(data){if(!data?.access_token)return null;let s={access_token:data.access_token,refresh_token:data.refresh_token||'',expires_at:Date.now()+Number(data.expires_in||3600)*1000,user:data.user||null};saveSession(s);session=s;return s}
   async function parseResponse(res){let text=await res.text(),data={};try{data=text?JSON.parse(text):{}}catch(_){data={message:text||res.statusText}}if(!res.ok){let e=new Error(data.msg||data.message||data.error_description||data.error||`HTTP ${res.status}`);e.status=res.status;e.data=data;throw e}return data}
-  async function authRequest(path,{method='GET',body=null,token=null,headers={}}={}){let h={'apikey':CFG.supabaseAnonKey,...headers};if(body!==null)h['Content-Type']='application/json';if(token)h['Authorization']='Bearer '+token;let res=await fetch(CFG.supabaseUrl+path,{method,headers:h,body:body===null?undefined:JSON.stringify(body)});return parseResponse(res)}
+  async function authRequest(path,{method='GET',body=null,token=null,headers={}}={}){const CFG=getCFG();let h={'apikey':CFG.supabaseAnonKey,...headers};if(body!==null)h['Content-Type']='application/json';if(token)h['Authorization']='Bearer '+token;let res=await fetch(CFG.supabaseUrl+path,{method,headers:h,body:body===null?undefined:JSON.stringify(body)});return parseResponse(res)}
   async function refreshSession(){if(refreshing)return refreshing;refreshing=(async()=>{let s=session||loadSession();if(!s?.refresh_token)throw new Error('로그인 세션이 만료되었습니다. 다시 로그인해 주세요.');let data=await authRequest('/auth/v1/token?grant_type=refresh_token',{method:'POST',body:{refresh_token:s.refresh_token}});return setSessionFromResponse(data)})().finally(()=>refreshing=null);return refreshing}
   async function ensureSession(){let s=session||loadSession();if(!s?.access_token)return null;session=s;if(Number(s.expires_at||0)<Date.now()+60000){try{s=await refreshSession()}catch(e){saveSession(null);session=null;return null}}return s}
-  async function api(path,{method='GET',body=null,prefer='',auth=true}={}){let s=auth?await ensureSession():null;if(auth&&!s)throw new Error('로그인이 필요합니다.');let headers={'apikey':CFG.supabaseAnonKey};if(auth)headers['Authorization']='Bearer '+s.access_token;if(body!==null)headers['Content-Type']='application/json';if(prefer)headers['Prefer']=prefer;let res=await fetch(CFG.supabaseUrl+'/rest/v1/'+path,{method,headers,body:body===null?undefined:JSON.stringify(body)});if(res.status===401&&auth){s=await refreshSession();headers['Authorization']='Bearer '+s.access_token;res=await fetch(CFG.supabaseUrl+'/rest/v1/'+path,{method,headers,body:body===null?undefined:JSON.stringify(body)})}return parseResponse(res)}
+  async function api(path,{method='GET',body=null,prefer='',auth=true}={}){const CFG=getCFG();let s=auth?await ensureSession():null;if(auth&&!s)throw new Error('로그인이 필요합니다.');let headers={'apikey':CFG.supabaseAnonKey};if(auth)headers['Authorization']='Bearer '+s.access_token;if(body!==null)headers['Content-Type']='application/json';if(prefer)headers['Prefer']=prefer;let res=await fetch(CFG.supabaseUrl+'/rest/v1/'+path,{method,headers,body:body===null?undefined:JSON.stringify(body)});if(res.status===401&&auth){s=await refreshSession();headers['Authorization']='Bearer '+s.access_token;res=await fetch(CFG.supabaseUrl+'/rest/v1/'+path,{method,headers,body:body===null?undefined:JSON.stringify(body)})}return parseResponse(res)}
   async function rpc(name,body={}){return api('rpc/'+name,{method:'POST',body})}
   function setAuthMode(mode){authMode=mode==='register'?'register':'login';$('loginTab')?.classList.toggle('on',authMode==='login');$('registerTab')?.classList.toggle('on',authMode==='register');$('displayNameField')?.classList.toggle('hidden',authMode!=='register');$('bootstrapAdminBtn')?.classList.toggle('hidden',authMode!=='register');$('authSubmit').textContent=authMode==='login'?'로그인':'아이디 만들기';$('authPassword').autocomplete=authMode==='login'?'current-password':'new-password';msg('')}
   async function submitAuth(){
