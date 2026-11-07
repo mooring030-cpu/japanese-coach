@@ -3,6 +3,7 @@
   const getCFG=()=>window.DACO_CLOUD_CONFIG||{};
   const EMAIL_DOMAIN='daco-jp.invalid';
   const SESSION_KEY='daco_jp_cloud_session_v1';
+  const AUTO_LOGIN_KEY='daco_jp_auto_login_v1';
   let session=null,currentUser=null,currentProfile=null,authMode='login',syncTimer=null,lastRemotePull=0,syncing=false,localOnly=false,refreshing=null;
   const $=id=>document.getElementById(id);
   const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
@@ -16,8 +17,10 @@
   function meaningful(s){return window.DACOApp?.hasMeaningfulState?.(s)||false}
   function showGate(show=true){$('authGate')?.classList.toggle('hidden',!show)}
   function setCloudBadge(text,on=true){let e=$('cloudStatusBadge');if(!e)return;e.textContent=text;e.classList.toggle('off',!on)}
-  function saveSession(s){session=s||null;if(s)try{localStorage.setItem(SESSION_KEY,JSON.stringify(s))}catch(_){ }else try{localStorage.removeItem(SESSION_KEY)}catch(_){ }}
-  function loadSession(){try{return JSON.parse(localStorage.getItem(SESSION_KEY)||'null')}catch(_){return null}}
+  function autoLoginEnabled(){try{let v=localStorage.getItem(AUTO_LOGIN_KEY);return v===null?true:v==='1'}catch(_){return true}}
+  function setAutoLoginEnabled(on){try{localStorage.setItem(AUTO_LOGIN_KEY,on?'1':'0')}catch(_){ }let c=$('autoLoginCheck');if(c)c.checked=!!on}
+  function saveSession(s){session=s||null;try{if(s){let raw=JSON.stringify(s);if(autoLoginEnabled()){localStorage.setItem(SESSION_KEY,raw);sessionStorage.removeItem(SESSION_KEY)}else{sessionStorage.setItem(SESSION_KEY,raw);localStorage.removeItem(SESSION_KEY)}}else{localStorage.removeItem(SESSION_KEY);sessionStorage.removeItem(SESSION_KEY)}}catch(_){ }}
+  function loadSession(){try{let raw=sessionStorage.getItem(SESSION_KEY);if(!raw&&autoLoginEnabled())raw=localStorage.getItem(SESSION_KEY);return JSON.parse(raw||'null')}catch(_){return null}}
   function setSessionFromResponse(data){if(!data?.access_token)return null;let s={access_token:data.access_token,refresh_token:data.refresh_token||'',expires_at:Date.now()+Number(data.expires_in||3600)*1000,user:data.user||null};saveSession(s);session=s;return s}
   async function parseResponse(res){let text=await res.text(),data={};try{data=text?JSON.parse(text):{}}catch(_){data={message:text||res.statusText}}if(!res.ok){let e=new Error(data.msg||data.message||data.error_description||data.error||`HTTP ${res.status}`);e.status=res.status;e.data=data;throw e}return data}
   async function authRequest(path,{method='GET',body=null,token=null,headers={}}={}){const CFG=getCFG();let h={'apikey':CFG.supabaseAnonKey,...headers};if(body!==null)h['Content-Type']='application/json';if(token)h['Authorization']='Bearer '+token;let res=await fetch(CFG.supabaseUrl+path,{method,headers:h,body:body===null?undefined:JSON.stringify(body)});return parseResponse(res)}
@@ -25,12 +28,13 @@
   async function ensureSession(){let s=session||loadSession();if(!s?.access_token)return null;session=s;if(Number(s.expires_at||0)<Date.now()+60000){try{s=await refreshSession()}catch(e){saveSession(null);session=null;return null}}return s}
   async function api(path,{method='GET',body=null,prefer='',auth=true}={}){const CFG=getCFG();let s=auth?await ensureSession():null;if(auth&&!s)throw new Error('로그인이 필요합니다.');let headers={'apikey':CFG.supabaseAnonKey};if(auth)headers['Authorization']='Bearer '+s.access_token;if(body!==null)headers['Content-Type']='application/json';if(prefer)headers['Prefer']=prefer;let res=await fetch(CFG.supabaseUrl+'/rest/v1/'+path,{method,headers,body:body===null?undefined:JSON.stringify(body)});if(res.status===401&&auth){s=await refreshSession();headers['Authorization']='Bearer '+s.access_token;res=await fetch(CFG.supabaseUrl+'/rest/v1/'+path,{method,headers,body:body===null?undefined:JSON.stringify(body)})}return parseResponse(res)}
   async function rpc(name,body={}){return api('rpc/'+name,{method:'POST',body})}
-  function setAuthMode(mode){authMode=mode==='register'?'register':'login';$('loginTab')?.classList.toggle('on',authMode==='login');$('registerTab')?.classList.toggle('on',authMode==='register');$('displayNameField')?.classList.toggle('hidden',authMode!=='register');$('bootstrapAdminBtn')?.classList.toggle('hidden',authMode!=='register');$('authSubmit').textContent=authMode==='login'?'로그인':'아이디 만들기';$('authPassword').autocomplete=authMode==='login'?'current-password':'new-password';msg('')}
+  function setAuthMode(mode){authMode=mode==='register'?'register':'login';$('loginTab')?.classList.toggle('on',authMode==='login');$('registerTab')?.classList.toggle('on',authMode==='register');$('displayNameField')?.classList.toggle('hidden',authMode!=='register');$('bootstrapAdminBtn')?.classList.toggle('hidden',authMode!=='register');$('autoLoginRow')?.classList.toggle('hidden',authMode!=='login');$('authSubmit').textContent=authMode==='login'?'로그인':'아이디 만들기';$('authPassword').autocomplete=authMode==='login'?'current-password':'new-password';if($('autoLoginCheck'))$('autoLoginCheck').checked=autoLoginEnabled();msg('')}
   async function submitAuth(){
     if(!configReady()){msg('클라우드 연결 설정이 아직 완료되지 않았습니다.',true);return}
     const u=normalizeUsername($('authUsername')?.value),p=$('authPassword')?.value||'',name=$('authDisplayName')?.value?.trim()||'';
     if(!validateUsername(u)){msg('아이디는 영문 소문자·숫자·_ 조합 3~20자로 입력하세요.',true);return}
     if(p.length<4){msg('비밀번호는 4자 이상 입력하세요.',true);return}
+    if(authMode==='login')setAutoLoginEnabled($('autoLoginCheck')?.checked!==false);
     msg(authMode==='login'?'로그인 중...':'계정 생성 중...');
     try{
       const bp=await backendPassword(u,p),email=emailFor(u);let data;
@@ -86,9 +90,9 @@
   async function adminExport(uid,username){try{let rows=await api(`learning_progress?select=state&user_id=eq.${encodeURIComponent(uid)}&limit=1`),blob=new Blob([JSON.stringify(rows?.[0]?.state||{},null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=`${username}_japanese_progress.json`;a.click();URL.revokeObjectURL(a.href)}catch(e){alert(prettyError(e))}}
   function toastSafe(t){if(typeof window.toast==='function')window.toast(t);else console.log(t)}
   async function init(){
-    setAuthMode('login');
-    if(!configReady()){$('localOnlyBtn')?.classList.remove('hidden');$('authSetupWarn')?.classList.remove('hidden');$('authSetupWarn').innerHTML='클라우드 연결 전입니다.<br><b>cloud-config.js</b>에 Supabase Project URL과 publishable/anon key를 입력하면 로그인·기기간 동기화가 활성화됩니다.';msg('먼저 클라우드 연결 설정이 필요합니다.');setCloudBadge('☁ 미설정',false);return}
-    try{session=loadSession();session=await ensureSession();if(session){currentUser=session.user||null;if(!currentUser){let u=await authRequest('/auth/v1/user',{token:session.access_token});session.user=u;saveSession(session)}await handleSession(session)}else{showGate(true);setCloudBadge('☁ 로그인 필요',false)}}catch(e){saveSession(null);session=null;msg(prettyError(e),true);showGate(true)}
+    setAuthMode('login');if($('autoLoginCheck'))$('autoLoginCheck').checked=autoLoginEnabled();
+    if(!configReady()){$('localOnlyBtn')?.classList.remove('hidden');$('authSetupWarn')?.classList.remove('hidden');$('authSetupWarn').innerHTML='클라우드 연결 전입니다.<br><b>cloud-config.js</b>에 Supabase Project URL과 publishable/anon key를 입력하면 로그인·기기간 동기화가 활성화됩니다.';msg('먼저 클라우드 연결 설정이 필요합니다.');setCloudBadge('☁ 미설정',false);showGate(true);return}
+    try{session=loadSession();if(session)showGate(false);session=await ensureSession();if(session){currentUser=session.user||null;if(!currentUser){let u=await authRequest('/auth/v1/user',{token:session.access_token});session.user=u;saveSession(session)}await handleSession(session)}else{showGate(true);setCloudBadge('☁ 로그인 필요',false)}}catch(e){saveSession(null);session=null;msg(prettyError(e),true);showGate(true)}
     document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')pullRemote()});window.addEventListener('focus',pullRemote);window.addEventListener('online',()=>{setCloudBadge('☁ 연결됨',true);syncNow(false);pullRemote()});window.addEventListener('offline',()=>setCloudBadge('☁ 오프라인',false));
   }
   window.DACOCloud={setAuthMode,submitAuth,bootstrapAdmin,continueLocal,scheduleSync,syncNow,pullRemote,logout,openAccount,openPasswordChange,changePassword,openAdmin,loadAdminUsers,adminReset,adminToggle,adminExport,closeModal,get currentUser(){return currentUser},get profile(){return currentProfile}};

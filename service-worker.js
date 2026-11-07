@@ -1,5 +1,5 @@
-const CACHE_NAME="daco-japanese-coach-v5-2-20261107a";
-const ASSETS=["./","./index.html","./app.js?v=5.2.0","./cloud-auth.js?v=5.2.0","./cloud-config.js?v=5.2.0","./manifest.webmanifest","./icon-192.png","./icon-512.png"];
+const CACHE_NAME="daco-japanese-coach-v5-3-20261107a";
+const ASSETS=["./","./index.html","./app.js?v=5.3","./cloud-auth.js?v=5.3","./cloud-config.js?v=5.3","./manifest.webmanifest","./icon-192.png","./icon-512.png"];
 self.addEventListener("install",event=>{event.waitUntil(caches.open(CACHE_NAME).then(cache=>cache.addAll(ASSETS)).then(()=>self.skipWaiting()))});
 self.addEventListener("activate",event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE_NAME).map(k=>caches.delete(k)))).then(()=>self.clients.claim()))});
 self.addEventListener("fetch",event=>{

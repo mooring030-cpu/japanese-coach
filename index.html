@@ -21,6 +21,7 @@ button,input,select{font:inherit} button{cursor:pointer}.app{max-width:920px;mar
 
 .studyTools{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.toolCard{border:1.5px solid var(--line);background:#fff;border-radius:18px;padding:16px;text-align:left;min-height:118px}.toolCard:hover{border-color:#9bbcff;background:#f8fbff}.toolCard b{display:block;font-size:16px;margin:7px 0 5px}.toolCard span{display:block;color:var(--muted);font-size:12px;line-height:1.5}.toolIcon{font-size:25px}.dictHeader{display:flex;gap:10px;align-items:center;justify-content:space-between;margin-bottom:12px}.dictTabs{display:flex;gap:6px;background:#f1f5f9;padding:5px;border-radius:14px;overflow:auto}.dictTabs button{border:0;background:transparent;border-radius:10px;padding:9px 12px;white-space:nowrap;color:#64748b;font-weight:800}.dictTabs button.on{background:#fff;color:#1d4ed8;box-shadow:0 2px 8px rgba(30,41,59,.08)}.dictControls{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}.dictSearch{flex:1;min-width:210px;border:1px solid var(--line);border-radius:13px;padding:11px 13px;background:#fff}.groupSeg{display:flex;gap:5px;background:#f1f5f9;padding:4px;border-radius:12px}.groupSeg button{border:0;background:transparent;border-radius:9px;padding:8px 10px;font-size:12px;font-weight:800;color:#64748b}.groupSeg button.on{background:#fff;color:#1d4ed8;box-shadow:0 2px 8px rgba(30,41,59,.08)}.ruleGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:12px 0}.ruleCard{background:#f8fafc;border:1px solid #e7ecf3;border-radius:16px;padding:13px}.ruleCard b{display:block;margin-bottom:6px}.ruleCard small{color:#64748b;line-height:1.5}.dictList{display:grid;gap:8px}.verbEntry,.grammarEntry,.endingEntry{border:1px solid var(--line);border-radius:16px;background:#fff;overflow:hidden}.verbEntry summary,.grammarEntry summary{cursor:pointer;padding:14px 15px;list-style:none;display:flex;justify-content:space-between;gap:10px;align-items:center}.verbEntry summary::-webkit-details-marker,.grammarEntry summary::-webkit-details-marker{display:none}.entryTitle b{font-family:"Noto Sans JP",sans-serif;font-size:18px}.entryTitle small{display:block;color:#64748b;margin-top:3px}.entryTag{font-size:11px;font-weight:800;background:#eef4ff;color:#2457b5;border-radius:999px;padding:5px 8px;white-space:nowrap}.conjGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;padding:0 14px 14px}.conjCell{background:#f8fafc;border-radius:12px;padding:10px}.conjCell span{display:block;color:#64748b;font-size:11px;margin-bottom:3px}.conjCell b{font-family:"Noto Sans JP",sans-serif;font-size:15px}.entryBody{padding:0 15px 15px;color:#475569;line-height:1.65}.endingEntry{padding:14px 15px}.endingEntry .jpPattern{font-family:"Noto Sans JP",sans-serif;font-weight:900;font-size:20px;color:#1d4ed8}.endingEntry .meaning{font-weight:800;margin:4px 0}.endingEntry .connect{font-size:12px;color:#64748b}.endingEntry .example{margin-top:8px;background:#f8fafc;border-radius:11px;padding:10px;font-family:"Noto Sans JP",sans-serif}.practiceMeta{text-align:center;color:#64748b;font-size:12px;margin:2px 0 10px}.practiceTarget{font-size:17px;font-weight:850;color:#1d4ed8;margin:7px 0}.practiceVerb{font-family:"Noto Sans JP",sans-serif;font-size:34px;font-weight:900;margin:10px 0 4px}.practiceKo{color:#64748b;font-size:15px}.practiceChoices{display:grid;gap:9px;max-width:650px;margin:22px auto}.practiceChoice{border:1.5px solid #dde4ee;background:#fff;border-radius:15px;padding:14px 16px;font-family:"Noto Sans JP",sans-serif;font-size:18px;text-align:left}.practiceChoice.correct{border-color:#34d399;background:#ecfdf5;color:#047857}.practiceChoice.wrong{border-color:#f87171;background:#fef2f2;color:#b91c1c}.practiceResult{margin:14px auto 0;max-width:650px}.practiceExplain{background:#f8fafc;border-radius:14px;padding:12px 14px;line-height:1.6;text-align:left}.practiceExplain b{font-family:"Noto Sans JP",sans-serif}.practiceStats{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:10px}.practiceStat{background:#f8fafc;border-radius:13px;padding:11px}.practiceStat b{display:block;font-size:18px}.practiceStat span{font-size:11px;color:#64748b}@media(max-width:720px){.studyTools{grid-template-columns:1fr}.ruleGrid{grid-template-columns:1fr}.conjGrid{grid-template-columns:repeat(2,1fr)}.dictHeader{align-items:flex-start;flex-direction:column}.practiceVerb{font-size:29px}}
 
+.audioChooser{display:flex;gap:9px;justify-content:center;flex-wrap:wrap;margin:16px 0 18px}.audioPick{border:1.5px solid #cbd8ee;background:#f8fbff;color:#1d4ed8;border-radius:999px;padding:11px 14px;font-weight:850;font-size:13px}.audioPick:active{transform:scale(.98)}.authCheck{display:flex;align-items:center;gap:9px;margin:10px 0 4px;color:#475569;font-size:13px;font-weight:750;cursor:pointer}.authCheck input{width:18px;height:18px;accent-color:#1d4ed8}.authCheck small{font-weight:400;color:#64748b;margin-left:2px}
 </style>
 </head>
 <body>
@@ -31,6 +32,7 @@ button,input,select{font:inherit} button{cursor:pointer}.app{max-width:920px;mar
     <div id="displayNameField" class="field hidden"><label>이름 (선택)</label><input id="authDisplayName" autocomplete="name" placeholder="예: 안종현"></div>
     <div class="field"><label>아이디</label><input id="authUsername" autocomplete="username" placeholder="영문/숫자/_ 3~20자"></div>
     <div class="field"><label>비밀번호</label><input id="authPassword" type="password" autocomplete="current-password" placeholder="4자 이상"></div>
+    <label id="autoLoginRow" class="authCheck"><input id="autoLoginCheck" type="checkbox" checked><span>자동 로그인 <small>이 기기에서 다음부터 바로 시작</small></span></label>
     <div id="authMsg" class="authMsg"></div>
     <button id="authSubmit" class="bigbtn blue" style="width:100%" onclick="DACOCloud.submitAuth()">로그인</button>
     <button id="bootstrapAdminBtn" class="bigbtn light hidden" style="width:100%;margin-top:8px" onclick="DACOCloud.bootstrapAdmin()">관리자 초기 계정 만들기 (admin / admin)</button>
@@ -38,9 +40,12 @@ button,input,select{font:inherit} button{cursor:pointer}.app{max-width:920px;mar
     <div id="authSetupWarn" class="setupWarn hidden"></div>
   </div>
 </div>
+<script>
+try{const p=localStorage.getItem('daco_jp_auto_login_v1'),s=localStorage.getItem('daco_jp_cloud_session_v1');if(s&&(p===null||p==='1'))document.getElementById('authGate').classList.add('hidden')}catch(e){}
+</script>
 <div class="app">
   <div class="top">
-    <div class="brand"><div class="logo">日</div><div><h1>DACO 일본어 코치</h1><small>초급 · 회사 실전 · N3 · 계정 동기화 · v5.2</small></div></div>
+    <div class="brand"><div class="logo">日</div><div><h1>DACO 일본어 코치</h1><small>초급 · 회사 실전 · N3 · 계정 동기화 · v5.3</small></div></div>
     <div class="accountStrip"><span id="cloudStatusBadge" class="cloudBadge off">☁ 로컬</span><button class="iconbtn hidden" id="adminBtn" onclick="DACOCloud.openAdmin()">🛡 관리자</button><button class="iconbtn hidden" id="cloudUserBtn" onclick="DACOCloud.openAccount()">👤 사용자</button><button class="iconbtn" id="installBtn">📲 설치</button><button class="iconbtn" id="settingsBtn">⚙ 설정</button></div>
   </div>
 
@@ -133,7 +138,7 @@ window.DACO_CLOUD_CONFIG = {
   supabaseAnonKey: "sb_publishable_BTuvdybnCP8BJI4KYPf9bw_PhNHKOnR"
 };
 </script>
-<script src="./cloud-config.js?v=5.2.0"></script>
-<script src="./app.js?v=5.2.0"></script>
-<script src="./cloud-auth.js?v=5.2.0"></script>
+<script src="./cloud-config.js?v=5.3"></script>
+<script src="./app.js?v=5.3"></script>
+<script src="./cloud-auth.js?v=5.3"></script>
 </body></html>
