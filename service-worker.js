@@ -1,4 +1,4 @@
-const CACHE_NAME="anthony-japanese-coach-v6-3-1-20261107a";
+const CACHE_NAME="anthony-japanese-coach-v6-4-20261107a";
 const ASSETS=["./","./index.html","./app.js?v=6.3","./cloud-auth.js?v=6.3","./cloud-config.js?v=6.3","./manifest.webmanifest","./icon-192.png","./icon-512.png"];
 self.addEventListener("install",event=>{event.waitUntil(caches.open(CACHE_NAME).then(cache=>cache.addAll(ASSETS)).then(()=>self.skipWaiting()))});
 self.addEventListener("activate",event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE_NAME).map(k=>caches.delete(k)))).then(()=>self.clients.claim()))});
