@@ -1,7 +1,7 @@
 {
-  "name": "DACO 일본어 코치",
-  "short_name": "일본어 Coach",
-  "description": "초급부터 N3, 회사 실전까지 매일 10분 일본어 학습",
+  "name": "ANTHONY 日本語 COACH",
+  "short_name": "Anthony JP",
+  "description": "Anthony의 일본어 학습 코치 - N5~N3, 회사 실전, 생활용어, 조사, 위치, 날짜·숫자, 상황 연습, 랭킹과 출석",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
