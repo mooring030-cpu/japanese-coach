@@ -18,6 +18,9 @@ button,input,select{font:inherit} button{cursor:pointer}.app{max-width:920px;mar
 .authGate{position:fixed;inset:0;z-index:100;background:linear-gradient(150deg,#0f1f46,#244ea7 58%,#60a5fa);display:flex;align-items:center;justify-content:center;padding:18px}.authGate.hidden{display:none}.authCard{width:min(440px,100%);background:#fff;border-radius:28px;padding:27px;box-shadow:0 28px 80px rgba(15,23,42,.28)}.authLogo{width:58px;height:58px;border-radius:18px;background:linear-gradient(135deg,#1d4ed8,#60a5fa);display:grid;place-items:center;color:#fff;font-size:26px;font-weight:900;margin:0 auto 13px}.authCard h2{text-align:center;margin:0 0 5px}.authCard>p{text-align:center;color:#64748b;margin:0 0 20px;font-size:13px}.authTabs{display:grid;grid-template-columns:1fr 1fr;background:#f1f5f9;border-radius:13px;padding:4px;margin-bottom:16px}.authTabs button{border:0;background:transparent;padding:10px;border-radius:10px;font-weight:800;color:#64748b}.authTabs button.on{background:#fff;color:#1d4ed8;box-shadow:0 2px 9px rgba(30,41,59,.08)}.field{margin:11px 0}.field label{font-size:12px;font-weight:800;color:#475569;display:block;margin:0 0 6px}.field input{width:100%;border:1.5px solid #dbe2ec;border-radius:13px;padding:13px 14px;outline:none}.field input:focus{border-color:#7da5ff;box-shadow:0 0 0 3px #edf3ff}.authMsg{min-height:20px;font-size:12px;margin:9px 0;color:#b45309;line-height:1.5}.cloudBadge{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:800;padding:5px 8px;border-radius:999px;background:#ecfdf5;color:#047857}.cloudBadge.off{background:#f1f5f9;color:#64748b}.adminTableWrap{overflow:auto;border:1px solid var(--line);border-radius:15px}.adminTable{width:100%;border-collapse:collapse;min-width:760px}.adminTable th,.adminTable td{padding:10px 11px;border-bottom:1px solid #edf0f5;text-align:left;font-size:12px}.adminTable th{background:#f8fafc;color:#64748b;position:sticky;top:0}.adminTable td b{font-size:13px}.miniBtn{border:1px solid #dbe2ec;background:#fff;border-radius:9px;padding:6px 8px;font-size:11px;font-weight:800}.miniBtn.danger{color:#b91c1c}.miniBtn.warn{color:#c2410c}.accountStrip{display:flex;gap:7px;align-items:center;flex-wrap:wrap}.setupWarn{background:#fff7ed;border:1px solid #fed7aa;color:#9a3412;border-radius:13px;padding:11px 12px;font-size:12px;line-height:1.55;margin-top:12px}.adminCards{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin:14px 0}.adminCards>div{background:#f8fafc;border-radius:15px;padding:13px}.adminCards b{font-size:21px;display:block}.adminCards span{font-size:11px;color:#64748b}@media(max-width:700px){.adminCards{grid-template-columns:1fr 1fr}.authCard{padding:22px}.accountStrip{justify-content:flex-end}}
 
 @media(max-width:700px){.app{padding:14px 12px 70px}.hero{padding:22px;border-radius:24px}.hero h2{font-size:26px}.grid{grid-template-columns:repeat(2,1fr)}.modes{grid-template-columns:1fr}.lessonCard{padding:19px;min-height:540px}.ko{font-size:25px}.jp{font-size:29px}.rating{grid-template-columns:repeat(2,1fr)}.summaryGrid{grid-template-columns:1fr 1fr}.top .brand small{display:none}.lessonNav{grid-template-columns:1fr 1.2fr 1fr}.navbtn{padding:11px 5px;font-size:13px}}
+
+.studyTools{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.toolCard{border:1.5px solid var(--line);background:#fff;border-radius:18px;padding:16px;text-align:left;min-height:118px}.toolCard:hover{border-color:#9bbcff;background:#f8fbff}.toolCard b{display:block;font-size:16px;margin:7px 0 5px}.toolCard span{display:block;color:var(--muted);font-size:12px;line-height:1.5}.toolIcon{font-size:25px}.dictHeader{display:flex;gap:10px;align-items:center;justify-content:space-between;margin-bottom:12px}.dictTabs{display:flex;gap:6px;background:#f1f5f9;padding:5px;border-radius:14px;overflow:auto}.dictTabs button{border:0;background:transparent;border-radius:10px;padding:9px 12px;white-space:nowrap;color:#64748b;font-weight:800}.dictTabs button.on{background:#fff;color:#1d4ed8;box-shadow:0 2px 8px rgba(30,41,59,.08)}.dictControls{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}.dictSearch{flex:1;min-width:210px;border:1px solid var(--line);border-radius:13px;padding:11px 13px;background:#fff}.groupSeg{display:flex;gap:5px;background:#f1f5f9;padding:4px;border-radius:12px}.groupSeg button{border:0;background:transparent;border-radius:9px;padding:8px 10px;font-size:12px;font-weight:800;color:#64748b}.groupSeg button.on{background:#fff;color:#1d4ed8;box-shadow:0 2px 8px rgba(30,41,59,.08)}.ruleGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:12px 0}.ruleCard{background:#f8fafc;border:1px solid #e7ecf3;border-radius:16px;padding:13px}.ruleCard b{display:block;margin-bottom:6px}.ruleCard small{color:#64748b;line-height:1.5}.dictList{display:grid;gap:8px}.verbEntry,.grammarEntry,.endingEntry{border:1px solid var(--line);border-radius:16px;background:#fff;overflow:hidden}.verbEntry summary,.grammarEntry summary{cursor:pointer;padding:14px 15px;list-style:none;display:flex;justify-content:space-between;gap:10px;align-items:center}.verbEntry summary::-webkit-details-marker,.grammarEntry summary::-webkit-details-marker{display:none}.entryTitle b{font-family:"Noto Sans JP",sans-serif;font-size:18px}.entryTitle small{display:block;color:#64748b;margin-top:3px}.entryTag{font-size:11px;font-weight:800;background:#eef4ff;color:#2457b5;border-radius:999px;padding:5px 8px;white-space:nowrap}.conjGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;padding:0 14px 14px}.conjCell{background:#f8fafc;border-radius:12px;padding:10px}.conjCell span{display:block;color:#64748b;font-size:11px;margin-bottom:3px}.conjCell b{font-family:"Noto Sans JP",sans-serif;font-size:15px}.entryBody{padding:0 15px 15px;color:#475569;line-height:1.65}.endingEntry{padding:14px 15px}.endingEntry .jpPattern{font-family:"Noto Sans JP",sans-serif;font-weight:900;font-size:20px;color:#1d4ed8}.endingEntry .meaning{font-weight:800;margin:4px 0}.endingEntry .connect{font-size:12px;color:#64748b}.endingEntry .example{margin-top:8px;background:#f8fafc;border-radius:11px;padding:10px;font-family:"Noto Sans JP",sans-serif}.practiceMeta{text-align:center;color:#64748b;font-size:12px;margin:2px 0 10px}.practiceTarget{font-size:17px;font-weight:850;color:#1d4ed8;margin:7px 0}.practiceVerb{font-family:"Noto Sans JP",sans-serif;font-size:34px;font-weight:900;margin:10px 0 4px}.practiceKo{color:#64748b;font-size:15px}.practiceChoices{display:grid;gap:9px;max-width:650px;margin:22px auto}.practiceChoice{border:1.5px solid #dde4ee;background:#fff;border-radius:15px;padding:14px 16px;font-family:"Noto Sans JP",sans-serif;font-size:18px;text-align:left}.practiceChoice.correct{border-color:#34d399;background:#ecfdf5;color:#047857}.practiceChoice.wrong{border-color:#f87171;background:#fef2f2;color:#b91c1c}.practiceResult{margin:14px auto 0;max-width:650px}.practiceExplain{background:#f8fafc;border-radius:14px;padding:12px 14px;line-height:1.6;text-align:left}.practiceExplain b{font-family:"Noto Sans JP",sans-serif}.practiceStats{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:10px}.practiceStat{background:#f8fafc;border-radius:13px;padding:11px}.practiceStat b{display:block;font-size:18px}.practiceStat span{font-size:11px;color:#64748b}@media(max-width:720px){.studyTools{grid-template-columns:1fr}.ruleGrid{grid-template-columns:1fr}.conjGrid{grid-template-columns:repeat(2,1fr)}.dictHeader{align-items:flex-start;flex-direction:column}.practiceVerb{font-size:29px}}
+
 </style>
 </head>
 <body>
@@ -37,7 +40,7 @@ button,input,select{font:inherit} button{cursor:pointer}.app{max-width:920px;mar
 </div>
 <div class="app">
   <div class="top">
-    <div class="brand"><div class="logo">日</div><div><h1>DACO 일본어 코치</h1><small>초급 · 회사 실전 · N3 · 계정 동기화 · v5.1</small></div></div>
+    <div class="brand"><div class="logo">日</div><div><h1>DACO 일본어 코치</h1><small>초급 · 회사 실전 · N3 · 계정 동기화 · v5.2</small></div></div>
     <div class="accountStrip"><span id="cloudStatusBadge" class="cloudBadge off">☁ 로컬</span><button class="iconbtn hidden" id="adminBtn" onclick="DACOCloud.openAdmin()">🛡 관리자</button><button class="iconbtn hidden" id="cloudUserBtn" onclick="DACOCloud.openAccount()">👤 사용자</button><button class="iconbtn" id="installBtn">📲 설치</button><button class="iconbtn" id="settingsBtn">⚙ 설정</button></div>
   </div>
 
@@ -66,6 +69,16 @@ button,input,select{font:inherit} button{cursor:pointer}.app{max-width:920px;mar
       <h3>10분이면 이렇게 끝납니다</h3>
       <div class="roadmap"><span class="stepchip on">1 기억 꺼내기</span><span>→</span><span class="stepchip">2 객관식</span><span>→</span><span class="stepchip">3 듣기</span><span>→</span><span class="stepchip">4 말하기</span><span>→</span><span class="stepchip">5 회화</span></div>
     </div>
+
+    <div class="panel">
+      <h3>문법 · 동사 활용 연습</h3>
+      <div class="studyTools">
+        <button class="toolCard" onclick="openGrammarDictionary('verbs')"><div class="toolIcon">📘</div><b>문법·활용 사전</b><span>동사 316개의 て형·た형·ない형·가능형·의지형과 N3 문법 99개를 검색합니다.</span></button>
+        <button class="toolCard" onclick="startVerbDrill()"><div class="toolIcon">🔄</div><b>동사 변형 맞추기</b><span>기본형을 보고 ます·て·た·ない·가능·의지·ば·수동·사역형을 맞춥니다.</span><div class="practiceStats"><div class="practiceStat"><b id="verbDrillAcc">-</b><span>첫 시도 정확도</span></div><div class="practiceStat"><b id="verbDrillSessions">0</b><span>완료 세션</span></div></div></button>
+        <button class="toolCard" onclick="startEndingDrill()"><div class="toolIcon">🧩</div><b>자주 쓰는 문장 맞추기</b><span>〜と思います·〜たいです·〜てもいいですか·〜なければなりません 같은 문장을 완성합니다.</span><div class="practiceStats"><div class="practiceStat"><b id="endingDrillAcc">-</b><span>첫 시도 정확도</span></div><div class="practiceStat"><b id="endingDrillSessions">0</b><span>완료 세션</span></div></div></button>
+      </div>
+      <button id="practiceResumeBtn" class="iconbtn hidden" style="margin-top:10px" onclick="resumePractice()">↩ 활용 훈련 이어하기</button>
+    </div>
     <div class="panel" id="weakPanel">
       <h3>최근 약한 표현</h3><div class="weakList" id="weakList"></div>
     </div>
@@ -77,6 +90,23 @@ button,input,select{font:inherit} button{cursor:pointer}.app{max-width:920px;mar
     <div class="lessonNav"><button id="prevNav" class="navbtn" onclick="previousItem()">← 이전</button><button class="navbtn repeat" onclick="manualRepeatCurrent()">🔁 뒤에서 다시</button><button id="nextNav" class="navbtn" onclick="nextNavItem()">다음 →</button></div>
     <div id="reviewNotice" class="reviewNotice"></div>
     <div class="lessonCard" id="lessonCard"></div>
+  </section>
+
+
+  <section id="dictionaryView" class="view">
+    <div class="dictHeader"><button class="iconbtn" onclick="goHome()">← 홈</button><div><h2 style="margin:0">📘 문법·활용 사전</h2><small style="color:#64748b">모르는 형태를 바로 찾아보고 음성으로 확인하세요.</small></div><span id="dictionaryCount" class="entryTag">0개</span></div>
+    <div class="panel" style="margin-top:0">
+      <div class="dictTabs"><button data-dtab="verbs" onclick="setDictionaryTab('verbs')">동사 활용</button><button data-dtab="endings" onclick="setDictionaryTab('endings')">자주 쓰는 문장</button><button data-dtab="grammar" onclick="setDictionaryTab('grammar')">문법 99</button></div>
+      <div id="dictionaryControls"></div>
+      <div id="dictionaryContent"></div>
+    </div>
+  </section>
+
+  <section id="practiceView" class="view">
+    <div class="lessonTop"><button class="iconbtn" onclick="exitPractice()">← 종료</button><div class="progress"><div id="practiceProgress"></div></div><b id="practiceCount">0/10</b></div>
+    <div class="lessonNav"><button id="practicePrev" class="navbtn" onclick="practicePrevious()">← 이전</button><button class="navbtn repeat" onclick="practiceRepeatCurrent()">🔁 뒤에서 다시</button><button id="practiceNext" class="navbtn" onclick="practiceNextNav()">다음 →</button></div>
+    <div id="practiceNotice" class="reviewNotice"></div>
+    <div class="lessonCard" id="practiceCard"></div>
   </section>
 
   <section id="summaryView" class="view">
@@ -103,7 +133,7 @@ window.DACO_CLOUD_CONFIG = {
   supabaseAnonKey: "sb_publishable_BTuvdybnCP8BJI4KYPf9bw_PhNHKOnR"
 };
 </script>
-<script src="./cloud-config.js?v=5.1.0"></script>
-<script src="./app.js?v=5.1.0"></script>
-<script src="./cloud-auth.js?v=5.1.0"></script>
+<script src="./cloud-config.js?v=5.2.0"></script>
+<script src="./app.js?v=5.2.0"></script>
+<script src="./cloud-auth.js?v=5.2.0"></script>
 </body></html>

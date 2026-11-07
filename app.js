@@ -4,7 +4,7 @@ const KIND_LABEL={grammar:'문법',verb:'동사',adjective:'형용사',keigo:'�
 const MODE_LABEL={beginner:'초급 편안하게',business:'회사 실전',n3:'N3 집중'};
 const BASE_KEY='daco_jp_coach_v5';
 const LEGACY_KEY='daco_jp_coach_v3';
-const APP_VERSION='5.0.0';
+const APP_VERSION='5.2.0';
 function storageOwner(){return String(window.DACO_CLOUD_USER_ID||'guest').replace(/[^a-zA-Z0-9_-]/g,'_')}
 function stateKey(){return BASE_KEY+'_'+storageOwner()}
 function backupKey(){return stateKey()+'_auto_backup'}
@@ -63,7 +63,7 @@ function updateHome(){
     db.textContent=`＋ ${MODE_LABEL[state.mode]} 새 10분`;db.className='secondary';
     document.getElementById('heroText').textContent=`저장된 ${MODE_LABEL[sm]||sm} 학습: 기본 ${done}/${base}${reviews?` · 추가복습 ${reviews}개`:''}. 이어하기와 새 학습은 별개입니다.`;
   }else{rb.classList.add('hidden');db.textContent=`▶ ${MODE_LABEL[state.mode]} 10분 시작`;db.className='primary';document.getElementById('heroText').textContent=`현재 선택: ${MODE_LABEL[state.mode]}. 오늘 이미 끝낸 카드는 새 수업에서 다시 나오지 않습니다.`}
-  syncSettingsUI();
+  syncSettingsUI();updatePracticeHome();
 }
 function setMode(m){state.mode=m;saveState();updateHome();toast(m==='business'?'회사 실전 표현을 우선합니다.':m==='n3'?'N3 문법·단어 비중을 높였습니다.':'기초부터 편안하게 갑니다.')}
 function showView(id){document.querySelectorAll('.view').forEach(v=>v.classList.remove('on'));document.getElementById(id).classList.add('on');window.scrollTo({top:0,behavior:'smooth'})}
@@ -245,6 +245,132 @@ document.getElementById('installBtn').onclick=async()=>{
   const ios=/iphone|ipad|ipod/i.test(navigator.userAgent);
   alert(ios?'iPhone/iPad: Safari의 공유 버튼 → 홈 화면에 추가 → 웹 앱으로 열기를 선택하세요.':'Chrome/Edge 메뉴에서 “앱 설치” 또는 “홈 화면에 추가”를 선택하세요. GitHub Pages 주소로 접속한 상태에서 설치할 수 있습니다.');
 };
+
+
+// ===== v5.2 문법·활용 사전 / 동사 변형 / 문장 완성 훈련 =====
+const VERB_FORM_DEFS=[
+  {key:'ます',label:'ます형',hint:'정중하게 말할 때'},
+  {key:'て',label:'て형',hint:'연결·부탁·진행의 기본'},
+  {key:'た',label:'た형',hint:'과거·완료의 기본'},
+  {key:'ない',label:'ない형(부정형)',hint:'~하지 않다'},
+  {key:'가능',label:'가능형',hint:'~할 수 있다'},
+  {key:'의지',label:'의지형',hint:'~하자 / ~하려고'},
+  {key:'ば',label:'ば형',hint:'~하면'},
+  {key:'수동',label:'수동형',hint:'~당하다 / ~받다'},
+  {key:'사역',label:'사역형',hint:'~하게 하다'}
+];
+const ENDING_PATTERNS=[
+  {id:'plain_think',pattern:'〜と思います',meaning:'~할 것이라고 생각합니다',connect:'사전형 + と思います',need:'dict',build:v=>`${v.jp}と思います`},
+  {id:'vol_think',pattern:'〜ようと思います',meaning:'~하려고 합니다',connect:'의지형 + と思います',need:'의지',build:v=>joinVerb(v,'의지','と思います')},
+  {id:'tai',pattern:'〜たいです',meaning:'~하고 싶습니다',connect:'ます어간 + たいです',need:'ます',build:v=>stemMasu(v)+'たいです'},
+  {id:'tsumori',pattern:'〜つもりです',meaning:'~할 생각입니다',connect:'사전형 + つもりです',need:'dict',build:v=>`${v.jp}つもりです`},
+  {id:'yotei',pattern:'〜予定です',meaning:'~할 예정입니다',connect:'사전형 + 予定です',need:'dict',build:v=>`${v.jp}予定です`},
+  {id:'te_kudasai',pattern:'〜てください',meaning:'~해 주세요',connect:'て형 + ください',need:'て',build:v=>joinVerb(v,'て','ください')},
+  {id:'te_itadake',pattern:'〜ていただけますか',meaning:'~해 주실 수 있을까요?',connect:'て형 + いただけますか',need:'て',build:v=>joinVerb(v,'て','いただけますか')},
+  {id:'te_mo_ii',pattern:'〜てもいいですか',meaning:'~해도 될까요?',connect:'て형 + もいいですか',need:'て',build:v=>joinVerb(v,'て','もいいですか')},
+  {id:'te_wa_ikenai',pattern:'〜てはいけません',meaning:'~해서는 안 됩니다',connect:'て형 + はいけません',need:'て',build:v=>joinVerb(v,'て','はいけません')},
+  {id:'nakereba',pattern:'〜なければなりません',meaning:'~해야 합니다',connect:'ない형의 ない → なければ + なりません',need:'ない',build:v=>replaceNai(v,'なければなりません')},
+  {id:'nakutemo',pattern:'〜なくてもいいです',meaning:'~하지 않아도 됩니다',connect:'ない형의 ない → なくて + もいいです',need:'ない',build:v=>replaceNai(v,'なくてもいいです')},
+  {id:'te_miru',pattern:'〜てみます',meaning:'~해 보겠습니다',connect:'て형 + みます',need:'て',build:v=>joinVerb(v,'て','みます')},
+  {id:'te_oku',pattern:'〜ておきます',meaning:'미리 ~해 두겠습니다',connect:'て형 + おきます',need:'て',build:v=>joinVerb(v,'て','おきます')},
+  {id:'te_iru',pattern:'〜ています',meaning:'~하고 있습니다',connect:'て형 + います',need:'て',build:v=>joinVerb(v,'て','います')}
+];
+const ENDING_GRAMMAR_MAP={vol_think:'grammar-17',tai:'grammar-16',tsumori:'grammar-18',yotei:'grammar-19',te_kudasai:'grammar-1',te_itadake:'grammar-4',te_mo_ii:'grammar-9',te_wa_ikenai:'grammar-10',nakereba:'grammar-11',nakutemo:'grammar-12',te_miru:'grammar-30',te_oku:'grammar-28',te_iru:'grammar-26'};
+let dictionaryTab='verbs',dictionaryVerbGroup='all',dictionaryLimit=60,dictionaryQuery='';
+let practiceSession=null;
+
+function ensurePracticeState(){
+  if(!state.drills||typeof state.drills!=='object')state.drills={};
+  for(const k of ['verb','ending'])if(!state.drills[k])state.drills[k]={sessions:0,firstTotal:0,firstCorrect:0,completed:0};
+  return state.drills;
+}
+function practiceStats(kind){ensurePracticeState();return state.drills[kind]}
+function updatePracticeHome(){
+  if(!document.getElementById('verbDrillAcc'))return;ensurePracticeState();
+  for(const [kind,prefix] of [['verb','verbDrill'],['ending','endingDrill']]){let x=state.drills[kind],acc=x.firstTotal?Math.round(x.firstCorrect/x.firstTotal*100)+'%':'-';document.getElementById(prefix+'Acc').textContent=acc;document.getElementById(prefix+'Sessions').textContent=x.sessions||0}
+  let b=document.getElementById('practiceResumeBtn'),ps=state.practiceSession;if(b){if(ps&&Array.isArray(ps.items)&&ps.items.length){b.classList.remove('hidden');b.textContent=`↩ ${ps.kind==='verb'?'동사 변형':'문장 완성'} 이어하기 · ${Math.min((ps.idx||0)+1,ps.items.length)}/${ps.items.length}`}else b.classList.add('hidden')}
+}
+function getVerbs(){return DB.cards.filter(c=>c.kind==='verb'&&c.jp&&c.extra)}
+function validForm(v,key){let x=v?.extra?.[key];return x&&!["–","-","—","―"].includes(String(x).trim())?cleanJP(x):''}
+function stemMasu(v){let x=validForm(v,'ます');return x.endsWith('ます')?x.slice(0,-2):''}
+function joinVerb(v,key,suffix){let x=validForm(v,key);return x?x+suffix:''}
+function replaceNai(v,suffix){let x=validForm(v,'ない');return x&&x.endsWith('ない')?x.slice(0,-2)+suffix:''}
+function endingAnswer(p,v){try{let x=p.build(v);return x&&!x.includes('–')?cleanJP(x):''}catch(e){return ''}}
+function currentModeVerbs(){let vs=getVerbs();if(state.mode==='beginner')return vs.filter(v=>v.level==='기초');if(state.mode==='business'||state.mode==='n3')return vs.filter(v=>v.level==='N3·비즈니스');return vs}
+
+function openGrammarDictionary(tab='verbs'){dictionaryTab=tab;dictionaryLimit=60;dictionaryQuery='';showView('dictionaryView');renderDictionary()}
+function setDictionaryTab(tab){dictionaryTab=tab;dictionaryLimit=60;dictionaryQuery='';renderDictionary()}
+function setDictionaryVerbGroup(group){dictionaryVerbGroup=group;dictionaryLimit=60;renderDictionary()}
+function dictionarySearchChanged(el){dictionaryQuery=String(el?.value||'');dictionaryLimit=60;if(dictionaryTab==='verbs')renderVerbDictionary();else if(dictionaryTab==='endings')renderEndingDictionary();else renderGrammarDictionary()}
+function loadMoreDictionary(){dictionaryLimit+=60;renderDictionary()}
+function setDictionaryActiveTabs(){document.querySelectorAll('[data-dtab]').forEach(b=>b.classList.toggle('on',b.dataset.dtab===dictionaryTab))}
+function renderDictionary(){
+  setDictionaryActiveTabs();let controls=document.getElementById('dictionaryControls'),box=document.getElementById('dictionaryContent'),count=document.getElementById('dictionaryCount');if(!controls||!box)return;
+  if(dictionaryTab==='verbs'){
+    controls.innerHTML=`<div class="dictControls"><input id="dictionarySearch" class="dictSearch" value="${escapeHtml(dictionaryQuery)}" placeholder="동사·읽기·뜻 검색" oninput="dictionarySearchChanged(this)"><div class="groupSeg">${['all','1그룹','2그룹','3그룹'].map(g=>`<button class="${dictionaryVerbGroup===g?'on':''}" onclick="setDictionaryVerbGroup('${g}')">${g==='all'?'전체':g}</button>`).join('')}</div></div>`;
+    renderVerbDictionary();
+  }else if(dictionaryTab==='endings'){
+    controls.innerHTML=`<div class="dictControls"><input id="dictionarySearch" class="dictSearch" value="${escapeHtml(dictionaryQuery)}" placeholder="문형·뜻 검색" oninput="dictionarySearchChanged(this)"><button class="iconbtn" onclick="startEndingDrill()">🧩 바로 연습</button></div>`;renderEndingDictionary();
+  }else{
+    controls.innerHTML=`<div class="dictControls"><input id="dictionarySearch" class="dictSearch" value="${escapeHtml(dictionaryQuery)}" placeholder="문법·뜻·예문 검색" oninput="dictionarySearchChanged(this)"><button class="iconbtn" onclick="startVerbDrill()">🔄 동사 변형 연습</button></div>`;renderGrammarDictionary();
+  }
+}
+function renderVerbDictionary(){
+  let q=dictionaryQuery.trim().toLowerCase(),verbs=getVerbs().filter(v=>dictionaryVerbGroup==='all'||v.category===dictionaryVerbGroup).filter(v=>!q||[v.jp,v.reading,v.ko].some(x=>String(x||'').toLowerCase().includes(q)));
+  let count=document.getElementById('dictionaryCount');if(count)count.textContent=`${verbs.length}개`;
+  let rules=`<div class="ruleGrid"><div class="ruleCard"><b>1그룹</b><small>う·つ·る→って/った, む·ぶ·ぬ→んで/んだ, く→いて, ぐ→いで, す→して. ない형은 あ단(う→わ)으로.</small></div><div class="ruleCard"><b>2그룹</b><small>끝의 る를 빼고 ます·て·た·ない를 붙입니다. 예: 食べる→食べて→食べた→食べない.</small></div><div class="ruleCard"><b>3그룹</b><small>する·来る 계열은 불규칙입니다. 사전에서 실제 형태를 통째로 확인하는 것이 가장 빠릅니다.</small></div></div>`;
+  let shown=verbs.slice(0,dictionaryLimit),list=shown.map(v=>`<details class="verbEntry"><summary><div class="entryTitle"><b>${escapeHtml(v.jp)}</b>${v.reading?` <span style="color:#64748b">(${escapeHtml(v.reading)})</span>`:''}<small>${escapeHtml(v.ko)}</small></div><span class="entryTag">${escapeHtml(v.category||'')}</span></summary><div class="conjGrid"><div class="conjCell"><span>기본형</span><b>${escapeHtml(v.jp)}</b></div>${VERB_FORM_DEFS.map(f=>`<div class="conjCell"><span>${escapeHtml(f.label)}</span><b>${escapeHtml(validForm(v,f.key)||'—')}</b></div>`).join('')}</div><div class="entryBody"><button class="iconbtn" onclick="speakText('${encodeURIComponent(v.jp)}')">🔊 기본형 듣기</button> ${validForm(v,'て')?`<button class="iconbtn" onclick="speakText('${encodeURIComponent(validForm(v,'て'))}')">🔊 て형</button>`:''}</div></details>`).join('');
+  document.getElementById('dictionaryContent').innerHTML=rules+`<div class="dictList">${list||'<div class="footerNote">검색 결과가 없습니다.</div>'}</div>${verbs.length>shown.length?`<div style="text-align:center;margin-top:12px"><button class="iconbtn" onclick="loadMoreDictionary()">더 보기 (${shown.length}/${verbs.length})</button></div>`:''}`;
+}
+function patternExample(p){let g=DB.cards.find(c=>c.id===ENDING_GRAMMAR_MAP[p.id]);return g?.extra?.example||''}
+function patternTranslation(p){let g=DB.cards.find(c=>c.id===ENDING_GRAMMAR_MAP[p.id]);return g?.extra?.translation||''}
+function renderEndingDictionary(){
+  let q=dictionaryQuery.trim().toLowerCase(),rows=ENDING_PATTERNS.filter(p=>!q||[p.pattern,p.meaning,p.connect,patternExample(p),patternTranslation(p)].some(x=>String(x||'').toLowerCase().includes(q)));let count=document.getElementById('dictionaryCount');if(count)count.textContent=`${rows.length}개`;
+  document.getElementById('dictionaryContent').innerHTML=`<div class="footerNote" style="text-align:left;margin:4px 0 12px">문장 끝을 통째로 외우면 회화가 빨라집니다. 특히 <b>〜と思います</b>와 <b>〜ようと思います</b>의 차이를 같이 익혀보세요.</div><div class="dictList">${rows.map(p=>{let ex=patternExample(p),tr=patternTranslation(p);return `<div class="endingEntry"><div class="jpPattern">${escapeHtml(p.pattern)}</div><div class="meaning">${escapeHtml(p.meaning)}</div><div class="connect">만드는 법: ${escapeHtml(p.connect)}</div>${ex?`<div class="example">${escapeHtml(ex)}${tr?`<br><span style="font-family:inherit;color:#64748b">${escapeHtml(tr)}</span>`:''}</div>`:''}</div>`}).join('')}</div>`;
+}
+function renderGrammarDictionary(){
+  let q=dictionaryQuery.trim().toLowerCase(),rows=DB.cards.filter(c=>c.kind==='grammar').filter(c=>!q||[c.jp,c.ko,c.level,c.category,c.note,c.extra?.connect,c.extra?.example,c.extra?.translation].some(x=>String(x||'').toLowerCase().includes(q)));let count=document.getElementById('dictionaryCount');if(count)count.textContent=`${rows.length}개`;
+  document.getElementById('dictionaryContent').innerHTML=`<div class="dictList">${rows.map(c=>`<details class="grammarEntry"><summary><div class="entryTitle"><b>${escapeHtml(c.jp)}</b><small>${escapeHtml(c.ko)}</small></div><span class="entryTag">${escapeHtml(c.level||'')} ${escapeHtml(c.category||'')}</span></summary><div class="entryBody">${c.extra?.connect?`<b>만드는 법</b> ${escapeHtml(c.extra.connect)}<br>`:''}${c.extra?.example?`<b>예문</b> ${escapeHtml(c.extra.example)}${c.extra?.translation?`<br><span style="color:#64748b">${escapeHtml(c.extra.translation)}</span>`:''}<br>`:''}${c.note?`<b>포인트</b> ${escapeHtml(c.note)}<br>`:''}<button class="iconbtn" style="margin-top:8px" onclick="speakText('${encodeURIComponent(audioTarget(c))}')">🔊 예문 듣기</button></div></details>`).join('')}</div>`;
+}
+
+function practiceItemKey(it){return it.kind==='verb'?`v:${it.verbId}:${it.formKey}`:`e:${it.verbId}:${it.patternId}`}
+function makePracticeItem(kind,verb,detail,isReview=false){return kind==='verb'?{kind,verbId:verb.id,formKey:detail,isReview,done:false,hadWrong:false,firstRecorded:false,reviewQueued:false}:{kind,verbId:verb.id,patternId:detail,isReview,done:false,hadWrong:false,firstRecorded:false,reviewQueued:false}}
+function buildVerbPractice(count=10){let verbs=currentModeVerbs().filter(v=>VERB_FORM_DEFS.filter(f=>validForm(v,f.key)).length>=6),out=[],used=new Set(),tries=0;while(out.length<count&&tries++<500){let v=verbs[Math.floor(Math.random()*verbs.length)],forms=VERB_FORM_DEFS.filter(f=>validForm(v,f.key)),f=forms[Math.floor(Math.random()*forms.length)],k=`${v.id}:${f.key}`;if(used.has(k))continue;used.add(k);out.push(makePracticeItem('verb',v,f.key))}return out}
+function buildEndingPractice(count=10){let verbs=currentModeVerbs(),out=[],used=new Set(),tries=0;while(out.length<count&&tries++<800){let v=verbs[Math.floor(Math.random()*verbs.length)],patterns=ENDING_PATTERNS.filter(p=>endingAnswer(p,v));if(patterns.length<4)continue;let p=patterns[Math.floor(Math.random()*patterns.length)],k=`${v.id}:${p.id}`;if(used.has(k))continue;used.add(k);out.push(makePracticeItem('ending',v,p.id))}return out}
+function startVerbDrill(){startPractice('verb')}
+function startEndingDrill(){startPractice('ending')}
+function startPractice(kind){
+  if(state.practiceSession&&state.practiceSession.items?.length&&!confirm('진행 중인 활용 훈련이 있습니다. 새 훈련을 시작할까요?'))return;
+  let items=kind==='verb'?buildVerbPractice(10):buildEndingPractice(10);if(!items.length){toast('현재 모드에서 연습할 동사를 찾지 못했습니다.');return}practiceSession={version:1,kind,items,idx:0,baseCount:items.length,firstTotal:0,firstCorrect:0,reviewAdded:0};state.practiceSession=practiceSession;saveState();showView('practiceView');renderPracticeItem();
+}
+function resumePractice(){let ps=state.practiceSession;if(!ps||!Array.isArray(ps.items)||!ps.items.length){toast('이어갈 활용 훈련이 없습니다.');updatePracticeHome();return}practiceSession=JSON.parse(JSON.stringify(ps));showView('practiceView');renderPracticeItem()}
+function savePracticeSession(){if(!practiceSession)return;state.practiceSession=JSON.parse(JSON.stringify(practiceSession));saveState();updatePracticeHome()}
+function exitPractice(){if(practiceSession){savePracticeSession();toast('활용 훈련 위치를 저장했습니다.')}goHome()}
+function practiceCurrent(){return practiceSession?.items?.[practiceSession.idx]}
+function practiceVerb(it){return DB.cards.find(c=>c.id===it?.verbId)}
+function practicePattern(it){return ENDING_PATTERNS.find(p=>p.id===it?.patternId)}
+function practiceCorrect(it){let v=practiceVerb(it);return it.kind==='verb'?validForm(v,it.formKey):endingAnswer(practicePattern(it),v)}
+function practiceLabel(it){if(it.kind==='verb')return VERB_FORM_DEFS.find(f=>f.key===it.formKey)?.label||it.formKey;return practicePattern(it)?.meaning||''}
+function practiceConnection(it){if(it.kind==='verb')return VERB_FORM_DEFS.find(f=>f.key===it.formKey)?.hint||'';return practicePattern(it)?.connect||''}
+function practiceChoices(it){let v=practiceVerb(it),correct=practiceCorrect(it),vals=[];if(it.kind==='verb'){vals=VERB_FORM_DEFS.map(f=>validForm(v,f.key)).filter(Boolean)}else vals=ENDING_PATTERNS.map(p=>endingAnswer(p,v)).filter(Boolean);let uniq=[...new Set(vals.filter(x=>x!==correct))];return shuffle([correct,...shuffle(uniq).slice(0,3)])}
+function renderPracticeItem(){
+  if(!practiceSession)return;if(practiceSession.idx<0)practiceSession.idx=0;if(practiceSession.idx>=practiceSession.items.length){finishPractice();return}let it=practiceCurrent(),v=practiceVerb(it);if(!v){practiceSession.idx++;renderPracticeItem();return}
+  let baseDone=practiceSession.items.filter(x=>!x.isReview&&x.done).length,reviewTotal=practiceSession.items.filter(x=>x.isReview).length,reviewDone=practiceSession.items.filter(x=>x.isReview&&x.done).length;document.getElementById('practiceCount').textContent=`기본 ${baseDone}/${practiceSession.baseCount}${reviewTotal?` +복습 ${reviewDone}/${reviewTotal}`:''}`;document.getElementById('practiceProgress').style.width=(baseDone/Math.max(1,practiceSession.baseCount)*100)+'%';document.getElementById('practicePrev').disabled=practiceSession.idx<=0;document.getElementById('practiceNext').textContent=practiceSession.idx>=practiceSession.items.length-1?'완료 →':'다음 →';document.getElementById('practiceNotice').textContent=reviewTotal?`🔁 오답·반복 문제 ${reviewDone}/${reviewTotal}`:'';
+  let card=document.getElementById('practiceCard'),correct=practiceCorrect(it);if(it.done){card.innerHTML=`<span class="badge">✓ 완료 · ${it.kind==='verb'?'동사 변형':'문장 완성'}${it.isReview?' · 🔁 재복습':''}</span><div class="prompt"><div class="practiceVerb">${escapeHtml(v.jp)}</div><div class="practiceKo">${escapeHtml(v.reading||'')} · ${escapeHtml(v.ko)}</div><div class="practiceTarget">${escapeHtml(practiceLabel(it))}</div><div class="jp" style="font-size:29px">${escapeHtml(correct)}</div><div class="practiceExplain">${escapeHtml(practiceConnection(it))}</div></div><div class="actions"><button class="bigbtn light" onclick="speakText('${encodeURIComponent(correct)}')">🔊 듣기</button><button class="bigbtn ghost" onclick="practiceRepeatCurrent()">🔁 뒤에서 다시</button></div>`;return}
+  let choices=practiceChoices(it);card.innerHTML=`<span class="badge">${it.kind==='verb'?'🔄 동사 변형':'🧩 문장 완성'}${it.isReview?' · 🔁 재복습':''}</span><div class="prompt"><div class="hint">${it.kind==='verb'?'기본형을 보고 요청한 활용형을 고르세요.':'다음 뜻이 되도록 가장 알맞은 문장을 고르세요.'}${it.hadWrong?' 이번에는 정확히 맞혀보세요.':''}</div><div class="practiceVerb">${escapeHtml(v.jp)}</div><div class="practiceKo">${v.reading?escapeHtml(v.reading)+' · ':''}${escapeHtml(v.ko)} · ${escapeHtml(v.category||'')}</div><div class="practiceTarget">${escapeHtml(practiceLabel(it))}</div><div class="practiceChoices">${choices.map(x=>`<button class="practiceChoice" data-answer="${escapeHtml(x)}" onclick="answerPractice(this)">${escapeHtml(x)}</button>`).join('')}</div><div id="practiceResult" class="practiceResult"></div></div><div class="actions"><button class="bigbtn light" onclick="speakText('${encodeURIComponent(v.jp)}')">🔊 기본형 듣기</button></div>`;
+}
+function recordPracticeFirst(it,ok){if(it.firstRecorded)return;it.firstRecorded=true;if(it.isReview)return;practiceSession.firstTotal++;let st=practiceStats(practiceSession.kind);st.firstTotal++;if(ok){practiceSession.firstCorrect++;st.firstCorrect++}}
+function queuePracticeReview(it,reason='오답 복습',manual=false){if(!practiceSession||!it)return false;let key=practiceItemKey(it),future=practiceSession.items.slice(practiceSession.idx+1).some(x=>!x.done&&practiceItemKey(x)===key);if(future)return false;let clone=JSON.parse(JSON.stringify(it));clone.isReview=true;clone.done=false;clone.hadWrong=false;clone.firstRecorded=false;clone.reviewQueued=false;clone.reviewReason=reason;practiceSession.items.push(clone);practiceSession.reviewAdded++;it.reviewQueued=true;savePracticeSession();return true}
+function answerPractice(btn){let it=practiceCurrent();if(!it||it.done)return;let selected=btn.dataset.answer||'',correct=practiceCorrect(it),ok=selected===correct;recordPracticeFirst(it,ok);document.querySelectorAll('.practiceChoice').forEach(b=>{b.disabled=true;if(b.dataset.answer===correct)b.classList.add('correct');else if(b===btn)b.classList.add('wrong')});let result=document.getElementById('practiceResult');if(ok){it.done=true;practiceStats(practiceSession.kind).completed++;if(state.autoSpeak)speak(correct);result.innerHTML=`<div class="practiceExplain"><b>${escapeHtml(correct)}</b><br>${escapeHtml(practiceConnection(it))}</div><div style="text-align:center;margin-top:10px"><button class="bigbtn blue" onclick="practiceAdvance()">다음 문제 →</button></div>`}else{it.hadWrong=true;queuePracticeReview(it,'오답 재복습');result.innerHTML=`<div class="practiceExplain" style="background:#fff7ed;color:#9a3412">정답은 <b>${escapeHtml(correct)}</b> 입니다.<br>${escapeHtml(practiceConnection(it))}<br><small>지금 다시 맞히고, 수업 뒤쪽에서 한 번 더 나옵니다.</small></div><div style="text-align:center;margin-top:10px"><button class="bigbtn blue" onclick="retryPracticeNow()">↻ 같은 문제 다시 풀기</button></div>`;if(state.autoSpeak)speak(correct)}savePracticeSession()}
+function retryPracticeNow(){renderPracticeItem()}
+function practiceAdvance(){if(!practiceSession)return;practiceSession.idx++;savePracticeSession();renderPracticeItem()}
+function practicePrevious(){if(!practiceSession||practiceSession.idx<=0)return;practiceSession.idx--;savePracticeSession();renderPracticeItem()}
+function practiceNextNav(){if(!practiceSession)return;let it=practiceCurrent();if(it&&!it.done){recordPracticeFirst(it,false);it.hadWrong=true;queuePracticeReview(it,'건너뜀 복습');it.done=true;toast('건너뛴 문제는 뒤쪽에 다시 나옵니다.')}practiceSession.idx++;savePracticeSession();renderPracticeItem()}
+function practiceRepeatCurrent(){let it=practiceCurrent();if(!it)return;let added=queuePracticeReview(it,'수동 반복',true);toast(added?'수업 뒤쪽에 다시 넣었습니다.':'이미 뒤쪽에 같은 문제가 있습니다.');renderPracticeItem()}
+function finishPractice(){
+  let ps=practiceSession;if(!ps)return;let pending=ps.items.findIndex(x=>!x.done);if(pending>=0){ps.idx=pending;renderPracticeItem();return}let kind=ps.kind,st=practiceStats(kind);st.sessions++;let firstAcc=ps.firstTotal?Math.round(ps.firstCorrect/ps.firstTotal*100):0,total=ps.items.length,review=ps.items.filter(x=>x.isReview).length;state.practiceSession=null;practiceSession=null;saveState();updatePracticeHome();let card=document.getElementById('practiceCard');document.getElementById('practiceProgress').style.width='100%';document.getElementById('practiceCount').textContent='완료';document.getElementById('practiceNotice').textContent='';document.getElementById('practicePrev').disabled=true;document.getElementById('practiceNext').disabled=true;card.innerHTML=`<div class="summary"><div class="trophy">🎯</div><h2>${kind==='verb'?'동사 변형':'문장 완성'} 훈련 완료!</h2><p>틀렸던 문제까지 다시 맞혔습니다.</p><div class="summaryGrid"><div><b>${ps.baseCount}</b><span>기본 문제</span></div><div><b>${firstAcc}%</b><span>첫 시도 정확도</span></div><div><b>${review}</b><span>추가 복습</span></div><div><b>${total}</b><span>총 풀이</span></div></div><button class="bigbtn blue" onclick="${kind==='verb'?'startVerbDrill()':'startEndingDrill()'}">10문제 더</button> <button class="bigbtn light" onclick="goHome()">홈으로</button></div>`;
+}
+
 if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('./service-worker.js').then(reg=>{reg.update().catch(()=>{});reg.addEventListener('updatefound',()=>{let w=reg.installing;if(w)w.addEventListener('statechange',()=>{if(w.state==='installed'&&navigator.serviceWorker.controller)toast('새 버전이 준비되었습니다. 앱을 다시 열면 적용됩니다.')})})}).catch(()=>{}));}
 window.addEventListener('pagehide',()=>{if(lesson)saveLessonState()});
 document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='hidden'&&lesson)saveLessonState()});
@@ -255,20 +381,20 @@ window.DACOApp={
   loadLocalForUser:(uid)=>{
     window.DACO_CLOUD_USER_ID=uid||'guest';
     state=loadState();state.cards=state.cards||{};state.roles=state.roles||{};state.history=Array.isArray(state.history)?state.history:[];
-    lesson=null;updateHome();return JSON.parse(JSON.stringify(state));
+    lesson=null;practiceSession=null;updateHome();return JSON.parse(JSON.stringify(state));
   },
   applyExternalState:(next,opts={})=>{
     window.__DACOCloudApplying=true;
     try{
       state=Object.assign({},defaultState,next||{});state.cards=state.cards||{};state.roles=state.roles||{};state.history=Array.isArray(state.history)?state.history:[];
       try{localStorage.setItem(stateKey(),JSON.stringify(state))}catch(e){}
-      saveStateIDB(state);lesson=null;updateHome();
+      saveStateIDB(state);lesson=null;practiceSession=null;updateHome();
     }finally{window.__DACOCloudApplying=false}
     return JSON.parse(JSON.stringify(state));
   },
-  setGuestMode:()=>{window.DACO_CLOUD_USER_ID='guest';state=loadState();lesson=null;updateHome()},
+  setGuestMode:()=>{window.DACO_CLOUD_USER_ID='guest';state=loadState();lesson=null;practiceSession=null;updateHome()},
   currentStorageKey:()=>stateKey(),
-  summary:(x)=>{x=x||{};return {totalSessions:Number(x.totalSessions||0),streak:Number(x.streak||0),mode:x.mode||'beginner',learned:Object.values(x.cards||{}).filter(v=>v&&v.seen).length,history:(x.history||[]).length,lastStudy:x.lastStudy||'',updatedAt:Number(x._updatedAt||0)}}
+  summary:(x)=>{x=x||{};return {totalSessions:Number(x.totalSessions||0),streak:Number(x.streak||0),mode:x.mode||'beginner',learned:Object.values(x.cards||{}).filter(v=>v&&v.seen).length,history:(x.history||[]).length,lastStudy:x.lastStudy||'',drillSessions:Number(x.drills?.verb?.sessions||0)+Number(x.drills?.ending?.sessions||0),updatedAt:Number(x._updatedAt||0)}}
 };
 updateHome();
 hydrateFromIDB();
