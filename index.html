@@ -45,19 +45,22 @@ html{background:#eef1f5}body{background:radial-gradient(circle at 15% -10%,rgba(
 
 .reviewScheduleBox{margin:12px 0;padding:13px 14px;border:1px solid rgba(79,70,229,.16);background:linear-gradient(135deg,#f8faff,#f3f1ff);border-radius:16px;text-align:left}.reviewScheduleBox>b{display:block;font-size:14px;color:#312e81;margin-bottom:3px}.reviewScheduleBox>span{display:block;font-size:12px;color:#64748b;margin-bottom:9px}.reviewScheduleBox>div{display:flex;gap:7px;flex-wrap:wrap}.miniReview{border:1px solid #c7d2fe;background:#fff;color:#3730a3;border-radius:10px;padding:8px 11px;font-weight:800;cursor:pointer}.miniReview:active{transform:translateY(1px)}.reviewPresetSeg button.on{background:#312e81!important;color:#fff!important;border-color:#312e81!important}
 
-/* v6.8 level vocab · connectors · voice selection */
+/* v6.9 level vocab · connectors · voice selection */
 .jlptTabs{display:grid;grid-template-columns:repeat(5,1fr);gap:7px;margin-bottom:14px}.jlptTabs button{border:1px solid var(--line);background:#f8fafc;border-radius:12px;padding:10px;font-weight:850;color:#64748b}.jlptTabs button.on{background:#111d3a;color:#fff;border-color:#111d3a}.jlptSummary{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}.jlptSummary span{background:#f2f4f8;border:1px solid #e5e7eb;border-radius:999px;padding:7px 10px;font-size:12px;color:#475569}.jlptWordList{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}.jlptWordCard{position:relative;border:1px solid #e3e7ee;background:#fff;border-radius:16px;padding:13px 46px 13px 14px;min-height:104px}.jlptWordCard b{font-family:"Noto Sans JP",sans-serif;font-size:20px;display:block}.jlptWordCard small{font-family:"Noto Sans JP",sans-serif;color:#6366f1;display:block;margin:3px 0}.jlptWordCard span{display:block;font-size:13px;color:#475569}.jlptWordCard p{font-family:"Noto Sans JP",sans-serif;margin:8px 0 0;font-size:12px;color:#667085;line-height:1.5}.jlptSpeak{position:absolute;right:10px;top:10px;border:0;background:#eef2ff;color:#4338ca;width:34px;height:34px;border-radius:11px}.connectorGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.connectorCard{border:1px solid #e2e7ef;background:#fff;border-radius:17px;padding:15px}.connectorTop{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}.connectorTop b{font-family:"Noto Sans JP",sans-serif;font-size:23px;color:#111827}.connectorTop span{font-size:12px;color:#4338ca;background:#eef0ff;padding:5px 8px;border-radius:999px}.connectorCard p{font-size:12px;color:#667085;line-height:1.55}.connectorExample{width:100%;border:0;text-align:left;background:#f7f8fb;border-radius:13px;padding:11px}.connectorExample b{display:block;font-family:"Noto Sans JP",sans-serif;line-height:1.55}.connectorExample small{display:block;color:#64748b;margin-top:4px}.connectorExample em{display:block;color:#0f766e;font-style:normal;font-size:11px;margin-top:6px}.voiceSetting{display:flex;align-items:center;gap:7px}.voiceSetting select{max-width:280px;border:1px solid var(--line);border-radius:11px;padding:9px;background:#fff;color:#334155}.jlptHomeTools{grid-template-columns:repeat(5,1fr)}
 @media(max-width:760px){.jlptWordList,.connectorGrid{grid-template-columns:1fr}.jlptHomeTools{grid-template-columns:1fr 1fr}.jlptTabs{grid-template-columns:repeat(5,1fr)}.voiceSetting{align-items:stretch;flex-direction:column}.voiceSetting select{max-width:100%}}
 
 
-/* v6.8 commercial-safe UX */
+/* v6.9 commercial-safe UX */
 .similarNote{margin:10px 0;padding:12px 13px;border-radius:14px;background:linear-gradient(135deg,#fffaf0,#fff7ed);border:1px solid #fed7aa;text-align:left;color:#7c2d12}.similarNote b{display:block;font-size:12px;margin-bottom:4px}.similarNote span{font-size:12px;line-height:1.55;color:#9a3412}
 .confidenceWrap{width:100%;max-width:720px;margin:16px auto 0}.confidenceHint{text-align:center;font-size:11px;color:#94a3b8;margin-bottom:8px}.confidenceBar{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}.confidenceBtn{border:0;border-radius:20px;padding:15px 10px 13px;box-shadow:0 10px 24px rgba(15,23,42,.09);font-weight:900;transition:.15s}.confidenceBtn:active{transform:translateY(1px) scale(.99)}.confidenceBtn b{display:block;font-size:20px}.confidenceBtn small{display:block;font-size:12px;margin-top:4px;font-weight:700;opacity:.88}.confidenceBtn.again{background:linear-gradient(145deg,#a855f7,#7e22ce);color:#fff}.confidenceBtn.understand{background:linear-gradient(145deg,#4f75ff,#2447d8);color:#fff}.confidenceBtn.perfect{background:linear-gradient(145deg,#22b8a7,#0f766e);color:#fff}.confidenceBtn:disabled{opacity:.34;filter:grayscale(.65);cursor:not-allowed;box-shadow:none}.wrongConfidenceWrap .confidenceHint{color:#b45309;font-weight:700}
 .locationCard{background:#fff;border:1px solid var(--line);border-radius:20px;padding:0;overflow:hidden;box-shadow:0 8px 20px rgba(15,23,42,.04)}.locationMainBtn{width:100%;border:0;background:#fff;padding:12px;display:flex;flex-direction:column;align-items:center}.locationCard .similarNote{margin:0 10px 12px}.locationPic svg{width:100%;max-width:220px;height:auto}
 .numberQuizControls{display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:flex-end}.numberFilterDrop{position:relative}.numberFilterDrop summary{list-style:none;border:1px solid #cbd5e1;background:#fff;border-radius:13px;padding:11px 13px;font-weight:800;color:#334155;cursor:pointer}.numberFilterDrop summary::-webkit-details-marker{display:none}.numberFilterPanel{position:absolute;z-index:18;right:0;top:48px;width:min(360px,88vw);background:#fff;border:1px solid #dbe3ef;border-radius:18px;padding:14px;box-shadow:0 18px 50px rgba(15,23,42,.18);display:grid;grid-template-columns:1fr 1fr;gap:8px}.numberFilterPanel label{display:flex;align-items:center;gap:8px;padding:9px 10px;background:#f8fafc;border-radius:10px;font-size:13px}.numberFilterActions{grid-column:1/-1;display:flex;gap:8px}.numberFilterActions button{border:0;background:#eef2ff;color:#3730a3;padding:8px 10px;border-radius:9px;font-weight:800}
 @media(max-width:640px){.app{padding:14px 12px 100px}.hero{border-radius:24px;padding:22px}.hero h2{font-size:26px}.lessonCard{padding:18px 14px;min-height:470px;border-radius:23px}.confidenceWrap{position:sticky;bottom:8px;z-index:8;padding:8px;background:linear-gradient(180deg,rgba(255,255,255,0),rgba(255,255,255,.92) 32%);backdrop-filter:blur(8px)}.confidenceBar{gap:7px}.confidenceBtn{border-radius:17px;padding:13px 6px}.confidenceBtn b{font-size:18px}.confidenceBtn small{font-size:11px}.numberQuizControls{justify-content:stretch}.numberQuizControls>*{flex:1}.numberFilterPanel{left:0;right:auto;grid-template-columns:1fr}.numberFilterActions{grid-column:1}}
 .contentOriginNote{margin:18px 0 6px;padding:12px 14px;border:1px solid #dbe4ff;background:#f7f9ff;border-radius:14px;color:#5b6475;font-size:11px;line-height:1.55;text-align:left}
-.jlptUsage{margin-top:8px;color:#586174;font-size:13px;line-height:1.45}.jlptUsageAnswer{margin-top:10px;padding:10px 12px;border-radius:12px;background:#f1f5f9;color:#475569;font-size:13px;line-height:1.5}</style>
+.jlptUsage{margin-top:8px;color:#586174;font-size:13px;line-height:1.45}.jlptUsageAnswer{margin-top:10px;padding:10px 12px;border-radius:12px;background:#f1f5f9;color:#475569;font-size:13px;line-height:1.5}
+/* v6.9 daily category completion */
+.toolCard,.mode,.lifeTabs button,.jlptTabs button{position:relative}.todayDoneBadge{position:absolute;right:9px;top:8px;z-index:4;background:linear-gradient(135deg,#0f766e,#14b8a6);color:#fff;border-radius:999px;padding:5px 8px;font-size:10px;font-weight:900;box-shadow:0 5px 14px rgba(15,118,110,.18);white-space:nowrap}.toolCard.dailyDone,.mode.dailyDone{border-color:#99f6e4!important;box-shadow:0 0 0 2px rgba(20,184,166,.08),0 10px 26px rgba(15,23,42,.06)}.lifeTabs button .todayDoneBadge,.jlptTabs button .todayDoneBadge{font-size:0;width:17px;height:17px;padding:0;right:4px;top:3px}.lifeTabs button .todayDoneBadge:after,.jlptTabs button .todayDoneBadge:after{content:'✓';font-size:10px;display:grid;place-items:center;height:17px}.todayCompleteBanner{margin:0 0 14px;padding:15px 16px;border:1px solid #99f6e4;background:linear-gradient(135deg,#f0fdfa,#ecfeff);border-radius:18px;display:flex;align-items:center;justify-content:space-between;gap:14px}.todayCompleteBanner b{display:block;color:#0f766e;font-size:15px}.todayCompleteBanner span{display:block;color:#52606d;font-size:12px;margin-top:4px;line-height:1.5}.todayCompleteBanner>div:last-child{display:flex;gap:8px;flex-wrap:wrap}.dailyChoiceHero{text-align:center;padding:8px 4px 2px}.dailyChoiceHero .doneIcon{width:56px;height:56px;margin:0 auto 10px;border-radius:18px;background:linear-gradient(135deg,#0f766e,#14b8a6);color:#fff;display:grid;place-items:center;font-size:26px;box-shadow:0 10px 24px rgba(15,118,110,.18)}.dailyChoiceActions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}.dailyChoiceActions button{min-height:72px}.dailyChoiceActions button b{display:block;font-size:15px}.dailyChoiceActions button small{display:block;margin-top:4px;opacity:.8;font-weight:600}@media(max-width:640px){.todayCompleteBanner{align-items:stretch;flex-direction:column}.todayCompleteBanner>div:last-child button{flex:1}.dailyChoiceActions{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
 <div id="authGate" class="authGate">
@@ -80,7 +83,7 @@ try{const p=localStorage.getItem('daco_jp_auto_login_v1'),s=localStorage.getItem
 </script>
 <div class="app">
   <div class="top">
-    <div class="brand"><div class="logo">A</div><div><h1>ANTHONY 日本語 COACH</h1><small>Anthony의 일본어 학습 코치 · v6.8</small></div></div>
+    <div class="brand"><div class="logo">A</div><div><h1>ANTHONY 日本語 COACH</h1><small>Anthony의 일본어 학습 코치 · v6.9</small></div></div>
     <div class="accountStrip"><span id="cloudStatusBadge" class="cloudBadge off">☁ 로컬</span><button class="iconbtn hidden" id="adminBtn" onclick="DACOCloud.openAdmin()">🛡 관리자</button><button class="iconbtn hidden" id="cloudUserBtn" onclick="DACOCloud.openAccount()">👤 사용자</button><button class="iconbtn" id="installBtn">📲 설치</button><button class="iconbtn" id="settingsBtn">⚙ 설정</button></div>
   </div>
 
@@ -89,7 +92,7 @@ try{const p=localStorage.getItem('daco_jp_auto_login_v1'),s=localStorage.getItem
       <div class="eyebrow" id="todayLabel">오늘의 일본어</div>
       <h2>생각하지 말고,<br>그냥 10분만 시작하세요.</h2>
       <p id="heroText">어제 약했던 표현부터 자동으로 골라서 듣기·말하기·회화까지 한 번에 끝냅니다.</p>
-      <div class="cta"><button id="resumeBtn" class="primary hidden" onclick="resumeLesson()">↩ 이어하기</button><button id="dailyBtn" class="primary" onclick="startLesson('daily')">▶ 오늘 10분 시작</button><button class="secondary" onclick="startLesson('quick')">⚡ 3분 초간단</button></div>
+      <div class="cta"><button id="resumeBtn" class="primary hidden" onclick="resumeLesson()">↩ 이어하기</button><button id="dailyBtn" class="primary" onclick="beginLesson('daily')">▶ 오늘 10분 시작</button><button class="secondary" onclick="beginLesson('quick')">⚡ 3분 초간단</button></div>
     </div>
     <div class="grid">
       <div class="stat"><div class="n" id="streakN">0</div><div class="t">🔥 연속 학습일</div></div>
@@ -100,9 +103,9 @@ try{const p=localStorage.getItem('daco_jp_auto_login_v1'),s=localStorage.getItem
     <div class="panel">
       <h3>오늘의 학습 모드</h3>
       <div class="modes">
-        <button class="mode" data-mode="beginner" onclick="setMode('beginner')"><b>🌱 초급 편안하게</b><span>N5·N4 문법, 기초 단어·동사, 조사·숫자, 쉬운 일상 회화</span></button>
-        <button class="mode" data-mode="business" onclick="setMode('business')"><b>💼 회사 실전</b><span>메일·전화·응대·출장 회화를 가장 많이</span></button>
-        <button class="mode" data-mode="n3" onclick="setMode('n3')"><b>🎯 N3 집중</b><span>N3 문법·단어·동사 중심, 시험 대비 집중</span></button>
+        <button class="mode" data-mode="beginner" data-daily-key="lesson:beginner" onclick="setMode('beginner')"><b>🌱 초급 편안하게</b><span>N5·N4 문법, 기초 단어·동사, 조사·숫자, 쉬운 일상 회화</span></button>
+        <button class="mode" data-mode="business" data-daily-key="lesson:business" onclick="setMode('business')"><b>💼 회사 실전</b><span>메일·전화·응대·출장 회화를 가장 많이</span></button>
+        <button class="mode" data-mode="n3" data-daily-key="lesson:n3" onclick="setMode('n3')"><b>🎯 N3 집중</b><span>N3 문법·단어·동사 중심, 시험 대비 집중</span></button>
       </div>
     </div>
     <div class="panel">
@@ -113,11 +116,11 @@ try{const p=localStorage.getItem('daco_jp_auto_login_v1'),s=localStorage.getItem
     <div class="panel">
       <h3>N5 ~ N1 대비 어휘</h3>
       <div class="studyTools jlptHomeTools">
-        <button class="toolCard" onclick="openJlptHub('N5')"><div class="toolIcon">🌱</div><b>N5 대비 어휘</b><span>기초 생활 단어를 표기·읽기·뜻으로 익힙니다.</span></button>
-        <button class="toolCard" onclick="openJlptHub('N4')"><div class="toolIcon">📗</div><b>N4 대비 어휘</b><span>기초를 넘어 자주 쓰는 어휘를 확장합니다.</span></button>
-        <button class="toolCard" onclick="openJlptHub('N3')"><div class="toolIcon">🎯</div><b>N3 대비 어휘</b><span>자체 선별한 중급 어휘를 단계별로 익힙니다.</span></button>
-        <button class="toolCard" onclick="openJlptHub('N2')"><div class="toolIcon">📘</div><b>N2 대비 어휘</b><span>자체 선별한 중상급 어휘를 집중 학습합니다.</span></button>
-        <button class="toolCard" onclick="openJlptHub('N1')"><div class="toolIcon">🏅</div><b>N1 대비 어휘</b><span>자체 선별한 고급·추상 어휘를 학습합니다.</span></button>
+        <button class="toolCard" data-daily-key="jlpt:N5" onclick="openJlptHub('N5')"><div class="toolIcon">🌱</div><b>N5 대비 어휘</b><span>기초 생활 단어를 표기·읽기·뜻으로 익힙니다.</span></button>
+        <button class="toolCard" data-daily-key="jlpt:N4" onclick="openJlptHub('N4')"><div class="toolIcon">📗</div><b>N4 대비 어휘</b><span>기초를 넘어 자주 쓰는 어휘를 확장합니다.</span></button>
+        <button class="toolCard" data-daily-key="jlpt:N3" onclick="openJlptHub('N3')"><div class="toolIcon">🎯</div><b>N3 대비 어휘</b><span>자체 선별한 중급 어휘를 단계별로 익힙니다.</span></button>
+        <button class="toolCard" data-daily-key="jlpt:N2" onclick="openJlptHub('N2')"><div class="toolIcon">📘</div><b>N2 대비 어휘</b><span>자체 선별한 중상급 어휘를 집중 학습합니다.</span></button>
+        <button class="toolCard" data-daily-key="jlpt:N1" onclick="openJlptHub('N1')"><div class="toolIcon">🏅</div><b>N1 대비 어휘</b><span>자체 선별한 고급·추상 어휘를 학습합니다.</span></button>
       </div>
       <button id="jlptResumeBtn" class="iconbtn hidden" style="margin-top:10px" onclick="resumeJlptPractice()">↩ N단계 어휘 훈련 이어하기</button>
     </div>
@@ -125,20 +128,20 @@ try{const p=localStorage.getItem('daco_jp_auto_login_v1'),s=localStorage.getItem
       <h3>문법 · 동사 활용 연습</h3>
       <div class="studyTools">
         <button class="toolCard" onclick="openGrammarDictionary('verbs')"><div class="toolIcon">📘</div><b>문법·활용 사전</b><span>동사 316개의 て형·た형·ない형·가능형·의지형과 N3 문법 99개를 검색합니다.</span></button>
-        <button class="toolCard" onclick="startVerbDrill()"><div class="toolIcon">🔄</div><b>동사 변형 맞추기</b><span>기본형을 보고 ます·て·た·ない·가능·의지·ば·수동·사역형을 맞춥니다.</span><div class="practiceStats"><div class="practiceStat"><b id="verbDrillAcc">-</b><span>첫 시도 정확도</span></div><div class="practiceStat"><b id="verbDrillSessions">0</b><span>완료 세션</span></div></div></button>
-        <button class="toolCard" onclick="startEndingDrill()"><div class="toolIcon">🧩</div><b>자주 쓰는 문장 맞추기</b><span>〜と思います·〜たいです·〜てもいいですか·〜なければなりません 같은 문장을 완성합니다.</span><div class="practiceStats"><div class="practiceStat"><b id="endingDrillAcc">-</b><span>첫 시도 정확도</span></div><div class="practiceStat"><b id="endingDrillSessions">0</b><span>완료 세션</span></div></div></button>
+        <button class="toolCard" data-daily-key="practice:verb" onclick="enterPractice('verb')"><div class="toolIcon">🔄</div><b>동사 변형 맞추기</b><span>기본형을 보고 ます·て·た·ない·가능·의지·ば·수동·사역형을 맞춥니다.</span><div class="practiceStats"><div class="practiceStat"><b id="verbDrillAcc">-</b><span>첫 시도 정확도</span></div><div class="practiceStat"><b id="verbDrillSessions">0</b><span>완료 세션</span></div></div></button>
+        <button class="toolCard" data-daily-key="practice:ending" onclick="enterPractice('ending')"><div class="toolIcon">🧩</div><b>자주 쓰는 문장 맞추기</b><span>〜と思います·〜たいです·〜てもいいですか·〜なければなりません 같은 문장을 완성합니다.</span><div class="practiceStats"><div class="practiceStat"><b id="endingDrillAcc">-</b><span>첫 시도 정확도</span></div><div class="practiceStat"><b id="endingDrillSessions">0</b><span>완료 세션</span></div></div></button>
       </div>
       <button id="practiceResumeBtn" class="iconbtn hidden" style="margin-top:10px" onclick="resumePractice()">↩ 활용 훈련 이어하기</button>
     </div>
     <div class="panel">
       <h3>실생활 일본어</h3>
       <div class="studyTools">
-        <button class="toolCard" onclick="openLifeHub('vocab')"><div class="toolIcon">🧺</div><b>생활용어</b><span>급수와 관계없이 편의점·식당·교통·집·스마트폰·회사에서 자주 쓰는 단어를 계속 확장합니다.</span></button>
-        <button class="toolCard" onclick="openLifeHub('particle')"><div class="toolIcon">🔗</div><b>조사 표현</b><span>は·が·を·に·で·と·から·まで 등을 실제 문장 빈칸으로 구분합니다.</span></button><button class="toolCard" onclick="openLifeHub('connector')"><div class="toolIcon">↔️</div><b>접속사 퀴즈</b><span>そして·それで·だから·しかし·ところで·つまり 등 문장 연결 표현을 집중 연습합니다.</span></button>
-        <button class="toolCard" onclick="openLifeHub('location')"><div class="toolIcon">📍</div><b>위치 표현</b><span>中·上·下·前·後ろ·隣·間·向かい 등을 그림을 보고 맞힙니다.</span></button>
-        <button class="toolCard" onclick="openLifeHub('number')"><div class="toolIcon">🗓</div><b>날짜·숫자</b><span>월·일·요일·돈·시간·개수·사람·장·권·대·층·횟수를 생활식으로 익힙니다.</span></button>
-        <button class="toolCard" onclick="openLifeHub('situation')"><div class="toolIcon">🎬</div><b>상황별 연계연습</b><span>편의점·식당·전철·택시·호텔·공항·회사처럼 한 상황에서 이어지는 단어와 문장을 묶어 연습합니다.</span></button>
-        <button class="toolCard" onclick="startLifeQuiz('situation')"><div class="toolIcon">⚡</div><b>실생활 랜덤 10문제</b><span>생활용어와 상황 문장을 섞어서 빠르게 꺼내는 훈련입니다.</span><div class="lifeHubStats"><span>누적 <b id="lifeSessionsN">0</b>세트</span></div></button>
+        <button class="toolCard" data-daily-key="life:vocab" onclick="openLifeHub('vocab')"><div class="toolIcon">🧺</div><b>생활용어</b><span>급수와 관계없이 편의점·식당·교통·집·스마트폰·회사에서 자주 쓰는 단어를 계속 확장합니다.</span></button>
+        <button class="toolCard" data-daily-key="life:particle" onclick="openLifeHub('particle')"><div class="toolIcon">🔗</div><b>조사 표현</b><span>は·が·を·に·で·と·から·まで 등을 실제 문장 빈칸으로 구분합니다.</span></button><button class="toolCard" data-daily-key="life:connector" onclick="openLifeHub('connector')"><div class="toolIcon">↔️</div><b>접속사 퀴즈</b><span>そして·それで·だから·しかし·ところで·つまり 등 문장 연결 표현을 집중 연습합니다.</span></button>
+        <button class="toolCard" data-daily-key="life:location" onclick="openLifeHub('location')"><div class="toolIcon">📍</div><b>위치 표현</b><span>中·上·下·前·後ろ·隣·間·向かい 등을 그림을 보고 맞힙니다.</span></button>
+        <button class="toolCard" data-daily-key="life:number" onclick="openLifeHub('number')"><div class="toolIcon">🗓</div><b>날짜·숫자</b><span>월·일·요일·돈·시간·개수·사람·장·권·대·층·횟수를 생활식으로 익힙니다.</span></button>
+        <button class="toolCard" data-daily-key="life:situation" onclick="openLifeHub('situation')"><div class="toolIcon">🎬</div><b>상황별 연계연습</b><span>편의점·식당·전철·택시·호텔·공항·회사처럼 한 상황에서 이어지는 단어와 문장을 묶어 연습합니다.</span></button>
+        <button class="toolCard" data-daily-key="life:situation" onclick="enterLifeQuick('situation')"><div class="toolIcon">⚡</div><b>실생활 랜덤 10문제</b><span>생활용어와 상황 문장을 섞어서 빠르게 꺼내는 훈련입니다.</span><div class="lifeHubStats"><span>누적 <b id="lifeSessionsN">0</b>세트</span></div></button>
       </div>
       <button id="lifeResumeBtn" class="iconbtn hidden" style="margin-top:10px" onclick="resumeLifePractice()">↩ 실생활 훈련 이어하기</button>
     </div>
@@ -175,8 +178,8 @@ try{const p=localStorage.getItem('daco_jp_auto_login_v1'),s=localStorage.getItem
 
 
   <section id="jlptView" class="view">
-    <div class="dictHeader"><button class="iconbtn" onclick="goHome()">← 홈</button><div><h2 style="margin:0">🎯 N5 ~ N1 대비 어휘</h2><small style="color:#64748b">ANTHONY 자체 난이도 분류 어휘를 검색하고 퀴즈로 반복합니다.</small></div><span class="entryTag">v6.8</span></div>
-    <div class="panel" style="margin-top:0"><div class="jlptTabs"><button data-jlptlevel="N5" onclick="setJlptLevel('N5')">N5</button><button data-jlptlevel="N4" onclick="setJlptLevel('N4')">N4</button><button data-jlptlevel="N3" onclick="setJlptLevel('N3')">N3</button><button data-jlptlevel="N2" onclick="setJlptLevel('N2')">N2</button><button data-jlptlevel="N1" onclick="setJlptLevel('N1')">N1</button></div><div id="jlptContent"></div></div>
+    <div class="dictHeader"><button class="iconbtn" onclick="goHome()">← 홈</button><div><h2 style="margin:0">🎯 N5 ~ N1 대비 어휘</h2><small style="color:#64748b">ANTHONY 자체 난이도 분류 어휘를 검색하고 퀴즈로 반복합니다.</small></div><span class="entryTag">v6.9</span></div>
+    <div class="panel" style="margin-top:0"><div class="jlptTabs"><button data-jlptlevel="N5" data-daily-key="jlpt:N5" onclick="setJlptLevel('N5')">N5</button><button data-jlptlevel="N4" data-daily-key="jlpt:N4" onclick="setJlptLevel('N4')">N4</button><button data-jlptlevel="N3" data-daily-key="jlpt:N3" onclick="setJlptLevel('N3')">N3</button><button data-jlptlevel="N2" data-daily-key="jlpt:N2" onclick="setJlptLevel('N2')">N2</button><button data-jlptlevel="N1" data-daily-key="jlpt:N1" onclick="setJlptLevel('N1')">N1</button></div><div id="jlptContent"></div></div>
   </section>
   <section id="jlptQuizView" class="view">
     <div class="lessonTop"><button class="iconbtn" onclick="exitJlptQuiz()">← 종료</button><div class="progress"><div id="jlptProgress"></div></div><b id="jlptCount">0/10</b></div>
@@ -184,8 +187,8 @@ try{const p=localStorage.getItem('daco_jp_auto_login_v1'),s=localStorage.getItem
     <div id="jlptNotice" class="reviewNotice"></div><div class="lessonCard" id="jlptQuizCard"></div>
   </section>
   <section id="lifeView" class="view">
-    <div class="dictHeader"><button class="iconbtn" onclick="goHome()">← 홈</button><div><h2 style="margin:0">🌿 실생활 일본어</h2><small style="color:#64748b">시험 범위를 넘어 실제로 자주 쓰는 표현을 상황과 함께 익힙니다.</small></div><span class="entryTag">v6.8</span></div>
-    <div class="panel" style="margin-top:0"><div class="lifeTabs"><button data-lifetab="vocab" onclick="setLifeTab('vocab')">🧺 생활용어</button><button data-lifetab="particle" onclick="setLifeTab('particle')">🔗 조사</button><button data-lifetab="connector" onclick="setLifeTab('connector')">↔️ 접속사</button><button data-lifetab="location" onclick="setLifeTab('location')">📍 위치</button><button data-lifetab="number" onclick="setLifeTab('number')">🗓 날짜·숫자</button><button data-lifetab="situation" onclick="setLifeTab('situation')">🎬 상황연계</button></div><div id="lifeContent"></div></div>
+    <div class="dictHeader"><button class="iconbtn" onclick="goHome()">← 홈</button><div><h2 style="margin:0">🌿 실생활 일본어</h2><small style="color:#64748b">시험 범위를 넘어 실제로 자주 쓰는 표현을 상황과 함께 익힙니다.</small></div><span class="entryTag">v6.9</span></div>
+    <div class="panel" style="margin-top:0"><div class="lifeTabs"><button data-lifetab="vocab" data-daily-key="life:vocab" onclick="setLifeTab('vocab')">🧺 생활용어</button><button data-lifetab="particle" data-daily-key="life:particle" onclick="setLifeTab('particle')">🔗 조사</button><button data-lifetab="connector" data-daily-key="life:connector" onclick="setLifeTab('connector')">↔️ 접속사</button><button data-lifetab="location" data-daily-key="life:location" onclick="setLifeTab('location')">📍 위치</button><button data-lifetab="number" data-daily-key="life:number" onclick="setLifeTab('number')">🗓 날짜·숫자</button><button data-lifetab="situation" data-daily-key="life:situation" onclick="setLifeTab('situation')">🎬 상황연계</button></div><div id="lifeContent"></div></div>
   </section>
   <section id="lifeQuizView" class="view">
     <div class="lessonTop"><button class="iconbtn" onclick="exitLifeQuiz()">← 종료</button><div class="progress"><div id="lifeProgress"></div></div><b id="lifeCount">0/10</b></div>
@@ -218,6 +221,7 @@ try{const p=localStorage.getItem('daco_jp_auto_login_v1'),s=localStorage.getItem
 <div class="modal" id="rankingModal"><div class="modalbox" style="max-width:720px"><div class="modalHead"><div><h3>🏆 학습 랭킹</h3><small>점수는 수업·정답·숙달·생활훈련·출석을 합산합니다.</small></div><button class="iconbtn" onclick="DACOCloud.closeModal('rankingModal')">✕</button></div><div id="rankingContent" style="margin-top:14px"></div></div></div>
 <div class="modal" id="attendanceModal"><div class="modalbox"><div class="modalHead"><div><h3>✅ 출석체크</h3><small>매일 한 번 출석하고 학습 습관을 만드세요.</small></div><button class="iconbtn" onclick="DACOCloud.closeModal('attendanceModal')">✕</button></div><div id="attendanceContent"></div></div></div>
 <div class="modal" id="myPageModal"><div class="modalbox" style="max-width:760px"><div class="modalHead"><div><h3>👤 마이페이지</h3><small>나의 누적 학습량과 성장 기록</small></div><button class="iconbtn" onclick="DACOCloud.closeModal('myPageModal')">✕</button></div><div id="myPageContent"></div></div></div>
+<div class="modal" id="dailyChoiceModal"><div class="modalbox" style="max-width:520px"><div class="modalHead"><div><h3 id="dailyChoiceTitle">오늘 학습 완료</h3><small>오늘 이미 학습한 영역입니다.</small></div><button class="iconbtn" onclick="closeDailyChoice()">✕</button></div><div class="dailyChoiceHero"><div class="doneIcon">✓</div><p id="dailyChoiceText" style="color:#64748b;line-height:1.6;margin:6px 0 0"></p></div><div class="dailyChoiceActions"><button class="bigbtn light" onclick="runDailyChoice('review')"><b>↻ 복습하기</b><small>오늘 배운 내용·약한 항목을 다시 확인</small></button><button class="bigbtn blue" onclick="runDailyChoice('extra')"><b>＋ 추가학습</b><small>아직 덜 본 문제를 더 학습</small></button></div></div></div>
 <div class="toast" id="toast"></div>
 <script>
 window.DACO_CLOUD_CONFIG = {
@@ -225,8 +229,8 @@ window.DACO_CLOUD_CONFIG = {
   supabaseAnonKey: "sb_publishable_BTuvdybnCP8BJI4KYPf9bw_PhNHKOnR"
 };
 </script>
-<script src="./cloud-config.js?v=6.6.2"></script>
-<script src="./study-data-v65.js?v=6.6.2"></script>
-<script src="./app.js?v=6.6.2"></script>
-<script src="./cloud-auth.js?v=6.6.2"></script>
+<script src="./cloud-config.js?v=6.9"></script>
+<script src="./study-data-v65.js?v=6.9"></script>
+<script src="./app.js?v=6.9"></script>
+<script src="./cloud-auth.js?v=6.9"></script>
 </body></html>
