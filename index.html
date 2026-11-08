@@ -44,6 +44,11 @@ html{background:#eef1f5}body{background:radial-gradient(circle at 15% -10%,rgba(
 
 
 .reviewScheduleBox{margin:12px 0;padding:13px 14px;border:1px solid rgba(79,70,229,.16);background:linear-gradient(135deg,#f8faff,#f3f1ff);border-radius:16px;text-align:left}.reviewScheduleBox>b{display:block;font-size:14px;color:#312e81;margin-bottom:3px}.reviewScheduleBox>span{display:block;font-size:12px;color:#64748b;margin-bottom:9px}.reviewScheduleBox>div{display:flex;gap:7px;flex-wrap:wrap}.miniReview{border:1px solid #c7d2fe;background:#fff;color:#3730a3;border-radius:10px;padding:8px 11px;font-weight:800;cursor:pointer}.miniReview:active{transform:translateY(1px)}.reviewPresetSeg button.on{background:#312e81!important;color:#fff!important;border-color:#312e81!important}
+
+/* v6.5 JLPT · 접속사 · 음성 선택 */
+.jlptTabs{display:grid;grid-template-columns:repeat(5,1fr);gap:7px;margin-bottom:14px}.jlptTabs button{border:1px solid var(--line);background:#f8fafc;border-radius:12px;padding:10px;font-weight:850;color:#64748b}.jlptTabs button.on{background:#111d3a;color:#fff;border-color:#111d3a}.jlptSummary{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}.jlptSummary span{background:#f2f4f8;border:1px solid #e5e7eb;border-radius:999px;padding:7px 10px;font-size:12px;color:#475569}.jlptWordList{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}.jlptWordCard{position:relative;border:1px solid #e3e7ee;background:#fff;border-radius:16px;padding:13px 46px 13px 14px;min-height:104px}.jlptWordCard b{font-family:"Noto Sans JP",sans-serif;font-size:20px;display:block}.jlptWordCard small{font-family:"Noto Sans JP",sans-serif;color:#6366f1;display:block;margin:3px 0}.jlptWordCard span{display:block;font-size:13px;color:#475569}.jlptWordCard p{font-family:"Noto Sans JP",sans-serif;margin:8px 0 0;font-size:12px;color:#667085;line-height:1.5}.jlptSpeak{position:absolute;right:10px;top:10px;border:0;background:#eef2ff;color:#4338ca;width:34px;height:34px;border-radius:11px}.connectorGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.connectorCard{border:1px solid #e2e7ef;background:#fff;border-radius:17px;padding:15px}.connectorTop{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}.connectorTop b{font-family:"Noto Sans JP",sans-serif;font-size:23px;color:#111827}.connectorTop span{font-size:12px;color:#4338ca;background:#eef0ff;padding:5px 8px;border-radius:999px}.connectorCard p{font-size:12px;color:#667085;line-height:1.55}.connectorExample{width:100%;border:0;text-align:left;background:#f7f8fb;border-radius:13px;padding:11px}.connectorExample b{display:block;font-family:"Noto Sans JP",sans-serif;line-height:1.55}.connectorExample small{display:block;color:#64748b;margin-top:4px}.connectorExample em{display:block;color:#0f766e;font-style:normal;font-size:11px;margin-top:6px}.voiceSetting{display:flex;align-items:center;gap:7px}.voiceSetting select{max-width:280px;border:1px solid var(--line);border-radius:11px;padding:9px;background:#fff;color:#334155}.jlptHomeTools{grid-template-columns:repeat(5,1fr)}
+@media(max-width:760px){.jlptWordList,.connectorGrid{grid-template-columns:1fr}.jlptHomeTools{grid-template-columns:1fr 1fr}.jlptTabs{grid-template-columns:repeat(5,1fr)}.voiceSetting{align-items:stretch;flex-direction:column}.voiceSetting select{max-width:100%}}
+
 </style>
 </head>
 <body>
@@ -67,7 +72,7 @@ try{const p=localStorage.getItem('daco_jp_auto_login_v1'),s=localStorage.getItem
 </script>
 <div class="app">
   <div class="top">
-    <div class="brand"><div class="logo">A</div><div><h1>ANTHONY 日本語 COACH</h1><small>Anthony의 일본어 학습 코치 · v6.4</small></div></div>
+    <div class="brand"><div class="logo">A</div><div><h1>ANTHONY 日本語 COACH</h1><small>Anthony의 일본어 학습 코치 · v6.5</small></div></div>
     <div class="accountStrip"><span id="cloudStatusBadge" class="cloudBadge off">☁ 로컬</span><button class="iconbtn hidden" id="adminBtn" onclick="DACOCloud.openAdmin()">🛡 관리자</button><button class="iconbtn hidden" id="cloudUserBtn" onclick="DACOCloud.openAccount()">👤 사용자</button><button class="iconbtn" id="installBtn">📲 설치</button><button class="iconbtn" id="settingsBtn">⚙ 설정</button></div>
   </div>
 
@@ -98,6 +103,17 @@ try{const p=localStorage.getItem('daco_jp_auto_login_v1'),s=localStorage.getItem
     </div>
 
     <div class="panel">
+      <h3>JLPT 단어 N5 ~ N1</h3>
+      <div class="studyTools jlptHomeTools">
+        <button class="toolCard" onclick="openJlptHub('N5')"><div class="toolIcon">🌱</div><b>N5 단어</b><span>기초 생활 단어를 표기·읽기·뜻으로 익힙니다.</span></button>
+        <button class="toolCard" onclick="openJlptHub('N4')"><div class="toolIcon">📗</div><b>N4 단어</b><span>기초를 넘어 자주 쓰는 어휘를 확장합니다.</span></button>
+        <button class="toolCard" onclick="openJlptHub('N3')"><div class="toolIcon">🎯</div><b>N3 단어</b><span>현재 N3 학습 데이터를 업로드 목록으로 보강했습니다.</span></button>
+        <button class="toolCard" onclick="openJlptHub('N2')"><div class="toolIcon">📘</div><b>N2 단어</b><span>중상급 어휘를 별도 탭에서 집중 학습합니다.</span></button>
+        <button class="toolCard" onclick="openJlptHub('N1')"><div class="toolIcon">🏅</div><b>N1 단어</b><span>고급 표현과 추상 어휘를 별도 탭에서 학습합니다.</span></button>
+      </div>
+      <button id="jlptResumeBtn" class="iconbtn hidden" style="margin-top:10px" onclick="resumeJlptPractice()">↩ JLPT 단어 훈련 이어하기</button>
+    </div>
+    <div class="panel">
       <h3>문법 · 동사 활용 연습</h3>
       <div class="studyTools">
         <button class="toolCard" onclick="openGrammarDictionary('verbs')"><div class="toolIcon">📘</div><b>문법·활용 사전</b><span>동사 316개의 て형·た형·ない형·가능형·의지형과 N3 문법 99개를 검색합니다.</span></button>
@@ -110,7 +126,7 @@ try{const p=localStorage.getItem('daco_jp_auto_login_v1'),s=localStorage.getItem
       <h3>실생활 일본어</h3>
       <div class="studyTools">
         <button class="toolCard" onclick="openLifeHub('vocab')"><div class="toolIcon">🧺</div><b>생활용어</b><span>급수와 관계없이 편의점·식당·교통·집·스마트폰·회사에서 자주 쓰는 단어를 계속 확장합니다.</span></button>
-        <button class="toolCard" onclick="openLifeHub('particle')"><div class="toolIcon">🔗</div><b>조사 표현</b><span>は·が·を·に·で·と·から·まで 등을 실제 문장 빈칸으로 구분합니다.</span></button>
+        <button class="toolCard" onclick="openLifeHub('particle')"><div class="toolIcon">🔗</div><b>조사 표현</b><span>は·が·を·に·で·と·から·まで 등을 실제 문장 빈칸으로 구분합니다.</span></button><button class="toolCard" onclick="openLifeHub('connector')"><div class="toolIcon">↔️</div><b>접속사 퀴즈</b><span>そして·それで·だから·しかし·ところで·つまり 등 문장 연결 표현을 집중 연습합니다.</span></button>
         <button class="toolCard" onclick="openLifeHub('location')"><div class="toolIcon">📍</div><b>위치 표현</b><span>中·上·下·前·後ろ·隣·間·向かい 등을 그림을 보고 맞힙니다.</span></button>
         <button class="toolCard" onclick="openLifeHub('number')"><div class="toolIcon">🗓</div><b>날짜·숫자</b><span>월·일·요일·돈·시간·개수·사람·장·권·대·층·횟수를 생활식으로 익힙니다.</span></button>
         <button class="toolCard" onclick="openLifeHub('situation')"><div class="toolIcon">🎬</div><b>상황별 연계연습</b><span>편의점·식당·전철·택시·호텔·공항·회사처럼 한 상황에서 이어지는 단어와 문장을 묶어 연습합니다.</span></button>
@@ -148,9 +164,19 @@ try{const p=localStorage.getItem('daco_jp_auto_login_v1'),s=localStorage.getItem
     <div class="lessonCard" id="practiceCard"></div>
   </section>
 
+
+  <section id="jlptView" class="view">
+    <div class="dictHeader"><button class="iconbtn" onclick="goHome()">← 홈</button><div><h2 style="margin:0">🎯 JLPT 단어 N5 ~ N1</h2><small style="color:#64748b">업로드 단어 모음을 기준으로 급수별 단어를 검색하고 퀴즈로 반복합니다.</small></div><span class="entryTag">v6.5</span></div>
+    <div class="panel" style="margin-top:0"><div class="jlptTabs"><button data-jlptlevel="N5" onclick="setJlptLevel('N5')">N5</button><button data-jlptlevel="N4" onclick="setJlptLevel('N4')">N4</button><button data-jlptlevel="N3" onclick="setJlptLevel('N3')">N3</button><button data-jlptlevel="N2" onclick="setJlptLevel('N2')">N2</button><button data-jlptlevel="N1" onclick="setJlptLevel('N1')">N1</button></div><div id="jlptContent"></div></div>
+  </section>
+  <section id="jlptQuizView" class="view">
+    <div class="lessonTop"><button class="iconbtn" onclick="exitJlptQuiz()">← 종료</button><div class="progress"><div id="jlptProgress"></div></div><b id="jlptCount">0/10</b></div>
+    <div class="lessonNav"><button id="jlptPrev" class="navbtn" onclick="jlptPrevious()">← 이전</button><button class="navbtn repeat" onclick="jlptRepeatCurrent()">🔁 뒤에서 다시</button><button class="navbtn" onclick="jlptNextNav()">다음 →</button></div>
+    <div id="jlptNotice" class="reviewNotice"></div><div class="lessonCard" id="jlptQuizCard"></div>
+  </section>
   <section id="lifeView" class="view">
-    <div class="dictHeader"><button class="iconbtn" onclick="goHome()">← 홈</button><div><h2 style="margin:0">🌿 실생활 일본어</h2><small style="color:#64748b">시험 범위를 넘어 실제로 자주 쓰는 표현을 상황과 함께 익힙니다.</small></div><span class="entryTag">v6.4</span></div>
-    <div class="panel" style="margin-top:0"><div class="lifeTabs"><button data-lifetab="vocab" onclick="setLifeTab('vocab')">🧺 생활용어</button><button data-lifetab="particle" onclick="setLifeTab('particle')">🔗 조사</button><button data-lifetab="location" onclick="setLifeTab('location')">📍 위치</button><button data-lifetab="number" onclick="setLifeTab('number')">🗓 날짜·숫자</button><button data-lifetab="situation" onclick="setLifeTab('situation')">🎬 상황연계</button></div><div id="lifeContent"></div></div>
+    <div class="dictHeader"><button class="iconbtn" onclick="goHome()">← 홈</button><div><h2 style="margin:0">🌿 실생활 일본어</h2><small style="color:#64748b">시험 범위를 넘어 실제로 자주 쓰는 표현을 상황과 함께 익힙니다.</small></div><span class="entryTag">v6.5</span></div>
+    <div class="panel" style="margin-top:0"><div class="lifeTabs"><button data-lifetab="vocab" onclick="setLifeTab('vocab')">🧺 생활용어</button><button data-lifetab="particle" onclick="setLifeTab('particle')">🔗 조사</button><button data-lifetab="connector" onclick="setLifeTab('connector')">↔️ 접속사</button><button data-lifetab="location" onclick="setLifeTab('location')">📍 위치</button><button data-lifetab="number" onclick="setLifeTab('number')">🗓 날짜·숫자</button><button data-lifetab="situation" onclick="setLifeTab('situation')">🎬 상황연계</button></div><div id="lifeContent"></div></div>
   </section>
   <section id="lifeQuizView" class="view">
     <div class="lessonTop"><button class="iconbtn" onclick="exitLifeQuiz()">← 종료</button><div class="progress"><div id="lifeProgress"></div></div><b id="lifeCount">0/10</b></div>
@@ -165,6 +191,8 @@ try{const p=localStorage.getItem('daco_jp_auto_login_v1'),s=localStorage.getItem
 
 <div class="modal" id="settingsModal"><div class="modalbox"><div style="display:flex;justify-content:space-between;align-items:center"><h3 style="margin:0">설정 · 내 학습 기록</h3><button class="iconbtn" onclick="closeSettings()">✕</button></div>
   <div class="settingrow"><div><label>일본어 음성 속도</label><small>초급자는 0.8배 추천</small></div><div class="seg" id="rateSeg"><button data-rate="0.7">0.7</button><button data-rate="0.8">0.8</button><button data-rate="0.95">보통</button></div></div>
+
+  <div class="settingrow"><div><label>일본어 성우</label><small>이 기기에서 실제 사용 가능한 일본어 음성 중 자연스러운 음성을 최대 3개 표시합니다.</small></div><div class="voiceSetting"><select id="voiceSelect" onchange="setVoiceName(this.value)"><option value="auto">자동</option></select><button class="iconbtn" onclick="speak('確認でき次第、ご連絡いたします。')">샘플</button></div></div>
   <div class="settingrow"><div><label>정답 후 자동 음성</label><small>정답을 확인하면 일본어를 바로 읽습니다.</small></div><div class="seg" id="autoSeg"><button data-auto="1">켜기</button><button data-auto="0">끄기</button></div></div>
 
   <div class="settingrow"><div><label>복습 주기 기본값</label><small>처음 맞힌 항목의 첫 복습 시점입니다. 여러 번 맞히면 자동으로 간격이 늘어납니다.</small></div><div><div class="seg reviewPresetSeg"><button data-reviewpreset="immediate" onclick="setReviewPreset('immediate')">즉시</button><button data-reviewpreset="3" onclick="setReviewPreset('3')">3일</button><button data-reviewpreset="7" onclick="setReviewPreset('7')">7일</button><button data-reviewpreset="custom" onclick="setReviewPreset('custom')">직접</button></div><div style="display:flex;gap:8px;align-items:center;margin-top:8px;justify-content:flex-end"><input id="reviewCustomDays" type="number" min="0.01" step="1" value="1" style="width:88px;padding:9px;border:1px solid #d8dee9;border-radius:10px" onchange="setCustomReviewDays(this.value)"><span style="font-size:13px;color:#64748b">일 후</span><button id="reviewGrowBtn" class="iconbtn" onclick="setReviewAutoGrow(!ensureReviewPrefs().autoGrow)">자동 증가 ON</button></div></div></div>
@@ -188,7 +216,8 @@ window.DACO_CLOUD_CONFIG = {
   supabaseAnonKey: "sb_publishable_BTuvdybnCP8BJI4KYPf9bw_PhNHKOnR"
 };
 </script>
-<script src="./cloud-config.js?v=6.4"></script>
-<script src="./app.js?v=6.4"></script>
-<script src="./cloud-auth.js?v=6.4"></script>
+<script src="./cloud-config.js?v=6.5"></script>
+<script src="./study-data-v65.js?v=6.5"></script>
+<script src="./app.js?v=6.5"></script>
+<script src="./cloud-auth.js?v=6.5"></script>
 </body></html>
