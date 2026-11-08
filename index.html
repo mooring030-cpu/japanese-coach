@@ -50,9 +50,9 @@ html{background:#eef1f5}body{background:radial-gradient(circle at 15% -10%,rgba(
 @media(max-width:760px){.jlptWordList,.connectorGrid{grid-template-columns:1fr}.jlptHomeTools{grid-template-columns:1fr 1fr}.jlptTabs{grid-template-columns:repeat(5,1fr)}.voiceSetting{align-items:stretch;flex-direction:column}.voiceSetting select{max-width:100%}}
 
 
-/* v6.6 UX polish */
+/* v6.6.2 UX polish */
 .similarNote{margin:10px 0;padding:12px 13px;border-radius:14px;background:linear-gradient(135deg,#fffaf0,#fff7ed);border:1px solid #fed7aa;text-align:left;color:#7c2d12}.similarNote b{display:block;font-size:12px;margin-bottom:4px}.similarNote span{font-size:12px;line-height:1.55;color:#9a3412}
-.confidenceWrap{width:100%;max-width:720px;margin:16px auto 0}.confidenceHint{text-align:center;font-size:11px;color:#94a3b8;margin-bottom:8px}.confidenceBar{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}.confidenceBtn{border:0;border-radius:20px;padding:15px 10px 13px;box-shadow:0 10px 24px rgba(15,23,42,.09);font-weight:900;transition:.15s}.confidenceBtn:active{transform:translateY(1px) scale(.99)}.confidenceBtn b{display:block;font-size:20px}.confidenceBtn small{display:block;font-size:12px;margin-top:4px;font-weight:700;opacity:.88}.confidenceBtn.again{background:linear-gradient(145deg,#ff6b35,#ff4d19);color:#fff}.confidenceBtn.understand{background:linear-gradient(145deg,#d7e3e8,#aabdc5);color:#fff}.confidenceBtn.perfect{background:linear-gradient(145deg,#21c76b,#0fb95d);color:#fff}
+.confidenceWrap{width:100%;max-width:720px;margin:16px auto 0}.confidenceHint{text-align:center;font-size:11px;color:#94a3b8;margin-bottom:8px}.confidenceBar{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}.confidenceBtn{border:0;border-radius:20px;padding:15px 10px 13px;box-shadow:0 10px 24px rgba(15,23,42,.09);font-weight:900;transition:.15s}.confidenceBtn:active{transform:translateY(1px) scale(.99)}.confidenceBtn b{display:block;font-size:20px}.confidenceBtn small{display:block;font-size:12px;margin-top:4px;font-weight:700;opacity:.88}.confidenceBtn.again{background:linear-gradient(145deg,#ff6b35,#ff4d19);color:#fff}.confidenceBtn.understand{background:linear-gradient(145deg,#d7e3e8,#aabdc5);color:#fff}.confidenceBtn.perfect{background:linear-gradient(145deg,#21c76b,#0fb95d);color:#fff}.confidenceBtn:disabled{opacity:.34;filter:grayscale(.65);cursor:not-allowed;box-shadow:none}.wrongConfidenceWrap .confidenceHint{color:#b45309;font-weight:700}
 .locationCard{background:#fff;border:1px solid var(--line);border-radius:20px;padding:0;overflow:hidden;box-shadow:0 8px 20px rgba(15,23,42,.04)}.locationMainBtn{width:100%;border:0;background:#fff;padding:12px;display:flex;flex-direction:column;align-items:center}.locationCard .similarNote{margin:0 10px 12px}.locationPic svg{width:100%;max-width:220px;height:auto}
 .numberQuizControls{display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:flex-end}.numberFilterDrop{position:relative}.numberFilterDrop summary{list-style:none;border:1px solid #cbd5e1;background:#fff;border-radius:13px;padding:11px 13px;font-weight:800;color:#334155;cursor:pointer}.numberFilterDrop summary::-webkit-details-marker{display:none}.numberFilterPanel{position:absolute;z-index:18;right:0;top:48px;width:min(360px,88vw);background:#fff;border:1px solid #dbe3ef;border-radius:18px;padding:14px;box-shadow:0 18px 50px rgba(15,23,42,.18);display:grid;grid-template-columns:1fr 1fr;gap:8px}.numberFilterPanel label{display:flex;align-items:center;gap:8px;padding:9px 10px;background:#f8fafc;border-radius:10px;font-size:13px}.numberFilterActions{grid-column:1/-1;display:flex;gap:8px}.numberFilterActions button{border:0;background:#eef2ff;color:#3730a3;padding:8px 10px;border-radius:9px;font-weight:800}
 @media(max-width:640px){.app{padding:14px 12px 100px}.hero{border-radius:24px;padding:22px}.hero h2{font-size:26px}.lessonCard{padding:18px 14px;min-height:470px;border-radius:23px}.confidenceWrap{position:sticky;bottom:8px;z-index:8;padding:8px;background:linear-gradient(180deg,rgba(255,255,255,0),rgba(255,255,255,.92) 32%);backdrop-filter:blur(8px)}.confidenceBar{gap:7px}.confidenceBtn{border-radius:17px;padding:13px 6px}.confidenceBtn b{font-size:18px}.confidenceBtn small{font-size:11px}.numberQuizControls{justify-content:stretch}.numberQuizControls>*{flex:1}.numberFilterPanel{left:0;right:auto;grid-template-columns:1fr}.numberFilterActions{grid-column:1}}
@@ -79,7 +79,7 @@ try{const p=localStorage.getItem('daco_jp_auto_login_v1'),s=localStorage.getItem
 </script>
 <div class="app">
   <div class="top">
-    <div class="brand"><div class="logo">A</div><div><h1>ANTHONY 日本語 COACH</h1><small>Anthony의 일본어 학습 코치 · v6.6</small></div></div>
+    <div class="brand"><div class="logo">A</div><div><h1>ANTHONY 日本語 COACH</h1><small>Anthony의 일본어 학습 코치 · v6.6.2</small></div></div>
     <div class="accountStrip"><span id="cloudStatusBadge" class="cloudBadge off">☁ 로컬</span><button class="iconbtn hidden" id="adminBtn" onclick="DACOCloud.openAdmin()">🛡 관리자</button><button class="iconbtn hidden" id="cloudUserBtn" onclick="DACOCloud.openAccount()">👤 사용자</button><button class="iconbtn" id="installBtn">📲 설치</button><button class="iconbtn" id="settingsBtn">⚙ 설정</button></div>
   </div>
 
@@ -173,7 +173,7 @@ try{const p=localStorage.getItem('daco_jp_auto_login_v1'),s=localStorage.getItem
 
 
   <section id="jlptView" class="view">
-    <div class="dictHeader"><button class="iconbtn" onclick="goHome()">← 홈</button><div><h2 style="margin:0">🎯 JLPT 단어 N5 ~ N1</h2><small style="color:#64748b">업로드 단어 모음을 기준으로 급수별 단어를 검색하고 퀴즈로 반복합니다.</small></div><span class="entryTag">v6.6</span></div>
+    <div class="dictHeader"><button class="iconbtn" onclick="goHome()">← 홈</button><div><h2 style="margin:0">🎯 JLPT 단어 N5 ~ N1</h2><small style="color:#64748b">업로드 단어 모음을 기준으로 급수별 단어를 검색하고 퀴즈로 반복합니다.</small></div><span class="entryTag">v6.6.2</span></div>
     <div class="panel" style="margin-top:0"><div class="jlptTabs"><button data-jlptlevel="N5" onclick="setJlptLevel('N5')">N5</button><button data-jlptlevel="N4" onclick="setJlptLevel('N4')">N4</button><button data-jlptlevel="N3" onclick="setJlptLevel('N3')">N3</button><button data-jlptlevel="N2" onclick="setJlptLevel('N2')">N2</button><button data-jlptlevel="N1" onclick="setJlptLevel('N1')">N1</button></div><div id="jlptContent"></div></div>
   </section>
   <section id="jlptQuizView" class="view">
@@ -182,7 +182,7 @@ try{const p=localStorage.getItem('daco_jp_auto_login_v1'),s=localStorage.getItem
     <div id="jlptNotice" class="reviewNotice"></div><div class="lessonCard" id="jlptQuizCard"></div>
   </section>
   <section id="lifeView" class="view">
-    <div class="dictHeader"><button class="iconbtn" onclick="goHome()">← 홈</button><div><h2 style="margin:0">🌿 실생활 일본어</h2><small style="color:#64748b">시험 범위를 넘어 실제로 자주 쓰는 표현을 상황과 함께 익힙니다.</small></div><span class="entryTag">v6.6</span></div>
+    <div class="dictHeader"><button class="iconbtn" onclick="goHome()">← 홈</button><div><h2 style="margin:0">🌿 실생활 일본어</h2><small style="color:#64748b">시험 범위를 넘어 실제로 자주 쓰는 표현을 상황과 함께 익힙니다.</small></div><span class="entryTag">v6.6.2</span></div>
     <div class="panel" style="margin-top:0"><div class="lifeTabs"><button data-lifetab="vocab" onclick="setLifeTab('vocab')">🧺 생활용어</button><button data-lifetab="particle" onclick="setLifeTab('particle')">🔗 조사</button><button data-lifetab="connector" onclick="setLifeTab('connector')">↔️ 접속사</button><button data-lifetab="location" onclick="setLifeTab('location')">📍 위치</button><button data-lifetab="number" onclick="setLifeTab('number')">🗓 날짜·숫자</button><button data-lifetab="situation" onclick="setLifeTab('situation')">🎬 상황연계</button></div><div id="lifeContent"></div></div>
   </section>
   <section id="lifeQuizView" class="view">
@@ -223,8 +223,8 @@ window.DACO_CLOUD_CONFIG = {
   supabaseAnonKey: "sb_publishable_BTuvdybnCP8BJI4KYPf9bw_PhNHKOnR"
 };
 </script>
-<script src="./cloud-config.js?v=6.6"></script>
-<script src="./study-data-v65.js?v=6.6"></script>
-<script src="./app.js?v=6.6"></script>
-<script src="./cloud-auth.js?v=6.6"></script>
+<script src="./cloud-config.js?v=6.6.2"></script>
+<script src="./study-data-v65.js?v=6.6.2"></script>
+<script src="./app.js?v=6.6.2"></script>
+<script src="./cloud-auth.js?v=6.6.2"></script>
 </body></html>
