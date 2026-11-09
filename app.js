@@ -35,7 +35,7 @@ const GRAMMAR_READING_MAP={"〜ていただけると助かります":"〜てい�
 const TTS_READING_OVERRIDES={"私は会社員です。":"わたしは かいしゃいんです。","猫がいます。":"ねこが います。","水を飲みます。":"みずを のみます。","7時に起きます。":"しちじに おきます。","日本へ行きます。":"にほんへ いきます。","図書館で勉強します。":"としょかんで べんきょうします。","友達と映画を見ます。":"ともだちと えいがを みます。","9時から働きます。":"くじから はたらきます。","5時まで働きます。":"ごじまで はたらきます。","会社の車です。":"かいしゃの くるまです。","私も行きます。":"わたしも いきます。","パンや卵を買いました。":"パンや たまごを かいました。","コーヒーかお茶にします。":"コーヒーか おちゃに します。","今日は暑いですね。":"きょうは あついですね。","この店は安いですよ。":"この みせは やすいですよ。","水だけ飲みます。":"みずだけ のみます。","千円しかありません。":"せんえんしか ありません。","10分くらいかかります。":"じゅっぷんくらい かかります。","3時ごろ来てください。":"さんじごろ きてください。","電車はバスより速いです。":"でんしゃは バスより はやいです。","思ったほど高くないです。":"おもったほど たかくないです。","価格について話します。":"かかくについて はなします。","人によって考え方が違います。":"ひとによって かんがえかたが ちがいます。","代表として参加します。":"だいひょうとして さんかします。","私にとって大切です。":"わたしにとって たいせつです。","コーヒーでも飲みませんか。":"コーヒーでも のみませんか。","京都なら秋がおすすめです。":"きょうとなら あきが おすすめです。","田中さんは明日来るって。":"たなかさんは あした くるって。","袋をお願いします。":"ふくろを おねがいします。","これ、温めてください。":"これ、あたためてください。","箸を一つお願いします。":"はしを ひとつ おねがいします。","レシートは大丈夫です。":"レシートは だいじょうぶです。","カードでお願いします。":"カードで おねがいします。","二人です。":"ふたりです。","おすすめは何ですか。":"おすすめは なんですか。","これを一つお願いします。":"これを ひとつ おねがいします。","お水をもう一つお願いします。":"おみずを もうひとつ おねがいします。","お会計をお願いします。":"おかいけいを おねがいします。","店内でお願いします。":"てんないで おねがいします。","持ち帰りでお願いします。":"もちかえりで おねがいします。","氷なしでお願いします。":"こおりなしで おねがいします。","砂糖はいりません。":"さとうは いりません。","空いている席はありますか。":"あいている せきは ありますか。","これはいくらですか。":"これは いくらですか。","もう少し大きいサイズはありますか。":"もうすこし おおきい サイズは ありますか。","試着してもいいですか。":"しちゃくしても いいですか。","他の色はありますか。":"ほかの いろは ありますか。","免税できますか。":"めんぜい できますか。","この電車は東京に行きますか。":"この でんしゃは とうきょうに いきますか。","何番線ですか。":"なんばんせんですか。","どこで乗り換えますか。":"どこで のりかえますか。","終電は何時ですか。":"しゅうでんは なんじですか。","電車が遅れています。":"でんしゃが おくれています。","ここまでお願いします。":"ここまで おねがいします。","この住所までお願いします。":"この じゅうしょまで おねがいします。","次の信号で止めてください。":"つぎの しんごうで とめてください。","カードで払えますか。":"カードで はらえますか。","だいたい何分かかりますか。":"だいたい なんぷん かかりますか。","チェックインをお願いします。":"チェックインを おねがいします。","予約しています。":"よやくしています。","荷物を預けてもいいですか。":"にもつを あずけても いいですか。","朝食は何時からですか。":"ちょうしょくは なんじからですか。","Wi-Fiのパスワードを教えてください。":"ワイファイの パスワードを おしえてください。","搭乗口はどこですか。":"とうじょうぐちは どこですか。","この荷物は預けます。":"この にもつは あずけます。","これは手荷物です。":"これは てにもつです。","パスポートはこちらです。":"パスポートは こちらです。","両替はどこでできますか。":"りょうがえは どこで できますか。","駅はどこですか。":"えきは どこですか。","ここから近いですか。":"ここから ちかいですか。","まっすぐ行ってください。":"まっすぐ いってください。","次の角を右に曲がります。":"つぎの かどを みぎに まがります。","コンビニの向かいです。":"コンビニの むかいです。","資料を確認します。":"しりょうを かくにんします。","日程を調整します。":"にっていを ちょうせいします。","担当者に確認します。":"たんとうしゃに かくにんします。","社内で共有します。":"しゃないで きょうゆうします。","進捗を教えていただけますか。":"しんちょくを おしえて いただけますか。","担当者をお願いします。":"たんとうしゃを おねがいします。","今、席を外しています。":"いま、せきを はずしています。","後ほどかけ直します。":"のちほど かけなおします。","折り返しお願いします。":"おりかえし おねがいします。","伝言をお願いできますか。":"でんごんを おねがいできますか。","すみません、助けてください。":"すみません、たすけてください。","財布をなくしました。":"さいふを なくしました。","スマホが動きません。":"スマホが うごきません。","忘れ物をしました。":"わすれものを しました。","駅員さんはどこですか。":"えきいんさんは どこですか。","確認でき次第、ご連絡いたします。":"かくにんできしだい、ごれんらくいたします。","今日はよろしくお願(ねが)いします。":"きょうは よろしく おねがいします。"};
 const BASE_KEY='daco_jp_coach_v5';
 const LEGACY_KEY='daco_jp_coach_v3';
-const APP_VERSION='6.10.1';
+const APP_VERSION='6.11';
 function storageOwner(){return String(window.DACO_CLOUD_USER_ID||'guest').replace(/[^a-zA-Z0-9_-]/g,'_')}
 function stateKey(){return BASE_KEY+'_'+storageOwner()}
 function backupKey(){return stateKey()+'_auto_backup'}
@@ -950,4 +950,384 @@ initNavigationHistory();
 hydrateFromIDB();
 requestPersistentStorage();
 
-window.ANTHONY_APP_VERSION='6.10.1';
+window.ANTHONY_APP_VERSION='6.11';
+
+
+/* ==========================================================================
+   v6.11 · learner-controlled quiz size/direction + absolute beginner + scripts
+   ========================================================================== */
+const V611_COUNT_OPTIONS=[5,10,15,20,30];
+const V611_DIR_LABELS={
+  'mixed':'자동 섞기',
+  'jp-ko':'한자·일본어 → 한국어',
+  'reading-jp':'읽기 → 한자·일본어',
+  'ko-jp':'한국어 → 한자·일본어',
+  'jp-reading':'한자·일본어 → 읽기',
+  'char-romaji':'문자 → 로마자 소리',
+  'romaji-char':'로마자 소리 → 문자',
+  'hira-kata':'히라가나 → 가타카나',
+  'kata-hira':'가타카나 → 히라가나',
+  'base-form':'기본형 → 활용형',
+  'meaning-form':'한국어 뜻 → 활용형',
+  'form-meaning':'활용형 → 한국어 뜻',
+  'sentence-particle':'문장 빈칸 → 조사',
+  'visual-jp':'그림 → 위치 표현',
+  'ko-reading':'한국어·숫자 → 읽기',
+  'reading-ko':'읽기 → 한국어 뜻'
+};
+defaultState.quizPrefs=defaultState.quizPrefs||{counts:{lesson:10,practice:10},directions:{lesson:'mixed',practice:'base-form'}};
+defaultState.starterDrills=defaultState.starterDrills||{};
+defaultState.starterSession=defaultState.starterSession||null;
+function ensureQuizPrefs(){
+  state.quizPrefs=state.quizPrefs||{};
+  state.quizPrefs.counts=state.quizPrefs.counts||{};
+  state.quizPrefs.directions=state.quizPrefs.directions||{};
+  if(!state.quizPrefs.counts.lesson)state.quizPrefs.counts.lesson=10;
+  if(!state.quizPrefs.counts.practice)state.quizPrefs.counts.practice=10;
+  if(!state.quizPrefs.directions.lesson)state.quizPrefs.directions.lesson='mixed';
+  if(!state.quizPrefs.directions.practice)state.quizPrefs.directions.practice='base-form';
+  return state.quizPrefs;
+}
+function quizPrefCount(key,fallback=10){let n=parseInt(ensureQuizPrefs().counts[key]||fallback,10);return V611_COUNT_OPTIONS.includes(n)?n:fallback}
+function quizPrefDirection(key,fallback='ko-jp'){return ensureQuizPrefs().directions[key]||fallback}
+function setQuizPrefCount(key,val,rerender=''){
+  let n=parseInt(val,10);if(!V611_COUNT_OPTIONS.includes(n))n=10;ensureQuizPrefs().counts[key]=n;saveState();
+  if(rerender&&typeof window[rerender]==='function')window[rerender]();
+  syncV611SetupControls();
+}
+function setQuizPrefDirection(key,val,rerender=''){
+  ensureQuizPrefs().directions[key]=String(val||'');saveState();
+  if(rerender&&typeof window[rerender]==='function')window[rerender]();
+  syncV611SetupControls();
+}
+function countOptionsHtml(selected){return V611_COUNT_OPTIONS.map(n=>`<option value="${n}" ${n===selected?'selected':''}>${n}문제</option>`).join('')}
+function directionOptionsHtml(list,selected){return list.map(x=>{let v=Array.isArray(x)?x[0]:x,l=Array.isArray(x)?x[1]:(V611_DIR_LABELS[v]||v);return `<option value="${escapeHtml(v)}" ${v===selected?'selected':''}>${escapeHtml(l)}</option>`}).join('')}
+function quizSetupHtml(key,directions,rerender='',note=''){
+  let count=quizPrefCount(key),dir=quizPrefDirection(key,directions?.[0]?.[0]||directions?.[0]||'ko-jp');
+  return `<div class="studySetupBar"><label class="setupField"><span>이번에 풀 문제 수</span><select onchange="setQuizPrefCount('${key}',this.value,'${rerender}')">${countOptionsHtml(count)}</select></label>${directions?.length?`<label class="setupField"><span>문제 출제 방향</span><select onchange="setQuizPrefDirection('${key}',this.value,'${rerender}')">${directionOptionsHtml(directions,dir)}</select></label>`:''}${note?`<div class="setupHelp">${escapeHtml(note)}</div>`:''}</div>`
+}
+function syncV611SetupControls(){
+  let q=ensureQuizPrefs(),a=document.getElementById('lessonCountSelect'),b=document.getElementById('lessonDirectionSelect'),pc=document.getElementById('practiceCountSelect'),pd=document.getElementById('practiceDirectionSelect');
+  if(a)a.value=String(quizPrefCount('lesson'));if(b)b.value=quizPrefDirection('lesson','mixed');
+  if(pc)pc.value=String(quizPrefCount('practice'));if(pd)pd.value=quizPrefDirection('practice','base-form');
+}
+function hasKanji(s){return /[一-龯々〆ヵヶ]/.test(String(s||''))}
+function usefulReading(jp,reading){let r=String(reading||'').trim();return r&&normalizeJP(r)!==normalizeJP(jp)}
+function stableDirection(seed,dirs){let s=String(seed||''),n=0;for(let i=0;i<s.length;i++)n=(n*31+s.charCodeAt(i))>>>0;return dirs[n%dirs.length]}
+
+/* Main mixed lesson: selectable item count + selectable multiple-choice direction */
+const __v611_buildLesson=buildLesson,__v611_buildLessonReview=buildLessonReview,__v611_updateHome=updateHome,__v611_renderQuiz=renderQuiz;
+function resizeV611LessonItems(items,count,mode=state.mode){
+  let out=[...items];if(out.length>count)return out.slice(0,count);if(out.length===count)return out;
+  let used=new Set(out.map(x=>x.card?.id||x.role?.id).filter(Boolean)),pool=weightedPool(mode).filter(c=>!used.has(c.id));
+  let seq=['recall','quiz','listening','speaking'],i=0;
+  while(out.length<count&&pool.length){let c=pool.shift(),type=seq[i++%seq.length];if(type==='speaking'&&!['business','conversation','word','verb','grammar','keigo','katakana'].includes(c.kind))type='quiz';out.push(decorateItem({type,card:c}));}
+  return out;
+}
+buildLesson=function(type){let base=__v611_buildLesson(type);if(type==='quick')return base;return resizeV611LessonItems(base,quizPrefCount('lesson'),state.mode)}
+buildLessonReview=function(type){let base=__v611_buildLessonReview(type);if(type==='quick')return base;return resizeV611LessonItems(base,quizPrefCount('lesson'),state.mode)}
+function cardReadingV611(c){return cardDisplayReading(c)||cardExplicitReading(c)||c?.reading||wordAudioTarget(c)||''}
+function lessonDirectionFor(c,it){
+  let pref=quizPrefDirection('lesson','mixed'),eligible=['jp-ko','ko-jp'];
+  if(usefulReading(c.jp,cardReadingV611(c)))eligible.push('jp-reading');
+  if(usefulReading(c.jp,cardReadingV611(c))&&hasKanji(c.jp))eligible.push('reading-jp');
+  if(pref==='mixed')return stableDirection(it?.uid||c.id,eligible);
+  if(pref==='reading-jp'&&(!hasKanji(c.jp)||!usefulReading(c.jp,cardReadingV611(c))))return 'jp-ko';
+  if(pref==='jp-reading'&&!usefulReading(c.jp,cardReadingV611(c)))return 'jp-ko';
+  return pref;
+}
+function directionOptionPoolCards(c,dir){
+  let allowed=DB.cards.filter(x=>cardAllowedForMode(x,lesson?.mode||state.mode)&&x.id!==c.id&&x.ko);
+  if(dir==='reading-jp')allowed=allowed.filter(x=>hasKanji(x.jp)&&usefulReading(x.jp,cardReadingV611(x)));
+  let label=x=>dir==='jp-ko'?x.ko:dir==='jp-reading'?cardReadingV611(x):cleanJP(x.jp);
+  let target=label(c),seen=new Set([target]),out=[];
+  for(const x of shuffle(allowed)){let l=label(x);if(!l||seen.has(l))continue;seen.add(l);out.push(x);if(out.length===3)break}
+  return shuffle([c,...out]);
+}
+renderQuiz=function(c){
+  let it=current();markSeen(c);let dir=lessonDirectionFor(c,it),opts=directionOptionPoolCards(c,dir),reading=cardReadingV611(c);
+  let prompt=dir==='jp-ko'?cleanJP(c.jp):dir==='ko-jp'?c.ko:dir==='jp-reading'?cleanJP(c.jp):reading;
+  let promptCls=dir==='ko-jp'?'ko':'jp',opt=x=>dir==='jp-ko'?x.ko:dir==='jp-reading'?cardReadingV611(x):cleanJP(x.jp);
+  let hint=dir==='jp-ko'?'일본어를 보고 맞는 한국어 뜻을 고르세요.':dir==='ko-jp'?'한국어 뜻에 맞는 일본어를 고르세요.':dir==='jp-reading'?'일본어 표기에 맞는 읽기를 고르세요.':'읽기를 보고 맞는 한자·일본어 표기를 고르세요.';
+  document.getElementById('lessonCard').innerHTML=`<span class="badge">2 · 빠른 선택${reviewTag(it)} · ${escapeHtml(label(c))}<span class="directionBadge">${escapeHtml(V611_DIR_LABELS[dir])}</span></span><div class="prompt"><div class="hint">${hint}${it.hadWrong?' 이번에는 정확히 맞혀보세요.':''}</div><div class="${promptCls}">${escapeHtml(prompt)}</div><div class="choices">${opts.map(o=>`<button class="choice" data-id="${o.id}" onclick="answerQuiz('${o.id}')">${escapeHtml(opt(o))}</button>`).join('')}</div><div id="quizFeedback"></div></div><div class="actions" id="quizActions">${dir==='reading-jp'?'':audioChoiceButtons(c)}</div>`;
+}
+updateHome=function(){__v611_updateHome();syncV611SetupControls()}
+
+/* Practice: selectable 5~30 + direction */
+const __v611_startPractice=startPractice,__v611_renderPracticeItem=renderPracticeItem,__v611_answerPractice=answerPractice;
+startPractice=function(kind,intent='normal'){
+  if(state.practiceSession&&state.practiceSession.items?.length&&!confirm('진행 중인 활용 훈련이 있습니다. 새 훈련을 시작할까요?'))return;
+  let count=quizPrefCount('practice'),items=kind==='verb'?buildVerbPractice(count,intent):buildEndingPractice(count,intent);if(!items.length){toast('현재 모드에서 연습할 동사를 찾지 못했습니다.');return}
+  practiceSession={version:2,kind,studyIntent:intent,direction:quizPrefDirection('practice','base-form'),items,idx:0,baseCount:items.length,firstTotal:0,firstCorrect:0,reviewAdded:0};state.practiceSession=practiceSession;saveState();showView('practiceView');renderPracticeItem();
+}
+function practiceCorrectV611(it){
+  let dir=practiceSession?.direction||'base-form';if(dir==='form-meaning')return practiceMeaning(it);return practiceCorrect(it)
+}
+function practiceChoicesV611(it){
+  let dir=practiceSession?.direction||'base-form',v=practiceVerb(it);
+  if(dir!=='form-meaning')return practiceChoices(it);
+  let vals=[];
+  if(it.kind==='verb')vals=VERB_FORM_DEFS.filter(f=>validForm(v,f.key)).map(f=>verbFormMeaning(v,f.key));
+  else vals=ENDING_PATTERNS.filter(p=>endingAnswer(p,v)).map(p=>p.meaning);
+  let correct=practiceMeaning(it),uniq=[...new Set(vals.filter(x=>x&&x!==correct))];return shuffle([correct,...shuffle(uniq).slice(0,3)])
+}
+renderPracticeItem=function(){
+  if(!practiceSession)return;if(practiceSession.idx<0)practiceSession.idx=0;if(practiceSession.idx>=practiceSession.items.length){finishPractice();return}let it=practiceCurrent(),v=practiceVerb(it);if(!v){practiceSession.idx++;return renderPracticeItem()}
+  let baseDone=practiceSession.items.filter(x=>!x.isReview&&x.done).length,reviewTotal=practiceSession.items.filter(x=>x.isReview).length,reviewDone=practiceSession.items.filter(x=>x.isReview&&x.done).length;
+  document.getElementById('practiceCount').textContent=`기본 ${baseDone}/${practiceSession.baseCount}${reviewTotal?` +복습 ${reviewDone}/${reviewTotal}`:''}`;document.getElementById('practiceProgress').style.width=(baseDone/Math.max(1,practiceSession.baseCount)*100)+'%';document.getElementById('practicePrev').disabled=practiceSession.idx<=0;document.getElementById('practiceNext').textContent=practiceSession.idx>=practiceSession.items.length-1?'완료 →':'다음 →';document.getElementById('practiceNotice').textContent=reviewTotal?`🔁 오답·반복 문제 ${reviewDone}/${reviewTotal}`:'';
+  let dir=practiceSession.direction||'base-form',correctJP=practiceCorrect(it),correctReading=practiceAudioTarget(it),correct=practiceCorrectV611(it),choices=practiceChoicesV611(it),card=document.getElementById('practiceCard');
+  if(it.done){card.innerHTML=`<span class="badge">✓ 완료 · ${it.kind==='verb'?'동사 변형':'문장 완성'}${it.isReview?' · 🔁 재복습':''}</span><div class="prompt"><div class="practiceVerb">${escapeHtml(v.jp)}</div><div class="practiceKo">${escapeHtml(v.reading||'')} · ${escapeHtml(v.ko)}</div><div class="practiceTarget">${escapeHtml(practiceLabel(it))}</div><div style="margin:7px auto 4px;max-width:650px;color:#1e40af;font-size:16px;font-weight:800;line-height:1.45">뜻: ${escapeHtml(practiceMeaning(it))}</div>${textAnswerHtml(correctJP,correctReading)}<div class="practiceExplain">${escapeHtml(practiceConnection(it))}</div></div><div class="actions"><button class="bigbtn light" onclick="speakText('${encodeURIComponent(correctReading)}')">🔊 듣기</button>${confidenceBarGeneric(practiceReviewKey(it),'practiceAdvance')}</div>`;return}
+  let promptMain=dir==='form-meaning'?correctJP:(dir==='meaning-form'?practiceMeaning(it):v.jp);
+  let promptSub=dir==='form-meaning'?'이 활용형의 한국어 의미를 고르세요.':dir==='meaning-form'?`${v.jp} · ${v.reading||''}`:`${v.ko} · ${v.category||''}`;
+  let target=dir==='form-meaning'?practiceLabel(it):practiceLabel(it);
+  card.innerHTML=`<span class="badge">${it.kind==='verb'?'🔄 동사 변형':'🧩 문장 완성'}${it.isReview?' · 🔁 재복습':''}<span class="directionBadge">${escapeHtml(V611_DIR_LABELS[dir]||dir)}</span></span><div class="prompt"><div class="hint">${dir==='form-meaning'?'활용된 일본어를 보고 실제 뜻을 고르세요.':dir==='meaning-form'?'한국어 뜻을 보고 알맞은 일본어 활용형을 고르세요.':'기본형과 목표 활용을 보고 정답을 고르세요.'}${it.hadWrong?' 이번에는 정확히 맞혀보세요.':''}</div><div class="${dir==='meaning-form'?'ko':'practiceVerb'}">${escapeHtml(promptMain)}</div><div class="practiceKo">${escapeHtml(promptSub)}</div><div class="practiceTarget">${escapeHtml(target)}</div><div class="practiceChoices">${choices.map(x=>`<button class="practiceChoice" data-answer="${escapeHtml(x)}" onclick="answerPractice(this)">${escapeHtml(x)}</button>`).join('')}</div><div id="practiceResult" class="practiceResult"></div></div><div class="actions"><button class="bigbtn light" onclick="speakText('${encodeURIComponent(dir==='form-meaning'?correctReading:verbBaseAudio(v))}')">🔊 듣기</button></div>`;
+}
+answerPractice=function(btn){
+  let it=practiceCurrent();if(!it||it.done)return;let v=practiceVerb(it),selected=btn.dataset.answer||'',correct=practiceCorrectV611(it),correctJP=practiceCorrect(it),ok=selected===correct;recordPracticeFirst(it,ok);
+  document.querySelectorAll('.practiceChoice').forEach(b=>{b.disabled=true;if(b.dataset.answer===correct)b.classList.add('correct');else if(b===btn)b.classList.add('wrong')});let result=document.getElementById('practiceResult'),audio=practiceAudioTarget(it);
+  if(ok){it.done=true;practiceStats(practiceSession.kind).completed++;if(state.autoSpeak)speak(audio);result.innerHTML=`<div class="practiceExplain">${textAnswerHtml(correctJP,audio)}<strong>뜻: ${escapeHtml(practiceMeaning(it))}</strong><br>${escapeHtml(practiceConnection(it))}</div>${similarNoteHtml(v)}${confidenceBarGeneric(practiceReviewKey(it),'practiceAdvance')}`}
+  else{it.hadWrong=true;queuePracticeReview(it,'오답 재복습');result.innerHTML=`<div class="practiceExplain" style="background:#fff7ed;color:#9a3412">정답 확인${textAnswerHtml(correctJP,audio)}<strong>뜻: ${escapeHtml(practiceMeaning(it))}</strong><br><small>지금 다시 맞히거나 ‘한 번 더’로 짧게 복습 예약할 수 있습니다.</small></div><div style="text-align:center;margin-top:10px"><button class="bigbtn blue" onclick="retryPracticeNow()">↻ 바로 이 문제 재도전</button></div>`+wrongConfidenceBarGeneric(practiceReviewKey(it),'deferPracticeWrong');if(state.autoSpeak)speak(audio)}
+  savePracticeSession()
+}
+
+/* JLPT/N-level vocabulary: selectable count and direction */
+const __v611_renderJlptHub=renderJlptHub;
+function jlptDirectionList(){return [['ko-jp','한국어 → 한자·일본어'],['jp-ko','한자·일본어 → 한국어'],['reading-jp','읽기 → 한자·일본어'],['jp-reading','한자·일본어 → 읽기']]}
+renderJlptHub=function(){
+  __v611_renderJlptHub();
+  let c=document.getElementById('jlptContent');if(!c)return;let key=`jlpt:${jlptLevel}`;
+  let intro=c.querySelector('.lifeIntro');if(intro)intro.insertAdjacentHTML('afterend',quizSetupHtml(key,jlptDirectionList(),'renderJlptHub','읽기→한자는 한자가 실제로 있는 항목만 출제합니다.'));
+  let btn=intro?.querySelector('.bigbtn.blue');if(btn)btn.textContent=`${quizPrefCount(key)}문제 연습`;
+}
+function jlptCanonicalRows(level,dir){
+  let rows=jlptData(level);if(dir==='reading-jp')rows=rows.filter(x=>hasKanji(x.jp)&&usefulReading(x.jp,x.reading));if(dir==='jp-reading')rows=rows.filter(x=>x.reading);return rows
+}
+function jlptFields(w,dir){
+  if(dir==='jp-ko')return {prompt:w.jp,answer:w.ko,answerPool:'ko'};
+  if(dir==='reading-jp')return {prompt:w.reading,answer:w.jp,answerPool:'jp'};
+  if(dir==='jp-reading')return {prompt:w.jp,answer:w.reading||w.jp,answerPool:'reading'};
+  return {prompt:w.ko,answer:w.jp,answerPool:'jp'}
+}
+makeJlptItems=function(level,count=10,intent='normal',direction=quizPrefDirection(`jlpt:${level}`,'ko-jp')){
+  let rows=jlptCanonicalRows(level,direction),allByType={jp:rows.map(x=>x.jp),ko:rows.map(x=>x.ko),reading:rows.map(x=>x.reading).filter(Boolean)};
+  let items=rows.map((x,i)=>{let f=jlptFields(x,direction);return {id:`jlpt-${level}-${x.id||i}`,reviewKey:`jlpt:${level}:${x.id||i}`,level,direction,prompt:f.prompt,answer:f.answer,reading:x.reading||x.jp,displayJP:x.jp,displayKO:x.ko,choices:choicePool(f.answer,allByType[f.answerPool]),examples:x.examples||[],usage:x.usage||'',status:'todo',isReview:false,firstAnswered:false,hadWrong:false}});
+  if(intent==='review'){let seen=items.filter(x=>genericReviewState(x.reviewKey).last);if(seen.length)items=seen}else if(intent==='extra'){let fresh=items.filter(x=>!genericReviewState(x.reviewKey).last);if(fresh.length>=Math.min(count,5))items=fresh}
+  items.sort((a,b)=>reviewPriority(b.reviewKey)-reviewPriority(a.reviewKey));return items.slice(0,count)
+}
+startJlptQuiz=function(level=jlptLevel,intent='normal'){
+  jlptLevel=level;let key=`jlpt:${level}`,count=quizPrefCount(key),direction=quizPrefDirection(key,'ko-jp'),items=makeJlptItems(level,count,intent,direction);if(!items.length){toast('이 출제 방향으로 만들 수 있는 문제가 없습니다. 다른 방향을 선택해 주세요.');return}
+  jlptSession={level,studyIntent:intent,direction,items,idx:0,baseCount:items.length,firstCorrect:0,firstTotal:0,startedAt:Date.now()};state.jlptSession=jlptSession;saveState();showView('jlptQuizView');renderJlptQuiz()
+}
+renderJlptQuiz=function(){
+  let it=jlptCurrent();if(!it){finishJlptQuiz();return}let p=jlptProgress(),bar=p.base?Math.round(p.done/p.base*100):0;document.getElementById('jlptProgress').style.width=bar+'%';document.getElementById('jlptCount').textContent=`${Math.min(p.done+1,p.base)}/${p.base}${p.review?' +복습 '+p.review:''}`;document.getElementById('jlptPrev').disabled=jlptSession.idx<=0;document.getElementById('jlptNotice').textContent=it.isReview?'🔁 다시 확인하는 단어입니다.':'';
+  let dir=it.direction||jlptSession.direction||'ko-jp',hint=dir==='jp-ko'?'일본어를 보고 맞는 한국어 뜻을 고르세요.':dir==='reading-jp'?'읽기를 보고 맞는 한자·일본어 표기를 고르세요.':dir==='jp-reading'?'한자·일본어 표기의 읽기를 고르세요.':'한국어 뜻에 맞는 한자·일본어를 고르세요.',cls=dir==='ko-jp'?'ko':'jp';
+  document.getElementById('jlptQuizCard').innerHTML=`<span class="badge">${it.level} 대비 어휘<span class="directionBadge">${escapeHtml(V611_DIR_LABELS[dir])}</span></span><div class="prompt"><div class="hint">${hint} 읽기와 뜻은 정답 후 함께 공개됩니다.</div><div class="${cls}">${escapeHtml(it.prompt)}</div><div class="lifeChoices">${it.choices.map(c=>`<button class="choice" onclick="answerJlptChoice(this,'${encodeURIComponent(c)}')">${escapeHtml(c)}</button>`).join('')}</div><div id="jlptAnswerResult"></div></div>`
+}
+answerJlptChoice=function(btn,enc){
+  let it=jlptCurrent();if(!it||it.status==='done')return;let ans=decodeURIComponent(enc),ok=ans===it.answer,box=document.getElementById('jlptAnswerResult');document.querySelectorAll('#jlptQuizCard .choice').forEach(b=>{b.disabled=true;if(b.textContent===it.answer)b.classList.add('correct')});if(!it.firstAnswered){it.firstAnswered=true;jlptSession.firstTotal++;if(ok)jlptSession.firstCorrect++}
+  let jp=it.displayJP||((it.direction||jlptSession.direction)==='ko-jp'||(it.direction||jlptSession.direction)==='reading-jp'?it.answer:it.prompt),rd=it.reading||'',ko=it.displayKO||((it.direction||jlptSession.direction)==='jp-ko'?it.answer:'');
+  if(!ok){btn.classList.add('wrong');it.hadWrong=true;if(!jlptSession.items.some(x=>x.isReview&&x.reviewOf===it.id&&x.status!=='done'))jlptSession.items.push({...it,id:it.id+'-r-'+Date.now(),status:'todo',isReview:true,reviewOf:it.id,firstAnswered:true});box.innerHTML=`<div class="retryBox">정답 확인${textAnswerHtml(jp,rd)}${ko?`<div style="margin-top:5px">${escapeHtml(ko)}</div>`:''}<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px"><button class="bigbtn light" onclick="speakText('${encodeURIComponent(rd||jp)}')">🔊 발음 듣기</button><button class="bigbtn light" onclick="retryJlptItem()">↻ 바로 이 문제 재도전</button></div></div>`+wrongConfidenceBarGeneric(it.reviewKey,'deferJlptWrong');saveJlptSession();return}
+  it.status='done';let ex=it.examples?.[0]||'',exReading=ex?textDisplayReading(ex):'';box.innerHTML=`<div class="practiceExplain">✅${textAnswerHtml(jp,rd)}${ko?`<div style="margin-top:5px;font-weight:800">${escapeHtml(ko)}</div>`:''}${it.usage?`<div class="jlptUsageAnswer">💡 ${escapeHtml(it.usage)}</div>`:''}${ex?`<br><b>${escapeHtml(plainJP(ex))}</b>${answerReadingHtml(ex,exReading,'예문 읽기')}`:''}<br><button class="bigbtn light" style="margin-top:8px" onclick="speakText('${encodeURIComponent(rd||jp)}')">🔊 단어 듣기</button></div>${similarNoteHtml(jp)}${confidenceBarGeneric(it.reviewKey,'advanceJlptItem')}`;if(state.autoSpeak)speak(rd||jp);saveJlptSession()
+}
+
+/* Life modules: count for every tab, direction wherever content allows */
+const __v611_renderLifeVocab=renderLifeVocab,__v611_renderParticles=renderParticles,__v611_renderConnectors=renderConnectors,__v611_renderLocations=renderLocations,__v611_renderNumbers=renderNumbers,__v611_renderSituations=renderSituations;
+function lifeDirections(kind){
+  if(kind==='particle')return [['sentence-particle','문장 빈칸 → 조사']];
+  if(kind==='location')return [['visual-jp','그림 → 위치 표현'],['jp-ko','위치 표현 → 한국어'],['reading-jp','읽기 → 한자'],['ko-jp','한국어 → 한자']];
+  if(kind==='number')return [['ko-reading','한국어·숫자 → 읽기'],['reading-ko','읽기 → 한국어'],['jp-reading','표기 → 읽기']];
+  return [['ko-jp','한국어 → 한자·일본어'],['jp-ko','한자·일본어 → 한국어'],['reading-jp','읽기 → 한자·일본어'],['jp-reading','한자·일본어 → 읽기']]
+}
+function addLifeSetup(c,kind){
+  let intro=c?.querySelector('.lifeIntro');if(!intro)return;let key=`life:${kind}`;intro.insertAdjacentHTML('afterend',quizSetupHtml(key,lifeDirections(kind),'renderLifeHub',kind==='particle'?'조사는 문장 안에서 쓰임을 구분하는 훈련이 가장 효과적이라 출제 방향은 고정됩니다.':''));
+  let count=quizPrefCount(key);intro.querySelectorAll('button').forEach(b=>{if(/10문제|랜덤 10|그림 10|선택 범위 10/.test(b.textContent))b.textContent=b.textContent.replace(/10문제|랜덤 10문제|그림 10문제|선택 범위 10문제/,`${count}문제`)})
+}
+renderLifeVocab=function(c){__v611_renderLifeVocab(c);addLifeSetup(c,'vocab')}
+renderParticles=function(c){__v611_renderParticles(c);addLifeSetup(c,'particle')}
+renderConnectors=function(c){__v611_renderConnectors(c);addLifeSetup(c,'connector')}
+renderLocations=function(c){__v611_renderLocations(c);addLifeSetup(c,'location')}
+renderNumbers=function(c){__v611_renderNumbers(c);addLifeSetup(c,'number')}
+renderSituations=function(c){__v611_renderSituations(c);addLifeSetup(c,'situation')}
+function canonicalLifeSource(kind,sceneId=''){
+  if(kind==='vocab')return LIFE_VOCAB.map((x,i)=>({id:`v-${x.id||i}`,reviewKey:`life:vocab:${x.id||i}`,jp:x.jp,reading:x.reading||x.jp,ko:x.ko,explain:`${x.jp} (${x.reading||x.jp}) = ${x.ko}`,tts:x.reading||x.jp}));
+  if(kind==='connector')return (window.CONNECTOR_DATA||[]).map((x,i)=>({id:`c-${x.id||i}`,reviewKey:`life:connector:${x.id||i}`,jp:x.jp,reading:x.reading||x.jp,ko:x.ko,explain:`${x.jp} (${x.reading||x.jp}) · ${x.ko}`,tts:x.reading||x.jp,example:x.example,exampleReading:x.exampleReading,tr:x.tr}));
+  if(kind==='location')return LOCATION_DATA.map((x,i)=>({id:`l-${x.id||i}`,reviewKey:`life:location:${x.id||i}`,jp:x.jp,reading:x.reading||x.jp,ko:x.ko,explain:`${x.jp} (${x.reading||x.jp}) · ${x.ko}`,tts:x.reading||x.jp,visual:locationSvg(x.id)}));
+  if(kind==='number'){let src=filteredNumberItems();if(!src.length)src=NUMBER_ITEMS;return src.map((x,i)=>({id:`n-${i}-${encodeURIComponent(x.prompt)}`,reviewKey:`life:number:${encodeURIComponent(x.prompt+'|'+x.answer)}`,jp:x.jp,reading:x.answer,ko:x.prompt,explain:`${x.jp} → ${x.answer}`,tts:x.answer}))}
+  if(kind==='particle')return PARTICLE_QUESTIONS.map((x,i)=>({id:`p-${i}`,reviewKey:`life:particle:${encodeURIComponent(x.s+'|'+x.a)}`,jp:x.s.replace('__',x.a),reading:textDisplayReading(x.s.replace('__',x.a)),ko:x.ko,particleAnswer:x.a,promptSentence:x.s.replace('__','□'),explain:(PARTICLE_DATA.find(p=>p.p===x.a)?.ko||x.a),tts:x.s.replace('__',x.a)}));
+  let scenes=sceneId?LIFE_SCENES.filter(s=>s.id===sceneId):LIFE_SCENES,phr=[];scenes.forEach(s=>s.phrases.forEach((p,i)=>phr.push({id:`s-${s.id}-${i}`,reviewKey:`life:situation:${encodeURIComponent(s.name+'|'+p[0])}`,jp:p[0],reading:scenePhraseAudio(p[0]),ko:p[1],sub:`${s.icon} ${s.name}에서 실제로 말해보세요`,explain:`${p[0]} = ${p[1]}`,tts:scenePhraseAudio(p[0])})));return phr
+}
+function lifeFields(x,kind,dir){
+  if(kind==='particle')return {prompt:x.promptSentence,answer:x.particleAnswer,poolField:'particleAnswer',sub:x.ko,visual:null};
+  if(kind==='number'){if(dir==='reading-ko')return {prompt:x.reading,answer:x.ko,poolField:'ko'};if(dir==='jp-reading')return {prompt:x.jp,answer:x.reading,poolField:'reading'};return {prompt:x.ko,answer:x.reading,poolField:'reading'}}
+  if(kind==='location'&&dir==='visual-jp')return {prompt:'파란 점의 위치는?',answer:x.jp,poolField:'jp',visual:x.visual,sub:'그림을 보고 알맞은 위치 표현을 고르세요.'};
+  if(dir==='jp-ko')return {prompt:x.jp,answer:x.ko,poolField:'ko'};if(dir==='reading-jp')return {prompt:x.reading,answer:x.jp,poolField:'jp'};if(dir==='jp-reading')return {prompt:x.jp,answer:x.reading,poolField:'reading'};return {prompt:x.ko,answer:x.jp,poolField:'jp'}
+}
+makeLifeItems=function(kind,count=10,sceneId='',intent='normal',direction=quizPrefDirection(`life:${kind}`,lifeDirections(kind)[0][0])){
+  let src=canonicalLifeSource(kind,sceneId);if(direction==='reading-jp')src=src.filter(x=>hasKanji(x.jp)&&usefulReading(x.jp,x.reading));
+  let pools={jp:src.map(x=>x.jp),ko:src.map(x=>x.ko),reading:src.map(x=>x.reading),particleAnswer:PARTICLE_DATA.map(x=>x.p)};
+  let items=src.map((x,i)=>{let f=lifeFields(x,kind,direction);return {...x,id:x.id||`${kind}-${i}`,kind,direction,prompt:f.prompt,sub:f.sub||x.sub||'',answer:f.answer,choices:choicePool(f.answer,pools[f.poolField]||[]),visual:f.visual||null,displayJP:x.jp,displayReading:x.reading,displayKO:x.ko,status:'todo',isReview:false,firstAnswered:false,hadWrong:false}});
+  if(intent==='review'){let seen=items.filter(x=>genericReviewState(x.reviewKey).last);if(seen.length)items=seen}else if(intent==='extra'){let fresh=items.filter(x=>!genericReviewState(x.reviewKey).last);if(fresh.length>=Math.min(count,5))items=fresh}
+  items.sort((a,b)=>reviewPriority(b.reviewKey)-reviewPriority(a.reviewKey));return items.slice(0,count)
+}
+startLifeQuiz=function(kind,sceneId='',intent='normal'){
+  let key=`life:${kind}`,count=quizPrefCount(key),direction=quizPrefDirection(key,lifeDirections(kind)[0][0]),items=makeLifeItems(kind,count,sceneId,intent,direction);if(!items.length){toast('이 출제 방향으로 만들 수 있는 문제가 없습니다. 다른 방향을 선택해 주세요.');return}
+  lifeSession={kind,sceneId,studyIntent:intent,direction,items,idx:0,baseCount:items.length,firstCorrect:0,firstTotal:0,startedAt:Date.now()};state.lifeSession=lifeSession;saveState();showView('lifeQuizView');renderLifeQuiz()
+}
+renderLifeQuiz=function(){
+  let it=lifeCurrent();if(!it){finishLifeQuiz();return}let p=lifeProgress(),bar=Math.round((p.done/Math.max(1,p.base))*100);document.getElementById('lifeProgress').style.width=bar+'%';document.getElementById('lifeCount').textContent=`${Math.min(p.done+1,p.base)}/${p.base}${p.review?' +복습 '+p.review:''}`;document.getElementById('lifePrev').disabled=lifeSession.idx<=0;document.getElementById('lifeNotice').textContent=it.isReview?'🔁 틀렸거나 다시 요청한 문제입니다.':'';
+  let dir=it.direction||lifeSession.direction||'',hint=it.sub||((dir==='jp-ko')?'일본어를 보고 뜻을 고르세요.':(dir==='reading-jp')?'읽기를 보고 한자·일본어를 고르세요.':(dir==='jp-reading')?'표기에 맞는 읽기를 고르세요.':'가장 알맞은 답을 고르세요.'),cls=(dir==='ko-jp'||dir==='ko-reading')?'ko':'jp';
+  document.getElementById('lifeQuizCard').innerHTML=`<span class="badge">${LIFE_LABEL[it.kind]}<span class="directionBadge">${escapeHtml(V611_DIR_LABELS[dir]||dir)}</span></span><div class="prompt lifePrompt">${it.visual?`<div class="quizVisual">${it.visual}</div>`:''}<div class="hint">${escapeHtml(hint)}</div><div class="${cls}">${escapeHtml(it.prompt)}</div><div class="lifeChoices">${it.choices.map(c=>`<button class="choice" onclick="answerLifeChoice(this,'${encodeURIComponent(c)}')">${escapeHtml(c)}</button>`).join('')}</div><div id="lifeAnswerResult"></div></div><div class="actions"><span class="footerNote" style="margin:0">정답 후 표기·읽기·뜻을 함께 확인합니다.</span></div>`
+}
+answerLifeChoice=function(btn,enc){
+  let it=lifeCurrent();if(!it||it.status==='done')return;let ans=decodeURIComponent(enc),ok=ans===it.answer,box=document.getElementById('lifeAnswerResult');document.querySelectorAll('#lifeQuizCard .choice').forEach(b=>{b.disabled=true;if(b.textContent===it.answer)b.classList.add('correct')});if(!it.firstAnswered){it.firstAnswered=true;lifeSession.firstTotal++;if(ok)lifeSession.firstCorrect++}
+  let jp=it.displayJP||it.answer,rd=it.displayReading||it.reading||it.tts||textDisplayReading(jp),ko=it.displayKO||'';
+  if(!ok){btn.classList.add('wrong');it.hadWrong=true;if(!lifeSession.items.some(x=>x.isReview&&x.reviewOf===it.id&&x.status!=='done'))lifeSession.items.push({...it,id:it.id+'-r-'+Date.now(),status:'todo',isReview:true,reviewOf:it.id,firstAnswered:true});box.innerHTML=`<div class="retryBox">정답 확인${textAnswerHtml(jp,rd)}${ko?`<div style="margin-top:6px">${escapeHtml(ko)}</div>`:''}<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px"><button class="bigbtn light" onclick="speakText('${encodeURIComponent(it.tts||rd||jp)}')">🔊 정답 듣기</button><button class="bigbtn light" onclick="retryLifeItem()">↻ 바로 이 문제 재도전</button></div></div>`+wrongConfidenceBarGeneric(it.reviewKey||`life:${it.kind}:${it.reviewOf||it.id}`,'deferLifeWrong');saveLifeSession();return}
+  it.status='done';box.innerHTML=`<div class="practiceExplain">✅${textAnswerHtml(jp,rd)}${ko?`<div style="margin-top:6px;font-weight:800">${escapeHtml(ko)}</div>`:''}${it.explain&&normalizeJP(it.explain)!==normalizeJP(jp)?`<div style="margin-top:8px">${escapeHtml(it.explain)}</div>`:''}${it.example?`<br><br><b>${escapeHtml(plainJP(it.example))}</b>${answerReadingHtml(it.example,it.exampleReading||textDisplayReading(it.example),'예문 읽기')}<br><span style="color:#64748b">${escapeHtml(it.tr||'')}</span>`:''}<br><button class="bigbtn light" style="margin-top:8px" onclick="speakText('${encodeURIComponent(it.tts||rd||jp)}')">🔊 정답 듣기</button></div>${similarNoteHtml(jp)}${confidenceBarGeneric(it.reviewKey||`life:${it.kind}:${it.reviewOf||it.id}`,'advanceLifeItem')}`;if(state.autoSpeak)speak(it.tts||rd||jp);saveLifeSession()
+}
+
+/* Absolute beginner + kana data */
+const HIRAGANA_BASE=[
+ ['あ','a'],['い','i'],['う','u'],['え','e'],['お','o'],['か','ka'],['き','ki'],['く','ku'],['け','ke'],['こ','ko'],
+ ['さ','sa'],['し','shi'],['す','su'],['せ','se'],['そ','so'],['た','ta'],['ち','chi'],['つ','tsu'],['て','te'],['と','to'],
+ ['な','na'],['に','ni'],['ぬ','nu'],['ね','ne'],['の','no'],['は','ha'],['ひ','hi'],['ふ','fu'],['へ','he'],['ほ','ho'],
+ ['ま','ma'],['み','mi'],['む','mu'],['め','me'],['も','mo'],['や','ya'],['ゆ','yu'],['よ','yo'],['ら','ra'],['り','ri'],
+ ['る','ru'],['れ','re'],['ろ','ro'],['わ','wa'],['を','wo'],['ん','n']
+];
+const KATAKANA_BASE=[
+ ['ア','a'],['イ','i'],['ウ','u'],['エ','e'],['オ','o'],['カ','ka'],['キ','ki'],['ク','ku'],['ケ','ke'],['コ','ko'],
+ ['サ','sa'],['シ','shi'],['ス','su'],['セ','se'],['ソ','so'],['タ','ta'],['チ','chi'],['ツ','tsu'],['テ','te'],['ト','to'],
+ ['ナ','na'],['ニ','ni'],['ヌ','nu'],['ネ','ne'],['ノ','no'],['ハ','ha'],['ヒ','hi'],['フ','fu'],['ヘ','he'],['ホ','ho'],
+ ['マ','ma'],['ミ','mi'],['ム','mu'],['メ','me'],['モ','mo'],['ヤ','ya'],['ユ','yu'],['ヨ','yo'],['ラ','ra'],['リ','ri'],
+ ['ル','ru'],['レ','re'],['ロ','ro'],['ワ','wa'],['ヲ','wo'],['ン','n']
+];
+
+const HIRAGANA_EXTRA=[
+ ['が','ga'],['ぎ','gi'],['ぐ','gu'],['げ','ge'],['ご','go'],['ざ','za'],['じ','ji'],['ず','zu'],['ぜ','ze'],['ぞ','zo'],
+ ['だ','da'],['ぢ','ji'],['づ','zu'],['で','de'],['ど','do'],['ば','ba'],['び','bi'],['ぶ','bu'],['べ','be'],['ぼ','bo'],
+ ['ぱ','pa'],['ぴ','pi'],['ぷ','pu'],['ぺ','pe'],['ぽ','po'],['きゃ','kya'],['きゅ','kyu'],['きょ','kyo'],['しゃ','sha'],['しゅ','shu'],['しょ','sho'],
+ ['ちゃ','cha'],['ちゅ','chu'],['ちょ','cho'],['にゃ','nya'],['にゅ','nyu'],['にょ','nyo'],['ひゃ','hya'],['ひゅ','hyu'],['ひょ','hyo'],
+ ['みゃ','mya'],['みゅ','myu'],['みょ','myo'],['りゃ','rya'],['りゅ','ryu'],['りょ','ryo'],['ぎゃ','gya'],['ぎゅ','gyu'],['ぎょ','gyo'],
+ ['じゃ','ja'],['じゅ','ju'],['じょ','jo'],['びゃ','bya'],['びゅ','byu'],['びょ','byo'],['ぴゃ','pya'],['ぴゅ','pyu'],['ぴょ','pyo'],['っ','small tsu']
+];
+const KATAKANA_EXTRA=[
+ ['ガ','ga'],['ギ','gi'],['グ','gu'],['ゲ','ge'],['ゴ','go'],['ザ','za'],['ジ','ji'],['ズ','zu'],['ゼ','ze'],['ゾ','zo'],
+ ['ダ','da'],['ヂ','ji'],['ヅ','zu'],['デ','de'],['ド','do'],['バ','ba'],['ビ','bi'],['ブ','bu'],['ベ','be'],['ボ','bo'],
+ ['パ','pa'],['ピ','pi'],['プ','pu'],['ペ','pe'],['ポ','po'],['キャ','kya'],['キュ','kyu'],['キョ','kyo'],['シャ','sha'],['シュ','shu'],['ショ','sho'],
+ ['チャ','cha'],['チュ','chu'],['チョ','cho'],['ニャ','nya'],['ニュ','nyu'],['ニョ','nyo'],['ヒャ','hya'],['ヒュ','hyu'],['ヒョ','hyo'],
+ ['ミャ','mya'],['ミュ','myu'],['ミョ','myo'],['リャ','rya'],['リュ','ryu'],['リョ','ryo'],['ギャ','gya'],['ギュ','gyu'],['ギョ','gyo'],
+ ['ジャ','ja'],['ジュ','ju'],['ジョ','jo'],['ビャ','bya'],['ビュ','byu'],['ビョ','byo'],['ピャ','pya'],['ピュ','pyu'],['ピョ','pyo'],['ッ','small tsu']
+];
+const STARTER_WORDS=[
+ {jp:'水',reading:'みず',ko:'물'},{jp:'犬',reading:'いぬ',ko:'개'},{jp:'猫',reading:'ねこ',ko:'고양이'},{jp:'家',reading:'いえ',ko:'집'},{jp:'駅',reading:'えき',ko:'역'},
+ {jp:'朝',reading:'あさ',ko:'아침'},{jp:'山',reading:'やま',ko:'산'},{jp:'海',reading:'うみ',ko:'바다'},{jp:'本',reading:'ほん',ko:'책'},{jp:'車',reading:'くるま',ko:'자동차'},
+ {jp:'人',reading:'ひと',ko:'사람'},{jp:'友達',reading:'ともだち',ko:'친구'},{jp:'学校',reading:'がっこう',ko:'학교'},{jp:'先生',reading:'せんせい',ko:'선생님'},{jp:'会社',reading:'かいしゃ',ko:'회사'},
+ {jp:'食べる',reading:'たべる',ko:'먹다'},{jp:'見る',reading:'みる',ko:'보다'},{jp:'行く',reading:'いく',ko:'가다'},{jp:'来る',reading:'くる',ko:'오다'},{jp:'話す',reading:'はなす',ko:'말하다'}
+];
+let starterTab='hiragana',starterSession=null,scriptTab='hiragana',scriptQuery='',scriptLimit=160;
+function openStarterHub(tab='hiragana'){starterTab=tab;showView('starterView');renderStarterHub()}
+function setStarterTab(tab){starterTab=tab;renderStarterHub()}
+function starterDirections(tab){if(tab==='hiragana'||tab==='katakana')return [['char-romaji','문자 → 로마자 소리'],['romaji-char','로마자 소리 → 문자']];if(tab==='pair')return [['hira-kata','히라가나 → 가타카나'],['kata-hira','가타카나 → 히라가나']];return [['reading-ko','읽기 → 한국어 뜻'],['ko-jp','한국어 → 한자·일본어'],['reading-jp','읽기 → 한자·일본어']]}
+function renderKanaGrid(rows){return `<div class="kanaGrid">${rows.map(([ch,r])=>`<div class="kanaCard"><b>${ch}</b><small>${r}</small><button onclick="speakText('${encodeURIComponent(ch)}')">🔊</button></div>`).join('')}</div>`}
+function renderStarterHub(){
+  let c=document.getElementById('starterContent');if(!c)return;let key=`starter:${starterTab}`,titles={hiragana:'히라가나 첫걸음',katakana:'가타카나 첫걸음',pair:'히라가나 ↔ 가타카나',firstword:'첫 단어'},descs={hiragana:'46개 기본 글자를 5개씩 보고, 소리와 모양을 연결합니다.',katakana:'외래어에서 많이 보이는 기본 가타카나 46개를 익힙니다.',pair:'같은 소리의 히라가나와 가타카나를 서로 연결합니다.',firstword:'문자를 조금 익힌 뒤 아주 자주 쓰는 단어 20개로 넘어갑니다.'};
+  let body=starterTab==='hiragana'?renderKanaGrid(HIRAGANA_BASE):starterTab==='katakana'?renderKanaGrid(KATAKANA_BASE):starterTab==='pair'?`<div class="kanaGrid">${HIRAGANA_BASE.map((x,i)=>`<div class="kanaCard"><b>${x[0]} · ${KATAKANA_BASE[i][0]}</b><small>${x[1]}</small><button onclick="speakText('${encodeURIComponent(x[0])}')">🔊</button></div>`).join('')}</div>`:`<div class="kanjiWordList">${STARTER_WORDS.map(w=>`<div class="kanjiWord"><div><b>${w.jp}</b><small>${w.reading}</small><span>${w.ko}</span></div><button onclick="speakText('${encodeURIComponent(w.reading)}')">🔊</button></div>`).join('')}</div>`;
+  c.innerHTML=`<div class="starterHero"><h3>🐣 ${titles[starterTab]}</h3><p>${descs[starterTab]}</p></div><div class="kanaTabs"><button class="${starterTab==='hiragana'?'on':''}" onclick="setStarterTab('hiragana')">1 히라가나</button><button class="${starterTab==='katakana'?'on':''}" onclick="setStarterTab('katakana')">2 가타카나</button><button class="${starterTab==='pair'?'on':''}" onclick="setStarterTab('pair')">3 문자 짝</button><button class="${starterTab==='firstword'?'on':''}" onclick="setStarterTab('firstword')">4 첫 단어</button></div>${quizSetupHtml(key,starterDirections(starterTab),'renderStarterHub','처음에는 5문제를 추천합니다. 틀린 글자는 같은 세트 뒤쪽에 다시 나옵니다.')}<button class="bigbtn blue" style="width:100%;margin-bottom:14px" onclick="startStarterQuiz('${starterTab}')">${quizPrefCount(key)}문제 시작</button>${body}`
+}
+function starterRows(tab){
+  if(tab==='hiragana')return HIRAGANA_BASE.map((x,i)=>({id:`h-${i}`,jp:x[0],reading:x[0],roman:x[1],ko:x[1]}));
+  if(tab==='katakana')return KATAKANA_BASE.map((x,i)=>({id:`k-${i}`,jp:x[0],reading:x[0],roman:x[1],ko:x[1]}));
+  if(tab==='pair')return HIRAGANA_BASE.map((x,i)=>({id:`p-${i}`,hira:x[0],kata:KATAKANA_BASE[i][0],roman:x[1],jp:x[0],reading:x[0],ko:x[1]}));
+  return STARTER_WORDS.map((x,i)=>({id:`w-${i}`,...x}))
+}
+function makeStarterItems(tab,count,direction){
+  let rows=starterRows(tab),items=[];
+  if(tab==='hiragana'||tab==='katakana'){
+    let chars=rows.map(x=>x.jp),romans=rows.map(x=>x.roman);items=rows.map(x=>direction==='romaji-char'?{...x,prompt:x.roman,answer:x.jp,choices:choicePool(x.jp,chars)}:{...x,prompt:x.jp,answer:x.roman,choices:choicePool(x.roman,romans)})
+  }else if(tab==='pair'){
+    let h=rows.map(x=>x.hira),k=rows.map(x=>x.kata);items=rows.map(x=>direction==='kata-hira'?{...x,prompt:x.kata,answer:x.hira,choices:choicePool(x.hira,h)}:{...x,prompt:x.hira,answer:x.kata,choices:choicePool(x.kata,k)})
+  }else{
+    if(direction==='reading-jp')rows=rows.filter(x=>hasKanji(x.jp));let jp=rows.map(x=>x.jp),ko=rows.map(x=>x.ko);items=rows.map(x=>direction==='ko-jp'?{...x,prompt:x.ko,answer:x.jp,choices:choicePool(x.jp,jp)}:direction==='reading-jp'?{...x,prompt:x.reading,answer:x.jp,choices:choicePool(x.jp,jp)}:{...x,prompt:x.reading,answer:x.ko,choices:choicePool(x.ko,ko)})
+  }
+  return shuffle(items).slice(0,count).map(x=>({...x,status:'todo',hadWrong:false,isReview:false,firstAnswered:false,reviewKey:`starter:${tab}:${x.id}`}))
+}
+function startStarterQuiz(tab=starterTab){
+  starterTab=tab;let key=`starter:${tab}`,count=quizPrefCount(key),direction=quizPrefDirection(key,starterDirections(tab)[0][0]),items=makeStarterItems(tab,count,direction);starterSession={tab,direction,items,idx:0,baseCount:items.length,firstTotal:0,firstCorrect:0};state.starterSession=starterSession;saveState();showView('starterQuizView');renderStarterQuiz()
+}
+function starterCurrent(){return starterSession?.items?.[starterSession.idx]||null}
+function saveStarterSession(){if(starterSession){state.starterSession=starterSession;saveState()}}
+function resumeStarterQuiz(){if(!state.starterSession)return;starterSession=state.starterSession;starterTab=starterSession.tab||'hiragana';showView('starterQuizView');renderStarterQuiz()}
+function exitStarterQuiz(){saveStarterSession();goHome()}
+function starterProgress(){return starterSession?{done:starterSession.items.filter(x=>x.status==='done'&&!x.isReview).length,base:starterSession.baseCount,review:starterSession.items.filter(x=>x.isReview&&x.status!=='done').length}:{done:0,base:0,review:0}}
+function renderStarterQuiz(){
+  let it=starterCurrent();if(!it){finishStarterQuiz();return}let p=starterProgress(),dir=starterSession.direction;document.getElementById('starterProgress').style.width=(p.done/Math.max(1,p.base)*100)+'%';document.getElementById('starterCount').textContent=`${Math.min(p.done+1,p.base)}/${p.base}${p.review?' +복습 '+p.review:''}`;document.getElementById('starterPrev').disabled=starterSession.idx<=0;document.getElementById('starterNotice').textContent=it.isReview?'🔁 다시 확인하는 문제입니다.':'';
+  let big=(starterTab==='hiragana'||starterTab==='katakana'||starterTab==='pair'),hint=dir==='romaji-char'?'소리를 보고 맞는 문자를 고르세요.':dir==='char-romaji'?'문자를 보고 로마자 소리를 고르세요.':dir==='hira-kata'?'같은 소리의 가타카나를 고르세요.':dir==='kata-hira'?'같은 소리의 히라가나를 고르세요.':dir==='ko-jp'?'한국어 뜻에 맞는 일본어를 고르세요.':dir==='reading-jp'?'읽기를 보고 맞는 한자를 고르세요.':'읽기를 보고 뜻을 고르세요.';
+  document.getElementById('starterQuizCard').innerHTML=`<span class="badge">🐣 ${starterTab==='hiragana'?'히라가나':starterTab==='katakana'?'가타카나':starterTab==='pair'?'문자 짝':'첫 단어'}<span class="directionBadge">${escapeHtml(V611_DIR_LABELS[dir]||dir)}</span></span><div class="prompt"><div class="hint">${hint}</div><div class="${big?'starterPrompt':(dir==='ko-jp'?'ko':'jp')}">${escapeHtml(it.prompt)}</div><div class="lifeChoices">${it.choices.map(c=>`<button class="choice" onclick="answerStarterChoice(this,'${encodeURIComponent(c)}')">${escapeHtml(c)}</button>`).join('')}</div><div id="starterAnswerResult"></div></div>`
+}
+function answerStarterChoice(btn,enc){
+  let it=starterCurrent();if(!it||it.status==='done')return;let ans=decodeURIComponent(enc),ok=ans===it.answer,box=document.getElementById('starterAnswerResult');document.querySelectorAll('#starterQuizCard .choice').forEach(b=>{b.disabled=true;if(b.textContent===it.answer)b.classList.add('correct')});if(!it.firstAnswered){it.firstAnswered=true;starterSession.firstTotal++;if(ok)starterSession.firstCorrect++}
+  if(!ok){btn.classList.add('wrong');it.hadWrong=true;if(!starterSession.items.some(x=>x.isReview&&x.reviewOf===it.id&&x.status!=='done'))starterSession.items.push({...it,id:it.id+'-r-'+Date.now(),status:'todo',isReview:true,reviewOf:it.id,firstAnswered:true});box.innerHTML=`<div class="retryBox">정답은 <b>${escapeHtml(it.answer)}</b>입니다.<br><button class="bigbtn light" style="margin-top:8px" onclick="speakText('${encodeURIComponent(it.reading||it.jp||it.answer)}')">🔊 소리 듣기</button><button class="bigbtn light" style="margin-top:8px;margin-left:6px" onclick="retryStarterItem()">↻ 바로 다시</button></div>`+wrongConfidenceBarGeneric(it.reviewKey,'deferStarterWrong');saveStarterSession();return}
+  it.status='done';let jp=it.jp||it.hira||'',rd=it.reading||jp,ko=starterTab==='firstword'?it.ko:(it.roman||'');box.innerHTML=`<div class="practiceExplain">✅${jp?textAnswerHtml(jp,rd):''}<div style="font-weight:850;margin-top:5px">${escapeHtml(ko)}</div><button class="bigbtn light" style="margin-top:8px" onclick="speakText('${encodeURIComponent(rd||jp)}')">🔊 소리 듣기</button></div>${confidenceBarGeneric(it.reviewKey,'advanceStarterItem')}`;if(state.autoSpeak)speak(rd||jp);saveStarterSession()
+}
+function retryStarterItem(){let it=starterCurrent();if(!it)return;it.status='todo';renderStarterQuiz()}
+function deferStarterWrong(){let it=starterCurrent();if(!it)return;it.status='done';saveStarterSession();advanceStarterItem()}
+function advanceStarterItem(){if(!starterSession)return;let next=starterSession.items.findIndex((x,i)=>i>starterSession.idx&&x.status!=='done');if(next<0)next=starterSession.items.findIndex(x=>x.status!=='done');if(next<0)return finishStarterQuiz();starterSession.idx=next;saveStarterSession();renderStarterQuiz()}
+function starterPrevious(){if(!starterSession||starterSession.idx<=0)return;starterSession.idx--;saveStarterSession();renderStarterQuiz()}
+function starterNextNav(){let it=starterCurrent();if(!it)return;if(it.status!=='done'&&!starterSession.items.some(x=>x.isReview&&x.reviewOf===it.id&&x.status!=='done'))starterSession.items.push({...it,id:it.id+'-skip-'+Date.now(),status:'todo',isReview:true,reviewOf:it.id,firstAnswered:true});starterSession.idx=Math.min(starterSession.items.length-1,starterSession.idx+1);saveStarterSession();renderStarterQuiz()}
+function starterRepeatCurrent(){let it=starterCurrent();if(!it)return;if(!starterSession.items.some(x=>x.isReview&&x.reviewOf===(it.reviewOf||it.id)&&x.status!=='done'))starterSession.items.push({...it,id:it.id+'-manual-'+Date.now(),status:'todo',isReview:true,reviewOf:it.reviewOf||it.id,firstAnswered:true});toast('복습 큐에 추가했습니다.');saveStarterSession();renderStarterQuiz()}
+function finishStarterQuiz(){
+  if(!starterSession)return;let pending=starterSession.items.findIndex(x=>x.status!=='done');if(pending>=0){starterSession.idx=pending;return renderStarterQuiz()}let tab=starterSession.tab,base=starterSession.baseCount,acc=starterSession.firstTotal?Math.round(starterSession.firstCorrect/starterSession.firstTotal*100):0;state.starterDrills=state.starterDrills||{};let st=state.starterDrills[tab]||(state.starterDrills[tab]={sessions:0});st.sessions++;markDailyComplete(`starter:${tab}`,`왕초보 ${tab}`,{module:'starter'});markDailyComplete('starter:basic','완전 왕초보 코스',{module:'starter'});touchStudyDay('starter');state.starterSession=null;starterSession=null;saveState();updateHome();document.getElementById('starterProgress').style.width='100%';document.getElementById('starterCount').textContent='완료';document.getElementById('starterQuizCard').innerHTML=`<div class="summary"><div class="trophy">🐣</div><h2>왕초보 한 단계 완료!</h2><p>문자를 눈으로 보고, 소리로 듣고, 직접 고르는 과정을 끝냈습니다.</p><div class="summaryGrid"><div><b>${base}</b><span>기본 문제</span></div><div><b>${acc}%</b><span>첫 시도 정확도</span></div></div><button class="bigbtn blue" onclick="startStarterQuiz('${tab}')">한 세트 더</button> <button class="bigbtn light" onclick="openStarterHub('${tab}')">목록 보기</button></div>`
+}
+
+/* Script / kanji-vocabulary library */
+function openScriptLibrary(tab='hiragana'){scriptTab=tab;scriptQuery='';scriptLimit=160;showView('scriptView');renderScriptLibrary()}
+function setScriptTab(tab){scriptTab=tab;scriptQuery='';scriptLimit=160;renderScriptLibrary()}
+function scriptSearchChanged(el){scriptQuery=String(el?.value||'');scriptLimit=160;renderScriptLibrary()}
+function renderScriptLibrary(){
+  document.querySelectorAll('[data-scripttab]').forEach(b=>b.classList.toggle('on',b.dataset.scripttab===scriptTab));let c=document.getElementById('scriptContent'),count=document.getElementById('scriptCount');if(!c)return;
+  if(scriptTab==='hiragana'||scriptTab==='katakana'){let base=scriptTab==='hiragana'?HIRAGANA_BASE:KATAKANA_BASE,extra=scriptTab==='hiragana'?HIRAGANA_EXTRA:KATAKANA_EXTRA,total=base.length+extra.length;if(count)count.textContent=`${total}항목`;c.innerHTML=`<div class="starterHero"><h3>${scriptTab==='hiragana'?'히라가나':'가타카나'} 모음집</h3><p>왕초보 코스에서는 기본 46자부터 시작하고, 이 모음집에서는 탁음·반탁음·요음·작은 っ/ッ까지 함께 확인합니다.</p></div><h3 class="lifeSub">기본 46자</h3>${renderKanaGrid(base)}<h3 class="lifeSub">탁음 · 반탁음 · 요음</h3>${renderKanaGrid(extra)}`;return}
+  let rows=(window.JLPT_WORD_DATA?.[scriptTab]||[]).filter(w=>hasKanji(w.jp)),q=scriptQuery.trim().toLowerCase();if(q)rows=rows.filter(w=>[w.jp,w.reading,w.ko].some(v=>String(v||'').toLowerCase().includes(q)));let show=rows.slice(0,scriptLimit);if(count)count.textContent=`${rows.length.toLocaleString()}개`;
+  c.innerHTML=`<div class="starterHero"><h3>${scriptTab} 대비 한자 어휘</h3><p>개별 한자의 공식 급수표가 아니라, 현재 ${scriptTab} 대비 어휘 중 한자가 들어간 단어를 표기·읽기·뜻으로 모은 목록입니다.</p></div><div class="scriptSummary"><span>한자 포함 어휘 ${rows.length.toLocaleString()}개</span><span>읽기·뜻 동시 표시</span></div><input class="dictSearch" value="${escapeHtml(scriptQuery)}" placeholder="한자·읽기·한국어 뜻 검색" oninput="scriptSearchChanged(this)"><div class="kanjiWordList">${show.map(w=>`<div class="kanjiWord"><div><b>${escapeHtml(w.jp)}</b><small>${escapeHtml(w.reading||'')}</small><span>${escapeHtml(w.ko)}</span></div><button onclick="speakText('${encodeURIComponent(w.reading||w.jp)}')">🔊</button></div>`).join('')}</div>${rows.length>show.length?`<button class="bigbtn light" style="width:100%;margin-top:12px" onclick="scriptLimit+=160;renderScriptLibrary()">더 보기 (${show.length}/${rows.length})</button>`:''}`
+}
+
+/* Upgrade state/cloud compatibility and home setup controls */
+state.quizPrefs=state.quizPrefs||JSON.parse(JSON.stringify(defaultState.quizPrefs));state.starterDrills=state.starterDrills||{};state.starterSession=state.starterSession||null;
+const __v611_dacoHasMeaningful=window.DACOApp?.hasMeaningfulState;
+if(window.DACOApp){
+  window.DACOApp.hasMeaningfulState=(x=state)=>!!(__v611_dacoHasMeaningful?.(x)||x?.starterSession||Object.values(x?.starterDrills||{}).some(d=>Number(d?.sessions||0)>0));
+  const oldLoad=window.DACOApp.loadLocalForUser,oldApply=window.DACOApp.applyExternalState,oldGuest=window.DACOApp.setGuestMode;
+  window.DACOApp.loadLocalForUser=(uid)=>{let r=oldLoad(uid);ensureQuizPrefs();state.starterDrills=state.starterDrills||{};state.starterSession=state.starterSession||null;syncV611SetupControls();return r};
+  window.DACOApp.applyExternalState=(next,opts={})=>{let r=oldApply(next,opts);ensureQuizPrefs();state.starterDrills=state.starterDrills||{};state.starterSession=state.starterSession||null;syncV611SetupControls();return r};
+  window.DACOApp.setGuestMode=()=>{oldGuest();ensureQuizPrefs();state.starterDrills=state.starterDrills||{};syncV611SetupControls()}
+}
+syncV611SetupControls();saveState();
+window.ANTHONY_APP_VERSION='6.11';
+
+
+const __v611_saveBeforeViewChange=saveBeforeViewChange;
+saveBeforeViewChange=function(){if(activeViewId()==='starterQuizView'&&starterSession)saveStarterSession();return __v611_saveBeforeViewChange()}
+
+/* v6.11 balanced mixed-lesson sizing */
+function buildSizedLessonV611(type,isReview=false){
+  if(type==='quick')return isReview?__v611_buildLessonReview(type):__v611_buildLesson(type);
+  let count=quizPrefCount('lesson'),pool=isReview?lessonReviewPool(state.mode):weightedPool(state.mode),used=new Set(),items=[];
+  if(!pool.length)return isReview?__v611_buildLessonReview(type):__v611_buildLesson(type);
+  let roleN=(count>=10&&state.mode!=='n3')?1:0,remain=Math.max(1,count-roleN);
+  let nRecall=Math.max(1,Math.round(remain*.35)),nQuiz=Math.max(1,Math.round(remain*.25)),nListen=Math.max(1,Math.round(remain*.20));
+  let nSpeak=Math.max(0,remain-nRecall-nQuiz-nListen);
+  while(nRecall+nQuiz+nListen+nSpeak>remain){if(nRecall>1)nRecall--;else if(nQuiz>1)nQuiz--;else if(nListen>1)nListen--;else nSpeak--}
+  while(nRecall+nQuiz+nListen+nSpeak<remain)nRecall++;
+  let speechPool=pool.filter(c=>['business','conversation','word','verb','grammar','keigo','katakana'].includes(c.kind));
+  if(!isReview)speechPool=[...speechPool].sort((a,b)=>Number(!!state.cards?.[b.id]?.speechPending)-Number(!!state.cards?.[a.id]?.speechPending));
+  items.push(...pickUnique(pool,nRecall,used).map(c=>({type:'recall',card:c})));
+  items.push(...pickUnique(pool.filter(c=>c.kind!=='counter'),nQuiz,used).map(c=>({type:'quiz',card:c})));
+  items.push(...pickUnique(pool.filter(c=>['business','conversation','word','verb','grammar','katakana'].includes(c.kind)),nListen,used).map(c=>({type:'listening',card:c})));
+  items.push(...pickUnique(speechPool,nSpeak,used).map(c=>({type:'speaking',card:c})));
+  if(roleN){
+    let roles=rolePool(state.mode);if(isReview){let seen=roles.filter(r=>state.roles?.[r.id]?.last);if(seen.length)roles=seen}
+    if(roles.length)items.push({type:'roleplay',role:roles[0]})
+  }
+  if(items.length<count){for(const c of pool){if(used.has(c.id))continue;items.push({type:'quiz',card:c});used.add(c.id);if(items.length>=count)break}}
+  return items.slice(0,count).map(x=>decorateItem(x))
+}
+buildLesson=function(type){return buildSizedLessonV611(type,false)}
+buildLessonReview=function(type){return buildSizedLessonV611(type,true)}
