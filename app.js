@@ -765,10 +765,10 @@ function finishPractice(){
 
 
 // v6.11.3 · installed PWA metadata migration helper
-const YOMIAN_INSTALL_META_VERSION='yomian-jp-v6113';
+const YOMIAN_INSTALL_META_VERSION='yomian-jp-v6114';
 function openInstallMetaHelp(){const m=document.getElementById('installMetaModal');if(m)m.classList.add('on')}
 function closeInstallMetaHelp(){const m=document.getElementById('installMetaModal');if(m)m.classList.remove('on');try{localStorage.setItem('yomianInstallMetaHelpSeen',YOMIAN_INSTALL_META_VERSION)}catch(_){}}
-async function copyWebApkAddress(){try{await navigator.clipboard.writeText('about://webapks');toast('about://webapks 주소를 복사했습니다. Chrome 주소창에 붙여넣으세요.')}catch(_){toast('Chrome 주소창에 about://webapks 를 입력하세요.')}}
+async function copyWebApkAddress(){try{location.href='./reinstall.html'}catch(_){location.assign('./reinstall.html')}}
 function maybeShowInstallMetaMigrationNotice(){
   try{
     const seen=localStorage.getItem('yomianInstallMetaHelpSeen');

@@ -1,5 +1,5 @@
-const CACHE_NAME="yomian-japanese-v6-11-3";
-const ASSETS=["./","./index.html","./study-data-v65.js?v=6.11.3","./app.js?v=6.11.3","./cloud-auth.js?v=6.11.3","./cloud-config.js?v=6.11.3","./manifest.webmanifest","./yomian-jp-icon-192-v6113.png","./yomian-jp-icon-512-v6113.png","./yomian-jp-maskable-192-v6113.png","./yomian-jp-maskable-512-v6113.png"];
+const CACHE_NAME="yomian-japanese-v6-11-4";
+const ASSETS=["./","./index.html","./study-data-v65.js?v=6.11.4","./app.js?v=6.11.4","./cloud-auth.js?v=6.11.4","./cloud-config.js?v=6.11.4","./manifest.webmanifest","./manifest-reinstall.webmanifest","./reinstall.html","./yomian-jp-icon-192-v6113.png","./yomian-jp-icon-512-v6113.png","./yomian-jp-maskable-192-v6113.png","./yomian-jp-maskable-512-v6113.png"];
 self.addEventListener("install",event=>{event.waitUntil(caches.open(CACHE_NAME).then(cache=>cache.addAll(ASSETS)))});
 self.addEventListener('message',event=>{if(event.data&&event.data.type==='SKIP_WAITING')self.skipWaiting()});
 self.addEventListener("activate",event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE_NAME).map(k=>caches.delete(k)))).then(()=>self.clients.claim()))});
