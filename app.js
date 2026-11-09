@@ -35,7 +35,7 @@ const GRAMMAR_READING_MAP={"〜ていただけると助かります":"〜てい�
 const TTS_READING_OVERRIDES={"私は会社員です。":"わたしは かいしゃいんです。","猫がいます。":"ねこが います。","水を飲みます。":"みずを のみます。","7時に起きます。":"しちじに おきます。","日本へ行きます。":"にほんへ いきます。","図書館で勉強します。":"としょかんで べんきょうします。","友達と映画を見ます。":"ともだちと えいがを みます。","9時から働きます。":"くじから はたらきます。","5時まで働きます。":"ごじまで はたらきます。","会社の車です。":"かいしゃの くるまです。","私も行きます。":"わたしも いきます。","パンや卵を買いました。":"パンや たまごを かいました。","コーヒーかお茶にします。":"コーヒーか おちゃに します。","今日は暑いですね。":"きょうは あついですね。","この店は安いですよ。":"この みせは やすいですよ。","水だけ飲みます。":"みずだけ のみます。","千円しかありません。":"せんえんしか ありません。","10分くらいかかります。":"じゅっぷんくらい かかります。","3時ごろ来てください。":"さんじごろ きてください。","電車はバスより速いです。":"でんしゃは バスより はやいです。","思ったほど高くないです。":"おもったほど たかくないです。","価格について話します。":"かかくについて はなします。","人によって考え方が違います。":"ひとによって かんがえかたが ちがいます。","代表として参加します。":"だいひょうとして さんかします。","私にとって大切です。":"わたしにとって たいせつです。","コーヒーでも飲みませんか。":"コーヒーでも のみませんか。","京都なら秋がおすすめです。":"きょうとなら あきが おすすめです。","田中さんは明日来るって。":"たなかさんは あした くるって。","袋をお願いします。":"ふくろを おねがいします。","これ、温めてください。":"これ、あたためてください。","箸を一つお願いします。":"はしを ひとつ おねがいします。","レシートは大丈夫です。":"レシートは だいじょうぶです。","カードでお願いします。":"カードで おねがいします。","二人です。":"ふたりです。","おすすめは何ですか。":"おすすめは なんですか。","これを一つお願いします。":"これを ひとつ おねがいします。","お水をもう一つお願いします。":"おみずを もうひとつ おねがいします。","お会計をお願いします。":"おかいけいを おねがいします。","店内でお願いします。":"てんないで おねがいします。","持ち帰りでお願いします。":"もちかえりで おねがいします。","氷なしでお願いします。":"こおりなしで おねがいします。","砂糖はいりません。":"さとうは いりません。","空いている席はありますか。":"あいている せきは ありますか。","これはいくらですか。":"これは いくらですか。","もう少し大きいサイズはありますか。":"もうすこし おおきい サイズは ありますか。","試着してもいいですか。":"しちゃくしても いいですか。","他の色はありますか。":"ほかの いろは ありますか。","免税できますか。":"めんぜい できますか。","この電車は東京に行きますか。":"この でんしゃは とうきょうに いきますか。","何番線ですか。":"なんばんせんですか。","どこで乗り換えますか。":"どこで のりかえますか。","終電は何時ですか。":"しゅうでんは なんじですか。","電車が遅れています。":"でんしゃが おくれています。","ここまでお願いします。":"ここまで おねがいします。","この住所までお願いします。":"この じゅうしょまで おねがいします。","次の信号で止めてください。":"つぎの しんごうで とめてください。","カードで払えますか。":"カードで はらえますか。","だいたい何分かかりますか。":"だいたい なんぷん かかりますか。","チェックインをお願いします。":"チェックインを おねがいします。","予約しています。":"よやくしています。","荷物を預けてもいいですか。":"にもつを あずけても いいですか。","朝食は何時からですか。":"ちょうしょくは なんじからですか。","Wi-Fiのパスワードを教えてください。":"ワイファイの パスワードを おしえてください。","搭乗口はどこですか。":"とうじょうぐちは どこですか。","この荷物は預けます。":"この にもつは あずけます。","これは手荷物です。":"これは てにもつです。","パスポートはこちらです。":"パスポートは こちらです。","両替はどこでできますか。":"りょうがえは どこで できますか。","駅はどこですか。":"えきは どこですか。","ここから近いですか。":"ここから ちかいですか。","まっすぐ行ってください。":"まっすぐ いってください。","次の角を右に曲がります。":"つぎの かどを みぎに まがります。","コンビニの向かいです。":"コンビニの むかいです。","資料を確認します。":"しりょうを かくにんします。","日程を調整します。":"にっていを ちょうせいします。","担当者に確認します。":"たんとうしゃに かくにんします。","社内で共有します。":"しゃないで きょうゆうします。","進捗を教えていただけますか。":"しんちょくを おしえて いただけますか。","担当者をお願いします。":"たんとうしゃを おねがいします。","今、席を外しています。":"いま、せきを はずしています。","後ほどかけ直します。":"のちほど かけなおします。","折り返しお願いします。":"おりかえし おねがいします。","伝言をお願いできますか。":"でんごんを おねがいできますか。","すみません、助けてください。":"すみません、たすけてください。","財布をなくしました。":"さいふを なくしました。","スマホが動きません。":"スマホが うごきません。","忘れ物をしました。":"わすれものを しました。","駅員さんはどこですか。":"えきいんさんは どこですか。","確認でき次第、ご連絡いたします。":"かくにんできしだい、ごれんらくいたします。","今日はよろしくお願(ねが)いします。":"きょうは よろしく おねがいします。"};
 const BASE_KEY='daco_jp_coach_v5';
 const LEGACY_KEY='daco_jp_coach_v3';
-const APP_VERSION='6.11.2';
+const APP_VERSION='6.11.3';
 function storageOwner(){return String(window.DACO_CLOUD_USER_ID||'guest').replace(/[^a-zA-Z0-9_-]/g,'_')}
 function stateKey(){return BASE_KEY+'_'+storageOwner()}
 function backupKey(){return stateKey()+'_auto_backup'}
@@ -763,6 +763,24 @@ function finishPractice(){
   let ps=practiceSession;if(!ps)return;let pending=ps.items.findIndex(x=>!x.done);if(pending>=0){ps.idx=pending;renderPracticeItem();return}let kind=ps.kind,st=practiceStats(kind);st.sessions++;markDailyComplete(`practice:${kind}`,kind==='verb'?'동사 변형':'문장 완성',{module:'practice'});touchStudyDay(kind==='verb'?'verb':'ending');let firstAcc=ps.firstTotal?Math.round(ps.firstCorrect/ps.firstTotal*100):0,total=ps.items.length,review=ps.items.filter(x=>x.isReview).length;state.practiceSession=null;practiceSession=null;saveState();updatePracticeHome();let card=document.getElementById('practiceCard');document.getElementById('practiceProgress').style.width='100%';document.getElementById('practiceCount').textContent='완료';document.getElementById('practiceNotice').textContent='';document.getElementById('practicePrev').disabled=true;document.getElementById('practiceNext').disabled=true;card.innerHTML=`<div class="summary"><div class="trophy">🎯</div><h2>${kind==='verb'?'동사 변형':'문장 완성'} 훈련 완료!</h2><p>틀렸던 문제까지 다시 맞혔습니다.</p><div class="summaryGrid"><div><b>${ps.baseCount}</b><span>기본 문제</span></div><div><b>${firstAcc}%</b><span>첫 시도 정확도</span></div><div><b>${review}</b><span>추가 복습</span></div><div><b>${total}</b><span>총 풀이</span></div></div><button class="bigbtn blue" onclick="${kind==='verb'?'startVerbDrill()':'startEndingDrill()'}">10문제 더</button> <button class="bigbtn light" onclick="goHome()">홈으로</button></div>`;
 }
 
+
+// v6.11.3 · installed PWA metadata migration helper
+const YOMIAN_INSTALL_META_VERSION='yomian-jp-v6113';
+function openInstallMetaHelp(){const m=document.getElementById('installMetaModal');if(m)m.classList.add('on')}
+function closeInstallMetaHelp(){const m=document.getElementById('installMetaModal');if(m)m.classList.remove('on');try{localStorage.setItem('yomianInstallMetaHelpSeen',YOMIAN_INSTALL_META_VERSION)}catch(_){}}
+async function copyWebApkAddress(){try{await navigator.clipboard.writeText('about://webapks');toast('about://webapks 주소를 복사했습니다. Chrome 주소창에 붙여넣으세요.')}catch(_){toast('Chrome 주소창에 about://webapks 를 입력하세요.')}}
+function maybeShowInstallMetaMigrationNotice(){
+  try{
+    const seen=localStorage.getItem('yomianInstallMetaHelpSeen');
+    if(seen===YOMIAN_INSTALL_META_VERSION)return;
+    const ua=navigator.userAgent||'';
+    const android=/Android/i.test(ua);
+    if(!android)return;
+    setTimeout(()=>{toast('YOMIAN 이름·아이콘은 Android가 별도로 갱신합니다. 설정에서 갱신 방법을 확인할 수 있습니다.');},1800);
+  }catch(_){}
+}
+window.addEventListener('load',maybeShowInstallMetaMigrationNotice);
+
 let pendingAppUpdateWorker=null,appUpdateApplying=false,appUpdateNoticeShown=false;
 function appUpdateIsSafe(){
   const view=activeViewId();
@@ -950,11 +968,11 @@ initNavigationHistory();
 hydrateFromIDB();
 requestPersistentStorage();
 
-window.ANTHONY_APP_VERSION='6.11.2';window.YOMIAN_APP_VERSION='6.11.2';
+window.ANTHONY_APP_VERSION='6.11.3';window.YOMIAN_APP_VERSION='6.11.3';
 
 
 /* ==========================================================================
-   v6.11.2 · learner-controlled quiz size/direction + absolute beginner + scripts
+   v6.11.3 · learner-controlled quiz size/direction + absolute beginner + scripts
    ========================================================================== */
 const V611_COUNT_OPTIONS=[5,10,15,20,30];
 const V611_DIR_LABELS={
@@ -1300,13 +1318,13 @@ if(window.DACOApp){
   window.DACOApp.setGuestMode=()=>{oldGuest();ensureQuizPrefs();state.starterDrills=state.starterDrills||{};syncV611SetupControls()}
 }
 syncV611SetupControls();saveState();
-window.ANTHONY_APP_VERSION='6.11.2';window.YOMIAN_APP_VERSION='6.11.2';
+window.ANTHONY_APP_VERSION='6.11.3';window.YOMIAN_APP_VERSION='6.11.3';
 
 
 const __v611_saveBeforeViewChange=saveBeforeViewChange;
 saveBeforeViewChange=function(){if(activeViewId()==='starterQuizView'&&starterSession)saveStarterSession();return __v611_saveBeforeViewChange()}
 
-/* v6.11.2 balanced mixed-lesson sizing */
+/* v6.11.3 balanced mixed-lesson sizing */
 function buildSizedLessonV611(type,isReview=false){
   if(type==='quick')return isReview?__v611_buildLessonReview(type):__v611_buildLesson(type);
   let count=quizPrefCount('lesson'),pool=isReview?lessonReviewPool(state.mode):weightedPool(state.mode),used=new Set(),items=[];

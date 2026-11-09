@@ -10,28 +10,43 @@
   "lang": "ko-KR",
   "icons": [
     {
-      "src": "./yomian-jp-icon-192.png",
+      "src": "./yomian-jp-icon-192-v6113.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "./yomian-jp-icon-512.png",
+      "src": "./yomian-jp-icon-512-v6113.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "./yomian-jp-maskable-192.png",
+      "src": "./yomian-jp-maskable-192-v6113.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "./yomian-jp-maskable-512.png",
+      "src": "./yomian-jp-maskable-512-v6113.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "오늘 학습",
+      "short_name": "오늘 학습",
+      "description": "YOMIAN JAPANESE 오늘 학습을 시작합니다.",
+      "url": "./",
+      "icons": [
+        {
+          "src": "./yomian-jp-icon-192-v6113.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
     }
   ]
 }
