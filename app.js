@@ -35,7 +35,7 @@ const GRAMMAR_READING_MAP={"〜ていただけると助かります":"〜てい�
 const TTS_READING_OVERRIDES={"私は会社員です。":"わたしは かいしゃいんです。","猫がいます。":"ねこが います。","水を飲みます。":"みずを のみます。","7時に起きます。":"しちじに おきます。","日本へ行きます。":"にほんへ いきます。","図書館で勉強します。":"としょかんで べんきょうします。","友達と映画を見ます。":"ともだちと えいがを みます。","9時から働きます。":"くじから はたらきます。","5時まで働きます。":"ごじまで はたらきます。","会社の車です。":"かいしゃの くるまです。","私も行きます。":"わたしも いきます。","パンや卵を買いました。":"パンや たまごを かいました。","コーヒーかお茶にします。":"コーヒーか おちゃに します。","今日は暑いですね。":"きょうは あついですね。","この店は安いですよ。":"この みせは やすいですよ。","水だけ飲みます。":"みずだけ のみます。","千円しかありません。":"せんえんしか ありません。","10分くらいかかります。":"じゅっぷんくらい かかります。","3時ごろ来てください。":"さんじごろ きてください。","電車はバスより速いです。":"でんしゃは バスより はやいです。","思ったほど高くないです。":"おもったほど たかくないです。","価格について話します。":"かかくについて はなします。","人によって考え方が違います。":"ひとによって かんがえかたが ちがいます。","代表として参加します。":"だいひょうとして さんかします。","私にとって大切です。":"わたしにとって たいせつです。","コーヒーでも飲みませんか。":"コーヒーでも のみませんか。","京都なら秋がおすすめです。":"きょうとなら あきが おすすめです。","田中さんは明日来るって。":"たなかさんは あした くるって。","袋をお願いします。":"ふくろを おねがいします。","これ、温めてください。":"これ、あたためてください。","箸を一つお願いします。":"はしを ひとつ おねがいします。","レシートは大丈夫です。":"レシートは だいじょうぶです。","カードでお願いします。":"カードで おねがいします。","二人です。":"ふたりです。","おすすめは何ですか。":"おすすめは なんですか。","これを一つお願いします。":"これを ひとつ おねがいします。","お水をもう一つお願いします。":"おみずを もうひとつ おねがいします。","お会計をお願いします。":"おかいけいを おねがいします。","店内でお願いします。":"てんないで おねがいします。","持ち帰りでお願いします。":"もちかえりで おねがいします。","氷なしでお願いします。":"こおりなしで おねがいします。","砂糖はいりません。":"さとうは いりません。","空いている席はありますか。":"あいている せきは ありますか。","これはいくらですか。":"これは いくらですか。","もう少し大きいサイズはありますか。":"もうすこし おおきい サイズは ありますか。","試着してもいいですか。":"しちゃくしても いいですか。","他の色はありますか。":"ほかの いろは ありますか。","免税できますか。":"めんぜい できますか。","この電車は東京に行きますか。":"この でんしゃは とうきょうに いきますか。","何番線ですか。":"なんばんせんですか。","どこで乗り換えますか。":"どこで のりかえますか。","終電は何時ですか。":"しゅうでんは なんじですか。","電車が遅れています。":"でんしゃが おくれています。","ここまでお願いします。":"ここまで おねがいします。","この住所までお願いします。":"この じゅうしょまで おねがいします。","次の信号で止めてください。":"つぎの しんごうで とめてください。","カードで払えますか。":"カードで はらえますか。","だいたい何分かかりますか。":"だいたい なんぷん かかりますか。","チェックインをお願いします。":"チェックインを おねがいします。","予約しています。":"よやくしています。","荷物を預けてもいいですか。":"にもつを あずけても いいですか。","朝食は何時からですか。":"ちょうしょくは なんじからですか。","Wi-Fiのパスワードを教えてください。":"ワイファイの パスワードを おしえてください。","搭乗口はどこですか。":"とうじょうぐちは どこですか。","この荷物は預けます。":"この にもつは あずけます。","これは手荷物です。":"これは てにもつです。","パスポートはこちらです。":"パスポートは こちらです。","両替はどこでできますか。":"りょうがえは どこで できますか。","駅はどこですか。":"えきは どこですか。","ここから近いですか。":"ここから ちかいですか。","まっすぐ行ってください。":"まっすぐ いってください。","次の角を右に曲がります。":"つぎの かどを みぎに まがります。","コンビニの向かいです。":"コンビニの むかいです。","資料を確認します。":"しりょうを かくにんします。","日程を調整します。":"にっていを ちょうせいします。","担当者に確認します。":"たんとうしゃに かくにんします。","社内で共有します。":"しゃないで きょうゆうします。","進捗を教えていただけますか。":"しんちょくを おしえて いただけますか。","担当者をお願いします。":"たんとうしゃを おねがいします。","今、席を外しています。":"いま、せきを はずしています。","後ほどかけ直します。":"のちほど かけなおします。","折り返しお願いします。":"おりかえし おねがいします。","伝言をお願いできますか。":"でんごんを おねがいできますか。","すみません、助けてください。":"すみません、たすけてください。","財布をなくしました。":"さいふを なくしました。","スマホが動きません。":"スマホが うごきません。","忘れ物をしました。":"わすれものを しました。","駅員さんはどこですか。":"えきいんさんは どこですか。","確認でき次第、ご連絡いたします。":"かくにんできしだい、ごれんらくいたします。","今日はよろしくお願(ねが)いします。":"きょうは よろしく おねがいします。"};
 const BASE_KEY='daco_jp_coach_v5';
 const LEGACY_KEY='daco_jp_coach_v3';
-const APP_VERSION='6.11.5';
+const APP_VERSION='6.11.6';
 function storageOwner(){return String(window.DACO_CLOUD_USER_ID||'guest').replace(/[^a-zA-Z0-9_-]/g,'_')}
 function stateKey(){return BASE_KEY+'_'+storageOwner()}
 function backupKey(){return stateKey()+'_auto_backup'}
@@ -211,7 +211,7 @@ function updateDailyCompletionUI(){
   document.querySelectorAll('[data-daily-key]').forEach(el=>{
     let key=el.dataset.dailyKey,old=el.querySelector(':scope > .todayDoneBadge');if(old)old.remove();
     el.classList.toggle('dailyDone',dailyCompleted(key));
-    if(dailyCompleted(key)){let b=document.createElement('span');b.className='todayDoneBadge';b.textContent='오늘 완료 ✓';el.appendChild(b)}
+    if(dailyCompleted(key)){let b=document.createElement('span');b.className='todayDoneBadge';b.textContent='✓ 오늘 완료';b.title=dailyBadgeText(key);b.setAttribute('aria-label',dailyBadgeText(key));el.appendChild(b)}
   });
 }
 let dailyChoiceContext=null;
@@ -249,6 +249,7 @@ function updateHome(){
   ensureGamificationState(state);document.getElementById('streakN').textContent=state.streak||0;document.getElementById('dueN').textContent=dueCount(state.mode);document.getElementById('masteredN').textContent=masteredCount(state.mode);document.getElementById('scoreN').textContent=scoreSummary(state).score.toLocaleString();
   document.querySelectorAll('.mode').forEach(x=>x.classList.toggle('active',x.dataset.mode===state.mode));
   const d=new Date(),days=['일','월','화','수','목','금','토'];document.getElementById('todayLabel').textContent=`${d.getMonth()+1}월 ${d.getDate()}일 (${days[d.getDay()]}) · 오늘의 일본어`;
+  const todayDoneMap=state.dailyCompletions?.[todayKey()]||{},todayDoneN=Object.keys(todayDoneMap).length,todaySummary=document.getElementById('todayCompletionSummary');if(todaySummary)todaySummary.innerHTML=todayDoneN?`<span class="summaryCheck">✓</span><span>오늘 ${todayDoneN}개 학습 영역 완료 · 완료 메뉴는 복습/추가학습 가능</span>`:'';
   const weak=DB.cards.filter(c=>cardAllowedForMode(c,state.mode)).map(c=>[c,cardState(c.id)]).filter(x=>x[1].seen&&x[1].lapses>0).sort((a,b)=>(b[1].lapses-b[0].priority*.05)-(a[1].lapses-a[0].priority*.05)).slice(0,4);
   const box=document.getElementById('weakList');box.innerHTML=weak.length?weak.map(([c,p])=>`<div class="weakItem"><div><b>${escapeHtml(cleanJP(c.jp))}</b><br><span>${escapeHtml(c.ko)}</span></div><span>${p.lapses}회 재복습</span></div>`).join(''):'<div style="color:#94a3b8;font-size:13px">현재 모드에서 아직 약한 표현이 없습니다.</div>';
   document.getElementById('dbInfo').textContent=`v${APP_VERSION} · YOMIAN JAPANESE · 학습 카드 ${DB.cards.length.toLocaleString()}개 · 회화 ${DB.roleplays.length}세트 · 계정 동기화`;
@@ -968,7 +969,7 @@ initNavigationHistory();
 hydrateFromIDB();
 requestPersistentStorage();
 
-window.ANTHONY_APP_VERSION='6.11.5';window.YOMIAN_APP_VERSION='6.11.5';
+window.ANTHONY_APP_VERSION='6.11.6';window.YOMIAN_APP_VERSION='6.11.6';
 
 
 /* ==========================================================================
@@ -1318,7 +1319,7 @@ if(window.DACOApp){
   window.DACOApp.setGuestMode=()=>{oldGuest();ensureQuizPrefs();state.starterDrills=state.starterDrills||{};syncV611SetupControls()}
 }
 syncV611SetupControls();saveState();
-window.ANTHONY_APP_VERSION='6.11.5';window.YOMIAN_APP_VERSION='6.11.5';
+window.ANTHONY_APP_VERSION='6.11.6';window.YOMIAN_APP_VERSION='6.11.6';
 
 
 const __v611_saveBeforeViewChange=saveBeforeViewChange;
