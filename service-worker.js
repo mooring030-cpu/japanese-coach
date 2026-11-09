@@ -1,6 +1,7 @@
-const CACHE_NAME="anthony-japanese-coach-v6-10";
-const ASSETS=["./","./index.html","./study-data-v65.js?v=6.10","./app.js?v=6.10","./cloud-auth.js?v=6.10","./cloud-config.js?v=6.10","./manifest.webmanifest","./icon-192.png","./icon-512.png"];
-self.addEventListener("install",event=>{event.waitUntil(caches.open(CACHE_NAME).then(cache=>cache.addAll(ASSETS)).then(()=>self.skipWaiting()))});
+const CACHE_NAME="anthony-japanese-coach-v6-10-1";
+const ASSETS=["./","./index.html","./study-data-v65.js?v=6.10.1","./app.js?v=6.10.1","./cloud-auth.js?v=6.10.1","./cloud-config.js?v=6.10.1","./manifest.webmanifest","./icon-192.png","./icon-512.png"];
+self.addEventListener("install",event=>{event.waitUntil(caches.open(CACHE_NAME).then(cache=>cache.addAll(ASSETS)))});
+self.addEventListener('message',event=>{if(event.data&&event.data.type==='SKIP_WAITING')self.skipWaiting()});
 self.addEventListener("activate",event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE_NAME).map(k=>caches.delete(k)))).then(()=>self.clients.claim()))});
 self.addEventListener("fetch",event=>{if(event.request.method!=="GET")return;const url=new URL(event.request.url);if(url.origin!==self.location.origin)return;event.respondWith(fetch(event.request,{cache:"no-store"}).then(response=>{const copy=response.clone();caches.open(CACHE_NAME).then(cache=>cache.put(event.request,copy)).catch(()=>{});return response}).catch(async()=>{const cached=await caches.match(event.request);if(cached)return cached;if(event.request.mode==='navigate')return caches.match("./index.html");return Response.error()}))});
 self.addEventListener('push',event=>{let data={title:'ANTHONY 日本語 COACH',body:'오늘 일본어 10분이 아직 남아 있어요. 3분만 시작해도 좋습니다.',url:'./'};try{if(event.data)data={...data,...event.data.json()}}catch(_){try{data.body=event.data.text()}catch(__){}}event.waitUntil(self.registration.showNotification(data.title,{body:data.body,icon:'./icon-192.png',badge:'./icon-192.png',tag:'anthony-study-reminder',renotify:false,data:{url:data.url||'./'}}))});

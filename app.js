@@ -35,7 +35,7 @@ const GRAMMAR_READING_MAP={"〜ていただけると助かります":"〜てい�
 const TTS_READING_OVERRIDES={"私は会社員です。":"わたしは かいしゃいんです。","猫がいます。":"ねこが います。","水を飲みます。":"みずを のみます。","7時に起きます。":"しちじに おきます。","日本へ行きます。":"にほんへ いきます。","図書館で勉強します。":"としょかんで べんきょうします。","友達と映画を見ます。":"ともだちと えいがを みます。","9時から働きます。":"くじから はたらきます。","5時まで働きます。":"ごじまで はたらきます。","会社の車です。":"かいしゃの くるまです。","私も行きます。":"わたしも いきます。","パンや卵を買いました。":"パンや たまごを かいました。","コーヒーかお茶にします。":"コーヒーか おちゃに します。","今日は暑いですね。":"きょうは あついですね。","この店は安いですよ。":"この みせは やすいですよ。","水だけ飲みます。":"みずだけ のみます。","千円しかありません。":"せんえんしか ありません。","10分くらいかかります。":"じゅっぷんくらい かかります。","3時ごろ来てください。":"さんじごろ きてください。","電車はバスより速いです。":"でんしゃは バスより はやいです。","思ったほど高くないです。":"おもったほど たかくないです。","価格について話します。":"かかくについて はなします。","人によって考え方が違います。":"ひとによって かんがえかたが ちがいます。","代表として参加します。":"だいひょうとして さんかします。","私にとって大切です。":"わたしにとって たいせつです。","コーヒーでも飲みませんか。":"コーヒーでも のみませんか。","京都なら秋がおすすめです。":"きょうとなら あきが おすすめです。","田中さんは明日来るって。":"たなかさんは あした くるって。","袋をお願いします。":"ふくろを おねがいします。","これ、温めてください。":"これ、あたためてください。","箸を一つお願いします。":"はしを ひとつ おねがいします。","レシートは大丈夫です。":"レシートは だいじょうぶです。","カードでお願いします。":"カードで おねがいします。","二人です。":"ふたりです。","おすすめは何ですか。":"おすすめは なんですか。","これを一つお願いします。":"これを ひとつ おねがいします。","お水をもう一つお願いします。":"おみずを もうひとつ おねがいします。","お会計をお願いします。":"おかいけいを おねがいします。","店内でお願いします。":"てんないで おねがいします。","持ち帰りでお願いします。":"もちかえりで おねがいします。","氷なしでお願いします。":"こおりなしで おねがいします。","砂糖はいりません。":"さとうは いりません。","空いている席はありますか。":"あいている せきは ありますか。","これはいくらですか。":"これは いくらですか。","もう少し大きいサイズはありますか。":"もうすこし おおきい サイズは ありますか。","試着してもいいですか。":"しちゃくしても いいですか。","他の色はありますか。":"ほかの いろは ありますか。","免税できますか。":"めんぜい できますか。","この電車は東京に行きますか。":"この でんしゃは とうきょうに いきますか。","何番線ですか。":"なんばんせんですか。","どこで乗り換えますか。":"どこで のりかえますか。","終電は何時ですか。":"しゅうでんは なんじですか。","電車が遅れています。":"でんしゃが おくれています。","ここまでお願いします。":"ここまで おねがいします。","この住所までお願いします。":"この じゅうしょまで おねがいします。","次の信号で止めてください。":"つぎの しんごうで とめてください。","カードで払えますか。":"カードで はらえますか。","だいたい何分かかりますか。":"だいたい なんぷん かかりますか。","チェックインをお願いします。":"チェックインを おねがいします。","予約しています。":"よやくしています。","荷物を預けてもいいですか。":"にもつを あずけても いいですか。","朝食は何時からですか。":"ちょうしょくは なんじからですか。","Wi-Fiのパスワードを教えてください。":"ワイファイの パスワードを おしえてください。","搭乗口はどこですか。":"とうじょうぐちは どこですか。","この荷物は預けます。":"この にもつは あずけます。","これは手荷物です。":"これは てにもつです。","パスポートはこちらです。":"パスポートは こちらです。","両替はどこでできますか。":"りょうがえは どこで できますか。","駅はどこですか。":"えきは どこですか。","ここから近いですか。":"ここから ちかいですか。","まっすぐ行ってください。":"まっすぐ いってください。","次の角を右に曲がります。":"つぎの かどを みぎに まがります。","コンビニの向かいです。":"コンビニの むかいです。","資料を確認します。":"しりょうを かくにんします。","日程を調整します。":"にっていを ちょうせいします。","担当者に確認します。":"たんとうしゃに かくにんします。","社内で共有します。":"しゃないで きょうゆうします。","進捗を教えていただけますか。":"しんちょくを おしえて いただけますか。","担当者をお願いします。":"たんとうしゃを おねがいします。","今、席を外しています。":"いま、せきを はずしています。","後ほどかけ直します。":"のちほど かけなおします。","折り返しお願いします。":"おりかえし おねがいします。","伝言をお願いできますか。":"でんごんを おねがいできますか。","すみません、助けてください。":"すみません、たすけてください。","財布をなくしました。":"さいふを なくしました。","スマホが動きません。":"スマホが うごきません。","忘れ物をしました。":"わすれものを しました。","駅員さんはどこですか。":"えきいんさんは どこですか。","確認でき次第、ご連絡いたします。":"かくにんできしだい、ごれんらくいたします。","今日はよろしくお願(ねが)いします。":"きょうは よろしく おねがいします。"};
 const BASE_KEY='daco_jp_coach_v5';
 const LEGACY_KEY='daco_jp_coach_v3';
-const APP_VERSION='6.10';
+const APP_VERSION='6.10.1';
 function storageOwner(){return String(window.DACO_CLOUD_USER_ID||'guest').replace(/[^a-zA-Z0-9_-]/g,'_')}
 function stateKey(){return BASE_KEY+'_'+storageOwner()}
 function backupKey(){return stateKey()+'_auto_backup'}
@@ -411,7 +411,7 @@ function startLesson(type,intent='normal'){
   lesson={mode:state.mode,sessionType:type,studyIntent:intent,items,idx:0,answers:0,correct:0,weak:0,firstAttempts:0,firstCorrect:0,seen:new Set(),weakSet:new Set(),masterySet:new Set(),reviewCounts:{},srs:{},baseCount:items.length};state.activeSession=null;saveLessonState();showView('lessonView');renderItem();
 }
 function quitLesson(){if(confirm('현재 문제 위치와 재복습 대기열까지 저장하고 종료할까요?')){saveLessonState();saveBackupSnapshot('중간 학습 저장');goHome();toast('진행 위치와 자동 백업을 저장했습니다.')}}
-function goHome(){showView('homeView',{replace:true});updateHome()}
+function goHome(){showView('homeView',{replace:true});updateHome();setTimeout(()=>maybeApplyPendingAppUpdate(),450)}
 function current(){return lesson?.items?.[lesson.idx]}
 function itemKey(it){return it?.type==='roleplay'?`role:${it.role?.id||''}`:`${it?.type||''}:${it?.card?.id||''}`}
 function pendingReviewCount(){return lesson?lesson.items.filter(x=>x.isReview&&x.status!=='done').length:0}
@@ -763,9 +763,56 @@ function finishPractice(){
   let ps=practiceSession;if(!ps)return;let pending=ps.items.findIndex(x=>!x.done);if(pending>=0){ps.idx=pending;renderPracticeItem();return}let kind=ps.kind,st=practiceStats(kind);st.sessions++;markDailyComplete(`practice:${kind}`,kind==='verb'?'동사 변형':'문장 완성',{module:'practice'});touchStudyDay(kind==='verb'?'verb':'ending');let firstAcc=ps.firstTotal?Math.round(ps.firstCorrect/ps.firstTotal*100):0,total=ps.items.length,review=ps.items.filter(x=>x.isReview).length;state.practiceSession=null;practiceSession=null;saveState();updatePracticeHome();let card=document.getElementById('practiceCard');document.getElementById('practiceProgress').style.width='100%';document.getElementById('practiceCount').textContent='완료';document.getElementById('practiceNotice').textContent='';document.getElementById('practicePrev').disabled=true;document.getElementById('practiceNext').disabled=true;card.innerHTML=`<div class="summary"><div class="trophy">🎯</div><h2>${kind==='verb'?'동사 변형':'문장 완성'} 훈련 완료!</h2><p>틀렸던 문제까지 다시 맞혔습니다.</p><div class="summaryGrid"><div><b>${ps.baseCount}</b><span>기본 문제</span></div><div><b>${firstAcc}%</b><span>첫 시도 정확도</span></div><div><b>${review}</b><span>추가 복습</span></div><div><b>${total}</b><span>총 풀이</span></div></div><button class="bigbtn blue" onclick="${kind==='verb'?'startVerbDrill()':'startEndingDrill()'}">10문제 더</button> <button class="bigbtn light" onclick="goHome()">홈으로</button></div>`;
 }
 
-if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('./service-worker.js').then(reg=>{reg.update().catch(()=>{});reg.addEventListener('updatefound',()=>{let w=reg.installing;if(w)w.addEventListener('statechange',()=>{if(w.state==='installed'&&navigator.serviceWorker.controller)toast('새 버전이 준비되었습니다. 앱을 다시 열면 적용됩니다.')})})}).catch(()=>{}));}
+let pendingAppUpdateWorker=null,appUpdateApplying=false,appUpdateNoticeShown=false;
+function appUpdateIsSafe(){
+  const view=activeViewId();
+  const speaking=!!(window.speechSynthesis&&speechSynthesis.speaking);
+  return view==='homeView'&&!lesson&&!practiceSession&&!lifeSession&&!jlptSession&&!speaking;
+}
+function rememberPendingAppUpdate(worker){
+  if(!worker)return;
+  pendingAppUpdateWorker=worker;
+  if(appUpdateIsSafe()){setTimeout(()=>maybeApplyPendingAppUpdate(),700);return}
+  if(!appUpdateNoticeShown){appUpdateNoticeShown=true;toast('새 버전을 받았습니다. 현재 학습이 끝나면 자동으로 적용됩니다.')}
+}
+function maybeApplyPendingAppUpdate(force=false){
+  if(!pendingAppUpdateWorker||appUpdateApplying)return false;
+  if(!force&&!appUpdateIsSafe())return false;
+  try{saveBeforeViewChange();saveState()}catch(_){}
+  appUpdateApplying=true;
+  toast('새 버전을 적용합니다.');
+  try{pendingAppUpdateWorker.postMessage({type:'SKIP_WAITING'});return true}catch(_){appUpdateApplying=false;return false}
+}
+function bindAppUpdateRegistration(reg){
+  if(reg.waiting)rememberPendingAppUpdate(reg.waiting);
+  reg.addEventListener('updatefound',()=>{
+    const worker=reg.installing;if(!worker)return;
+    worker.addEventListener('statechange',()=>{
+      if(worker.state==='installed'&&navigator.serviceWorker.controller)rememberPendingAppUpdate(worker);
+    });
+  });
+}
+if('serviceWorker' in navigator){
+  window.addEventListener('load',async()=>{
+    try{
+      const reg=await navigator.serviceWorker.register('./service-worker.js',{updateViaCache:'none'});
+      bindAppUpdateRegistration(reg);
+      reg.update().catch(()=>{});
+      navigator.serviceWorker.addEventListener('controllerchange',()=>{
+        if(appUpdateApplying){pendingAppUpdateWorker=null;setTimeout(()=>location.reload(),120)}
+      });
+      setInterval(()=>reg.update().catch(()=>{}),10*60*1000);
+      document.addEventListener('visibilitychange',()=>{
+        if(document.visibilityState==='visible'){
+          reg.update().catch(()=>{});
+          setTimeout(()=>{if(reg.waiting)rememberPendingAppUpdate(reg.waiting);maybeApplyPendingAppUpdate()},600);
+        }
+      });
+    }catch(_){}
+  });
+}
 window.addEventListener('pagehide',()=>{if(lesson)saveLessonState()});
-document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='hidden'&&lesson)saveLessonState()});
+document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='hidden'&&lesson)saveLessonState();if(document.visibilityState==='visible')setTimeout(()=>maybeApplyPendingAppUpdate(),500)});
 
 // ---------- 실생활 일본어 v6.1 ----------
 let lifeTab='vocab',lifeQuery='',lifeCategory='전체',lifeVocabLimit=100,lifeSession=null;
@@ -903,4 +950,4 @@ initNavigationHistory();
 hydrateFromIDB();
 requestPersistentStorage();
 
-window.ANTHONY_APP_VERSION='6.10';
+window.ANTHONY_APP_VERSION='6.10.1';
