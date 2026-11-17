@@ -109,6 +109,10 @@ button{min-height:44px}
 @media(max-width:560px){.jlptHomeTools{grid-template-columns:1fr!important}.todayCompletionSummary:not(:empty){width:100%;border-radius:14px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
 
+
+/* v6.11.8 · N4 별도 단어 출제방향/복습 선택 */
+.n4ModeBox{margin:14px 0 0;padding:13px;border-radius:16px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18)}.n4ModeBox>b{display:block;margin-bottom:8px}.n4ModeBox small{display:block;margin-top:8px;opacity:.82;line-height:1.45}.n4ModeGrid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:7px}.n4ModeBtn{border:1px solid rgba(255,255,255,.24);background:rgba(255,255,255,.12);color:#fff;border-radius:11px;padding:9px 7px;font-weight:850;font-size:12px;cursor:pointer}.n4ModeBtn.on{background:#fff;color:#4c1d95;border-color:#fff;box-shadow:0 5px 14px rgba(0,0,0,.12)}.n4ReviewChoice{margin-top:12px;padding:13px;border:1px solid #e2e8f0;background:#fff;border-radius:16px}.n4ReviewGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:8px}.n4ReviewBtn{min-height:62px;border-radius:13px;border:1px solid #dbe4ef;background:#f8fafc;padding:10px;cursor:pointer;text-align:left}.n4ReviewBtn b,.n4ReviewBtn small{display:block}.n4ReviewBtn small{font-size:10px;color:#64748b;margin-top:4px}.n4ReviewBtn.today{background:#f5f3ff;border-color:#c4b5fd;color:#5b21b6}.n4ReviewBtn.tomorrow{background:#eff6ff;border-color:#bfdbfe;color:#1d4ed8}.n4ReviewBtn.custom{background:#f0fdfa;border-color:#99f6e4;color:#0f766e}.n4ReviewRecommend{margin-top:9px;padding:8px 10px;background:#fff7ed;color:#9a3412;border-radius:10px;font-size:11px}.n4FullDone{text-align:center;padding:28px 8px}.n4FullDone h3{margin:14px 0 5px}.n4FullDone p{color:#64748b;line-height:1.55}.n4SpecialWord small{font-size:13px;letter-spacing:.02em}
+@media(max-width:760px){.n4ModeGrid{grid-template-columns:1fr 1fr}.n4ReviewGrid{grid-template-columns:1fr}.n4ReviewBtn{text-align:center}}
 </style>
 
 <style>
@@ -155,7 +159,7 @@ button{min-height:44px}
 </style>
 
 <style>
-/* v6.11.7 · N4 별도 단어 무한학습 */
+/* v6.11.8 · N4 별도 단어 68개 전체학습 */
 .n4SpecialHomeCard{border-color:#c4b5fd!important;background:linear-gradient(180deg,#fff,#faf7ff)!important}.n4SpecialHomeCard .toolIcon{background:#f3e8ff!important}.n4SpecialHomeCard em{font-style:normal;font-size:10px;background:#ede9fe;color:#6d28d9;padding:3px 6px;border-radius:999px;margin-left:5px;vertical-align:2px}.n4SpecialMini{margin-top:11px;padding:7px 9px;border-radius:10px;background:#f5f3ff;color:#6d28d9;font-size:11px;font-weight:850;width:max-content;max-width:100%}.n4SpecialHero{background:linear-gradient(135deg,#312e81,#6d28d9);color:white;border-radius:22px;padding:20px;margin-bottom:14px;box-shadow:0 14px 32px rgba(79,70,229,.16)}.n4SpecialHero h3{font-size:22px;margin:0 0 7px}.n4SpecialHero p{margin:0;opacity:.88;font-size:13px;line-height:1.6}.n4SpecialActions{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}.n4SpecialStats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:12px 0}.n4SpecialStats>div{border:1px solid #e2e8f0;background:#fff;border-radius:15px;padding:12px}.n4SpecialStats b{display:block;font-size:20px;color:#111827}.n4SpecialStats span{font-size:11px;color:#64748b}.n4SpecialWordList{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.n4SpecialWord{border:1px solid #e2e8f0;border-radius:15px;padding:12px;background:#fff;display:grid;grid-template-columns:1fr auto;gap:8px}.n4SpecialWord b{font-family:"Noto Sans JP",sans-serif;font-size:19px}.n4SpecialWord small,.n4SpecialWord span{display:block}.n4SpecialWord small{color:#6d28d9;font-weight:800;margin:2px 0}.n4SpecialWord span{font-size:12px;color:#334155}.n4InfiniteStrip{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 13px;margin:8px 0 12px;border-radius:13px;background:#f5f3ff;color:#5b21b6;font-size:12px}.n4InfiniteStrip span{font-weight:950}.n4DualProgress{display:flex;gap:7px;justify-content:center;margin:8px 0 18px}.n4DualProgress span{padding:7px 10px;border-radius:999px;background:#eef2f7;color:#64748b;font-size:11px;font-weight:850}.n4DualProgress span.on{background:#ede9fe;color:#6d28d9}.n4DualProgress span.done{background:#ccfbf1;color:#0f766e}.n4SpecialPromptLabel{text-align:center;color:#64748b;font-size:12px;font-weight:750;margin-bottom:6px}.n4SpecialKo{text-align:center;font-size:27px;font-weight:900;margin:7px 0 18px}.n4SpecialJP{text-align:center;font-family:"Noto Sans JP",sans-serif;font-size:34px;font-weight:900;margin:7px 0 18px}.n4SpecialResultNote{padding:10px 12px;border-radius:12px;background:#f8fafc;color:#475569;font-size:12px;line-height:1.55;margin-top:9px}.n4SpecialStopHint{text-align:center;color:#94a3b8;font-size:11px;margin-top:9px}
 @media(max-width:720px){.n4SpecialStats{grid-template-columns:1fr 1fr}.n4SpecialWordList{grid-template-columns:1fr}.n4InfiniteStrip{align-items:flex-start;flex-direction:column}.n4SpecialKo{font-size:24px}.n4SpecialJP{font-size:30px}}
 </style>
@@ -181,7 +185,7 @@ try{const p=localStorage.getItem('daco_jp_auto_login_v1'),s=localStorage.getItem
 </script>
 <div class="app">
   <div class="top">
-    <div class="brand"><div class="logo" aria-label="YOMIAN JP"></div><div><h1>YOMIAN JAPANESE</h1><small>일본어 학습 · 복습 · 회화 · v6.11.7</small></div></div>
+    <div class="brand"><div class="logo" aria-label="YOMIAN JP"></div><div><h1>YOMIAN JAPANESE</h1><small>일본어 학습 · 복습 · 회화 · v6.11.8</small></div></div>
     <div class="accountStrip"><span id="cloudStatusBadge" class="cloudBadge off">☁ 로컬</span><button class="iconbtn hidden" id="adminBtn" onclick="DACOCloud.openAdmin()">🛡 관리자</button><button class="iconbtn hidden" id="cloudUserBtn" onclick="DACOCloud.openAccount()">👤 사용자</button><button class="iconbtn" id="installBtn">📲 설치</button><button class="iconbtn" id="settingsBtn">⚙ 설정</button></div>
   </div>
 
@@ -234,7 +238,7 @@ try{const p=localStorage.getItem('daco_jp_auto_login_v1'),s=localStorage.getItem
       <div class="studyTools jlptHomeTools">
         <button class="toolCard" data-daily-key="jlpt:N5" onclick="openJlptHub('N5')"><div class="toolIcon">🌱</div><b>N5 대비 어휘</b><span>기초 생활 단어를 표기·읽기·뜻으로 익힙니다.</span></button>
         <button class="toolCard" data-daily-key="jlpt:N4" onclick="openJlptHub('N4')"><div class="toolIcon">📗</div><b>N4 대비 어휘</b><span>기초를 넘어 자주 쓰는 어휘를 확장합니다.</span></button>
-        <button class="toolCard n4SpecialHomeCard" data-daily-key="n4special" onclick="openN4SpecialHub()"><div class="toolIcon">🧩</div><b>N4 별도 단어 <em>68</em></b><span>놓친 단어 전용 · 한자/표기와 읽기를 모두 확인하며 무한 반복합니다.</span><div class="n4SpecialMini" id="n4SpecialMini">오늘 0개 · 계속 학습</div></button>
+        <button class="toolCard n4SpecialHomeCard" data-daily-key="n4special" onclick="openN4SpecialHub()"><div class="toolIcon">🧩</div><b>N4 별도 단어 <em>68</em></b><span>놓친 단어 68개 전체 · 한자와 히라가나를 방향별로 반복합니다.</span><div class="n4SpecialMini" id="n4SpecialMini">오늘 0/68 · 전체 학습</div></button>
         <button class="toolCard" data-daily-key="jlpt:N3" onclick="openJlptHub('N3')"><div class="toolIcon">🎯</div><b>N3 대비 어휘</b><span>자체 선별한 중급 어휘를 단계별로 익힙니다.</span></button>
         <button class="toolCard" data-daily-key="jlpt:N2" onclick="openJlptHub('N2')"><div class="toolIcon">📘</div><b>N2 대비 어휘</b><span>자체 선별한 중상급 어휘를 집중 학습합니다.</span></button>
         <button class="toolCard" data-daily-key="jlpt:N1" onclick="openJlptHub('N1')"><div class="toolIcon">🏅</div><b>N1 대비 어휘</b><span>자체 선별한 고급·추상 어휘를 학습합니다.</span></button>
@@ -299,7 +303,7 @@ try{const p=localStorage.getItem('daco_jp_auto_login_v1'),s=localStorage.getItem
 
 
   <section id="jlptView" class="view">
-    <div class="dictHeader"><button class="iconbtn" onclick="goHome()">← 홈</button><div><h2 style="margin:0">🎯 N5 ~ N1 대비 어휘</h2><small style="color:#64748b">YOMIAN 자체 난이도 분류 어휘를 검색하고 퀴즈로 반복합니다.</small></div><span class="entryTag">v6.11.7</span></div>
+    <div class="dictHeader"><button class="iconbtn" onclick="goHome()">← 홈</button><div><h2 style="margin:0">🎯 N5 ~ N1 대비 어휘</h2><small style="color:#64748b">YOMIAN 자체 난이도 분류 어휘를 검색하고 퀴즈로 반복합니다.</small></div><span class="entryTag">v6.11.8</span></div>
     <div class="panel" style="margin-top:0"><div class="jlptTabs"><button data-jlptlevel="N5" data-daily-key="jlpt:N5" onclick="setJlptLevel('N5')">N5</button><button data-jlptlevel="N4" data-daily-key="jlpt:N4" onclick="setJlptLevel('N4')">N4</button><button data-jlptlevel="N3" data-daily-key="jlpt:N3" onclick="setJlptLevel('N3')">N3</button><button data-jlptlevel="N2" data-daily-key="jlpt:N2" onclick="setJlptLevel('N2')">N2</button><button data-jlptlevel="N1" data-daily-key="jlpt:N1" onclick="setJlptLevel('N1')">N1</button></div><div id="jlptContent"></div></div>
   </section>
   <section id="jlptQuizView" class="view">
@@ -308,18 +312,18 @@ try{const p=localStorage.getItem('daco_jp_auto_login_v1'),s=localStorage.getItem
     <div id="jlptNotice" class="reviewNotice"></div><div class="lessonCard" id="jlptQuizCard"></div>
   </section>
   <section id="n4SpecialView" class="view">
-    <div class="dictHeader"><button class="iconbtn" onclick="goHome()">← 홈</button><div><h2 style="margin:0">🧩 N4 별도 단어</h2><small style="color:#64748b">첨부한 놓친 단어 68개만 따로, 끝없이 반복 학습합니다.</small></div><span class="entryTag">무한학습</span></div>
+    <div class="dictHeader"><button class="iconbtn" onclick="goHome()">← 홈</button><div><h2 style="margin:0">🧩 N4 별도 단어</h2><small style="color:#64748b">첨부한 놓친 단어 68개를 전부 풀고, 원하는 단어는 오늘 또는 원하는 날짜에 다시 복습합니다.</small></div><span class="entryTag">68개 전체</span></div>
     <div id="n4SpecialHubContent"></div>
   </section>
   <section id="n4SpecialQuizView" class="view">
     <div class="lessonTop"><button class="iconbtn" onclick="exitN4SpecialQuiz()">← 중단</button><div class="progress"><div id="n4SpecialProgress"></div></div><b id="n4SpecialCount">0단어</b></div>
-    <div class="n4InfiniteStrip"><span>∞ 무한학습</span><b id="n4SpecialCycleText">한자/표기 + 읽기 모두 확인</b></div>
+    <div class="n4InfiniteStrip"><span>68개 전체학습</span><b id="n4SpecialCycleText">한자/표기 + 읽기 모두 확인</b></div>
     <div id="n4SpecialNotice" class="reviewNotice"></div>
     <div class="lessonCard" id="n4SpecialQuizCard"></div>
   </section>
 
   <section id="lifeView" class="view">
-    <div class="dictHeader"><button class="iconbtn" onclick="goHome()">← 홈</button><div><h2 style="margin:0">🌿 실생활 일본어</h2><small style="color:#64748b">시험 범위를 넘어 실제로 자주 쓰는 표현을 상황과 함께 익힙니다.</small></div><span class="entryTag">v6.11.7</span></div>
+    <div class="dictHeader"><button class="iconbtn" onclick="goHome()">← 홈</button><div><h2 style="margin:0">🌿 실생활 일본어</h2><small style="color:#64748b">시험 범위를 넘어 실제로 자주 쓰는 표현을 상황과 함께 익힙니다.</small></div><span class="entryTag">v6.11.8</span></div>
     <div class="panel" style="margin-top:0"><div class="lifeTabs"><button data-lifetab="vocab" data-daily-key="life:vocab" onclick="setLifeTab('vocab')">🧺 생활용어</button><button data-lifetab="particle" data-daily-key="life:particle" onclick="setLifeTab('particle')">🔗 조사</button><button data-lifetab="connector" data-daily-key="life:connector" onclick="setLifeTab('connector')">↔️ 접속사</button><button data-lifetab="location" data-daily-key="life:location" onclick="setLifeTab('location')">📍 위치</button><button data-lifetab="number" data-daily-key="life:number" onclick="setLifeTab('number')">🗓 날짜·숫자</button><button data-lifetab="situation" data-daily-key="life:situation" onclick="setLifeTab('situation')">🎬 상황연계</button></div><div id="lifeContent"></div></div>
   </section>
   <section id="lifeQuizView" class="view">
@@ -386,9 +390,9 @@ window.DACO_CLOUD_CONFIG = {
   supabaseAnonKey: "sb_publishable_BTuvdybnCP8BJI4KYPf9bw_PhNHKOnR"
 };
 </script>
-<script src="./cloud-config.js?v=6.11.7"></script>
-<script src="./study-data-v65.js?v=6.11.7"></script>
-<script src="./n4-special-data.js?v=6.11.7"></script>
-<script src="./app.js?v=6.11.7"></script>
-<script src="./cloud-auth.js?v=6.11.7"></script>
+<script src="./cloud-config.js?v=6.11.8"></script>
+<script src="./study-data-v65.js?v=6.11.8"></script>
+<script src="./n4-special-data.js?v=6.11.8"></script>
+<script src="./app.js?v=6.11.8"></script>
+<script src="./cloud-auth.js?v=6.11.8"></script>
 </body></html>
