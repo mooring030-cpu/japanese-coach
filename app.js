@@ -35,7 +35,7 @@ const GRAMMAR_READING_MAP={"〜ていただけると助かります":"〜てい�
 const TTS_READING_OVERRIDES={"私は会社員です。":"わたしは かいしゃいんです。","猫がいます。":"ねこが います。","水を飲みます。":"みずを のみます。","7時に起きます。":"しちじに おきます。","日本へ行きます。":"にほんへ いきます。","図書館で勉強します。":"としょかんで べんきょうします。","友達と映画を見ます。":"ともだちと えいがを みます。","9時から働きます。":"くじから はたらきます。","5時まで働きます。":"ごじまで はたらきます。","会社の車です。":"かいしゃの くるまです。","私も行きます。":"わたしも いきます。","パンや卵を買いました。":"パンや たまごを かいました。","コーヒーかお茶にします。":"コーヒーか おちゃに します。","今日は暑いですね。":"きょうは あついですね。","この店は安いですよ。":"この みせは やすいですよ。","水だけ飲みます。":"みずだけ のみます。","千円しかありません。":"せんえんしか ありません。","10分くらいかかります。":"じゅっぷんくらい かかります。","3時ごろ来てください。":"さんじごろ きてください。","電車はバスより速いです。":"でんしゃは バスより はやいです。","思ったほど高くないです。":"おもったほど たかくないです。","価格について話します。":"かかくについて はなします。","人によって考え方が違います。":"ひとによって かんがえかたが ちがいます。","代表として参加します。":"だいひょうとして さんかします。","私にとって大切です。":"わたしにとって たいせつです。","コーヒーでも飲みませんか。":"コーヒーでも のみませんか。","京都なら秋がおすすめです。":"きょうとなら あきが おすすめです。","田中さんは明日来るって。":"たなかさんは あした くるって。","袋をお願いします。":"ふくろを おねがいします。","これ、温めてください。":"これ、あたためてください。","箸を一つお願いします。":"はしを ひとつ おねがいします。","レシートは大丈夫です。":"レシートは だいじょうぶです。","カードでお願いします。":"カードで おねがいします。","二人です。":"ふたりです。","おすすめは何ですか。":"おすすめは なんですか。","これを一つお願いします。":"これを ひとつ おねがいします。","お水をもう一つお願いします。":"おみずを もうひとつ おねがいします。","お会計をお願いします。":"おかいけいを おねがいします。","店内でお願いします。":"てんないで おねがいします。","持ち帰りでお願いします。":"もちかえりで おねがいします。","氷なしでお願いします。":"こおりなしで おねがいします。","砂糖はいりません。":"さとうは いりません。","空いている席はありますか。":"あいている せきは ありますか。","これはいくらですか。":"これは いくらですか。","もう少し大きいサイズはありますか。":"もうすこし おおきい サイズは ありますか。","試着してもいいですか。":"しちゃくしても いいですか。","他の色はありますか。":"ほかの いろは ありますか。","免税できますか。":"めんぜい できますか。","この電車は東京に行きますか。":"この でんしゃは とうきょうに いきますか。","何番線ですか。":"なんばんせんですか。","どこで乗り換えますか。":"どこで のりかえますか。","終電は何時ですか。":"しゅうでんは なんじですか。","電車が遅れています。":"でんしゃが おくれています。","ここまでお願いします。":"ここまで おねがいします。","この住所までお願いします。":"この じゅうしょまで おねがいします。","次の信号で止めてください。":"つぎの しんごうで とめてください。","カードで払えますか。":"カードで はらえますか。","だいたい何分かかりますか。":"だいたい なんぷん かかりますか。","チェックインをお願いします。":"チェックインを おねがいします。","予約しています。":"よやくしています。","荷物を預けてもいいですか。":"にもつを あずけても いいですか。","朝食は何時からですか。":"ちょうしょくは なんじからですか。","Wi-Fiのパスワードを教えてください。":"ワイファイの パスワードを おしえてください。","搭乗口はどこですか。":"とうじょうぐちは どこですか。","この荷物は預けます。":"この にもつは あずけます。","これは手荷物です。":"これは てにもつです。","パスポートはこちらです。":"パスポートは こちらです。","両替はどこでできますか。":"りょうがえは どこで できますか。","駅はどこですか。":"えきは どこですか。","ここから近いですか。":"ここから ちかいですか。","まっすぐ行ってください。":"まっすぐ いってください。","次の角を右に曲がります。":"つぎの かどを みぎに まがります。","コンビニの向かいです。":"コンビニの むかいです。","資料を確認します。":"しりょうを かくにんします。","日程を調整します。":"にっていを ちょうせいします。","担当者に確認します。":"たんとうしゃに かくにんします。","社内で共有します。":"しゃないで きょうゆうします。","進捗を教えていただけますか。":"しんちょくを おしえて いただけますか。","担当者をお願いします。":"たんとうしゃを おねがいします。","今、席を外しています。":"いま、せきを はずしています。","後ほどかけ直します。":"のちほど かけなおします。","折り返しお願いします。":"おりかえし おねがいします。","伝言をお願いできますか。":"でんごんを おねがいできますか。","すみません、助けてください。":"すみません、たすけてください。","財布をなくしました。":"さいふを なくしました。","スマホが動きません。":"スマホが うごきません。","忘れ物をしました。":"わすれものを しました。","駅員さんはどこですか。":"えきいんさんは どこですか。","確認でき次第、ご連絡いたします。":"かくにんできしだい、ごれんらくいたします。","今日はよろしくお願(ねが)いします。":"きょうは よろしく おねがいします。"};
 const BASE_KEY='daco_jp_coach_v5';
 const LEGACY_KEY='daco_jp_coach_v3';
-const APP_VERSION='6.11.6';
+const APP_VERSION='6.11.7';
 function storageOwner(){return String(window.DACO_CLOUD_USER_ID||'guest').replace(/[^a-zA-Z0-9_-]/g,'_')}
 function stateKey(){return BASE_KEY+'_'+storageOwner()}
 function backupKey(){return stateKey()+'_auto_backup'}
@@ -260,13 +260,13 @@ function updateHome(){
     db.textContent=`＋ ${MODE_LABEL[state.mode]} 새 10분`;db.className='secondary';
     document.getElementById('heroText').textContent=`저장된 ${MODE_LABEL[sm]||sm} 학습: 기본 ${done}/${base}${reviews?` · 추가복습 ${reviews}개`:''}. 이어하기와 새 학습은 별개입니다.`;
   }else{rb.classList.add('hidden');let doneToday=dailyCompleted(`lesson:${state.mode}`);db.textContent=doneToday?`✓ ${MODE_LABEL[state.mode]} 오늘 완료 · 다시 학습`:`▶ ${MODE_LABEL[state.mode]} 10분 시작`;db.className=doneToday?'secondary':'primary';document.getElementById('heroText').textContent=doneToday?`${MODE_LABEL[state.mode]} 오늘 학습을 완료했습니다. 다시 누르면 복습 또는 추가학습을 선택할 수 있습니다.`:`현재 선택: ${MODE_LABEL[state.mode]}. 오늘 이미 끝낸 카드는 새 수업에서 다시 나오지 않습니다.`}
-  syncSettingsUI();updatePracticeHome();updateLifeHome();updateJlptHome();updateDailyCompletionUI();
+  syncSettingsUI();updatePracticeHome();updateLifeHome();updateJlptHome();updateN4SpecialHome();updateDailyCompletionUI();
 }
 
 function setMode(m){state.mode=m;saveState();updateHome();toast(m==='business'?'회사 실전 표현을 우선합니다.':m==='n3'?'N3 문법·단어 비중을 높였습니다.':'기초부터 편안하게 갑니다.')}
 let navReady=false,navHandlingPop=false,homeBackArmedAt=0,homeExitInProgress=false;
 function activeViewId(){let v=document.querySelector('.view.on');return v?.id||'homeView'}
-function saveBeforeViewChange(){let v=activeViewId();if(v==='lessonView'&&lesson)saveLessonState();if(v==='practiceView'&&practiceSession)savePracticeSession();if(v==='lifeQuizView'&&lifeSession)saveLifeSession()}
+function saveBeforeViewChange(){let v=activeViewId();if(v==='lessonView'&&lesson)saveLessonState();if(v==='practiceView'&&practiceSession)savePracticeSession();if(v==='lifeQuizView'&&lifeSession)saveLifeSession();if(v==='n4SpecialQuizView'&&n4SpecialSession)saveN4SpecialSession()}
 function showView(id,opts={}){let before=activeViewId();document.querySelectorAll('.view').forEach(v=>v.classList.remove('on'));let target=document.getElementById(id)||document.getElementById('homeView');target.classList.add('on');let actual=target.id;if(navReady&&!navHandlingPop&&before!==actual&&opts.history!==false){let st={dacoNav:true,view:actual};if(opts.replace)history.replaceState(st,'',location.href);else history.pushState(st,'',location.href)}if(actual!=='homeView')homeBackArmedAt=0;window.scrollTo({top:0,behavior:opts.instant?'auto':'smooth'})}
 function initNavigationHistory(){
   if(navReady)return;navReady=true;
@@ -969,7 +969,7 @@ initNavigationHistory();
 hydrateFromIDB();
 requestPersistentStorage();
 
-window.ANTHONY_APP_VERSION='6.11.6';window.YOMIAN_APP_VERSION='6.11.6';
+window.ANTHONY_APP_VERSION='6.11.7';window.YOMIAN_APP_VERSION='6.11.7';
 
 
 /* ==========================================================================
@@ -1319,7 +1319,7 @@ if(window.DACOApp){
   window.DACOApp.setGuestMode=()=>{oldGuest();ensureQuizPrefs();state.starterDrills=state.starterDrills||{};syncV611SetupControls()}
 }
 syncV611SetupControls();saveState();
-window.ANTHONY_APP_VERSION='6.11.6';window.YOMIAN_APP_VERSION='6.11.6';
+window.ANTHONY_APP_VERSION='6.11.7';window.YOMIAN_APP_VERSION='6.11.7';
 
 
 const __v611_saveBeforeViewChange=saveBeforeViewChange;
@@ -1350,3 +1350,61 @@ function buildSizedLessonV611(type,isReview=false){
 }
 buildLesson=function(type){return buildSizedLessonV611(type,false)}
 buildLessonReview=function(type){return buildSizedLessonV611(type,true)}
+
+
+/* ===== v6.11.7 · N4 별도 단어 무한학습 ===== */
+let n4SpecialSession=null,n4SpecialQuery='';
+function n4SpecialRows(){return Array.isArray(window.N4_SPECIAL_WORDS)?window.N4_SPECIAL_WORDS:[]}
+function ensureN4SpecialState(){
+  state.n4Special=state.n4Special||{words:{},totalCompleted:0,totalAttempts:0,totalSteps:0,totalCorrect:0,totalWrong:0,today:{date:'',count:0}};
+  state.n4Special.words=state.n4Special.words||{};
+  let t=state.n4Special.today||{};if(t.date!==todayKey())t={date:todayKey(),count:0};state.n4Special.today=t;return state.n4Special
+}
+function n4SpecialWordState(id){let s=ensureN4SpecialState();return s.words[id]||(s.words[id]={seen:0,cycles:0,cleanCycles:0,wrong:0,last:0})}
+function updateN4SpecialHome(){let s=ensureN4SpecialState(),box=document.getElementById('n4SpecialMini');if(box)box.textContent=`오늘 ${s.today.count||0}개 · 누적 ${s.totalCompleted||0}개 · 계속 학습`;}
+function openN4SpecialHub(){n4SpecialQuery='';showView('n4SpecialView');renderN4SpecialHub()}
+function renderN4SpecialHub(){
+  let s=ensureN4SpecialState(),rows=n4SpecialRows(),q=n4SpecialQuery.trim().toLowerCase(),f=rows.filter(w=>!q||[w.jp,w.reading,w.ko].some(x=>String(x||'').toLowerCase().includes(q))),clean=Object.values(s.words).filter(x=>(x.cleanCycles||0)>0).length,weak=Object.values(s.words).filter(x=>(x.wrong||0)>0).length,box=document.getElementById('n4SpecialHubContent');if(!box)return;
+  box.innerHTML=`<div class="n4SpecialHero"><h3>놓친 N4 단어 68개 · 무한학습</h3><p>세트 종료 없이 계속 출제합니다. 한자가 있는 단어는 <b>뜻 → 한자/표기</b>와 <b>표기 → 읽기</b>를 둘 다 확인해야 한 번 학습한 것으로 기록됩니다. 가나-only 14개는 뜻 → 표기를 확인합니다.</p><div class="n4SpecialActions"><button class="bigbtn blue" onclick="startN4SpecialInfinite(false)">${state.n4SpecialSession?'↩ 무한학습 이어하기':'∞ 무한학습 시작'}</button><button class="bigbtn light" onclick="startN4SpecialInfinite(true)">새 순서로 시작</button></div></div><div class="n4SpecialStats"><div><b>${s.today.count||0}</b><span>오늘 완료 단어</span></div><div><b>${s.totalCompleted||0}</b><span>누적 완료 횟수</span></div><div><b>${clean}</b><span>한 번 이상 완벽 통과</span></div><div><b>${weak}</b><span>오답 경험 단어</span></div></div><div class="panel"><div style="display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap"><div><h3 style="margin:0">N4 별도 단어 목록</h3><small style="color:#64748b">${rows.length}개 · 첨부 파일 기준</small></div><input class="dictSearch" style="max-width:320px" placeholder="한자·읽기·뜻 검색" value="${escapeHtml(n4SpecialQuery)}" oninput="n4SpecialQuery=this.value;renderN4SpecialHub()"></div><div class="n4SpecialWordList" style="margin-top:12px">${f.map(w=>{let st=n4SpecialWordState(w.id);return `<div class="n4SpecialWord"><div><b>${escapeHtml(w.jp)}</b><small>${escapeHtml(w.reading)}</small><span>${escapeHtml(w.ko)}</span>${st.wrong?`<span style="color:#b45309;margin-top:4px">오답 ${st.wrong}회</span>`:''}</div><button class="iconbtn" onclick="speakText('${encodeURIComponent(w.reading||w.jp)}')">🔊</button></div>`}).join('')}</div></div>`;
+}
+function n4SpecialBuildCycle(){
+  let rows=n4SpecialRows().map(w=>({w,st:n4SpecialWordState(w.id)}));
+  rows.forEach(x=>x.score=(x.st.wrong||0)*5+((x.st.cleanCycles||0)===0?3:0)+Math.random()*4);
+  rows.sort((a,b)=>b.score-a.score);let head=rows.slice(0,Math.min(18,rows.length)).map(x=>x.w.id),rest=shuffle(rows.slice(Math.min(18,rows.length)).map(x=>x.w.id));return [...shuffle(head),...rest]
+}
+function startN4SpecialInfinite(reset=false){
+  ensureN4SpecialState();if(!reset&&state.n4SpecialSession){n4SpecialSession=state.n4SpecialSession}else{n4SpecialSession={queue:n4SpecialBuildCycle(),idx:0,stage:'jp',stage1Ok:null,stage2Ok:null,completed:0,steps:0,correct:0,wrong:0,startedAt:Date.now()};state.n4SpecialSession=n4SpecialSession;saveState()}
+  showView('n4SpecialQuizView');renderN4SpecialQuiz()
+}
+function saveN4SpecialSession(){if(n4SpecialSession){state.n4SpecialSession=n4SpecialSession;saveState()}}
+function n4SpecialCurrent(){if(!n4SpecialSession)return null;if(n4SpecialSession.idx>=n4SpecialSession.queue.length)n4SpecialSession.queue.push(...n4SpecialBuildCycle());let id=n4SpecialSession.queue[n4SpecialSession.idx];return n4SpecialRows().find(w=>w.id===id)||null}
+function n4SpecialChoices(answer,field){let pool=n4SpecialRows().map(w=>w[field]).filter(Boolean);return choicePool(answer,pool)}
+function renderN4SpecialQuiz(){
+  let w=n4SpecialCurrent();if(!w)return;let s=ensureN4SpecialState(),stage=n4SpecialSession.stage||'jp',isRead=stage==='reading',prompt=isRead?w.jp:w.ko,answer=isRead?w.reading:w.jp,choices=n4SpecialChoices(answer,isRead?'reading':'jp'),dual=!!w.hasDistinctReading;
+  document.getElementById('n4SpecialCount').textContent=`${n4SpecialSession.completed||0}단어`;document.getElementById('n4SpecialProgress').style.width=((s.today.count||0)%10)*10+'%';document.getElementById('n4SpecialCycleText').textContent=dual?'한자/표기 + 읽기 2단계':'가나 표기 1단계';document.getElementById('n4SpecialNotice').textContent=(n4SpecialWordState(w.id).wrong||0)>0?'🔁 이전에 틀린 적 있는 단어입니다. 이번에는 두 단계를 모두 확인하세요.':'';
+  let stepHtml=dual?`<div class="n4DualProgress"><span class="${stage==='jp'?'on':(n4SpecialSession.stage1Ok!==null?'done':'')}">1 한자·표기</span><span class="${stage==='reading'?'on':''}">2 읽기</span></div>`:`<div class="n4DualProgress"><span class="on">표기 확인</span></div>`;
+  let label=isRead?'아래 표기의 올바른 읽기를 고르세요.':'한국어 뜻에 맞는 한자·일본어 표기를 고르세요.';
+  document.getElementById('n4SpecialQuizCard').innerHTML=`<span class="badge">N4 별도 단어 · ∞ 무한학습</span>${stepHtml}<div class="n4SpecialPromptLabel">${label}</div><div class="${isRead?'n4SpecialJP':'n4SpecialKo'}">${escapeHtml(prompt)}</div><div class="lifeChoices">${choices.map(c=>`<button class="choice" onclick="answerN4Special(this,'${encodeURIComponent(c)}')">${escapeHtml(c)}</button>`).join('')}</div><div id="n4SpecialResult"></div><div class="n4SpecialStopHint">언제든 중단해도 현재 위치와 오답 기록이 저장됩니다.</div>`;
+}
+function n4SpecialRequeue(id,delay=5){if(!n4SpecialSession)return;let pos=Math.min(n4SpecialSession.queue.length,n4SpecialSession.idx+Math.max(3,delay));let near=n4SpecialSession.queue.slice(n4SpecialSession.idx+1,n4SpecialSession.idx+9);if(!near.includes(id))n4SpecialSession.queue.splice(pos,0,id)}
+function answerN4Special(btn,enc){
+  let w=n4SpecialCurrent();if(!w)return;let ans=decodeURIComponent(enc),stage=n4SpecialSession.stage||'jp',correct=stage==='reading'?w.reading:w.jp,ok=ans===correct,box=document.getElementById('n4SpecialResult'),st=n4SpecialWordState(w.id),ss=ensureN4SpecialState();document.querySelectorAll('#n4SpecialQuizCard .choice').forEach(b=>{b.disabled=true;if(b.textContent===correct)b.classList.add('correct')});if(!ok)btn.classList.add('wrong');n4SpecialSession.steps++;ss.totalSteps++;st.seen++;st.last=Date.now();
+  if(ok){n4SpecialSession.correct++;ss.totalCorrect++}else{n4SpecialSession.wrong++;ss.totalWrong++;st.wrong++;n4SpecialRequeue(w.id,4+Math.floor(Math.random()*4))}
+  if(stage==='jp'){
+    n4SpecialSession.stage1Ok=ok;
+    if(w.hasDistinctReading){box.innerHTML=`<div class="${ok?'doneMark':'retryBox'}">${ok?'✓ 한자·표기 정답':'표기 정답은 아래입니다.'}</div><div class="answerReveal"><div class="answerKanji">${escapeHtml(w.jp)}</div></div><div class="n4SpecialResultNote">읽기는 아직 공개하지 않습니다. 다음 단계에서 직접 맞혀보세요.</div><div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:10px">${!ok?'<button class="bigbtn light" onclick="n4SpecialRetryStage()">↻ 표기 다시 풀기</button>':''}<button class="bigbtn blue" onclick="n4SpecialToReading()">읽기 문제로 →</button></div>`;saveN4SpecialSession();return}
+    finalizeN4SpecialWord(ok,null);return
+  }
+  n4SpecialSession.stage2Ok=ok;finalizeN4SpecialWord(n4SpecialSession.stage1Ok,ok)
+}
+function n4SpecialRetryStage(){renderN4SpecialQuiz()}
+function n4SpecialToReading(){n4SpecialSession.stage='reading';saveN4SpecialSession();renderN4SpecialQuiz()}
+function finalizeN4SpecialWord(stage1Ok,stage2Ok){
+  let w=n4SpecialCurrent(),st=n4SpecialWordState(w.id),clean=!!stage1Ok&&(stage2Ok===null||!!stage2Ok),box=document.getElementById('n4SpecialResult');st.cycles++;if(clean)st.cleanCycles++;n4SpecialSession.lastCycleClean=clean;let key=`n4special:${w.id}`;
+  box.innerHTML=`<div class="practiceExplain">${clean?'✅ 두 단계 확인 완료':'🔁 이번 단어는 다시 나옵니다.'}${textAnswerHtml(w.jp,w.reading)}<div style="margin-top:5px;font-weight:850">${escapeHtml(w.ko)}</div><button class="bigbtn light" style="margin-top:8px" onclick="speakText('${encodeURIComponent(w.reading||w.jp)}')">🔊 발음 듣기</button></div>${clean?confidenceBarGeneric(key,'n4SpecialAdvance'):wrongConfidenceBarGeneric(key,'n4SpecialAdvance')}`;if(state.autoSpeak)speak(w.reading||w.jp);saveN4SpecialSession()
+}
+function n4SpecialAdvance(){
+  if(!n4SpecialSession)return;let w=n4SpecialCurrent(),ss=ensureN4SpecialState(),clean=!!n4SpecialSession.lastCycleClean;ss.totalAttempts=(ss.totalAttempts||0)+1;if(clean){n4SpecialSession.completed++;ss.totalCompleted++;ss.today.count=(ss.today.count||0)+1;if(ss.today.count>=10&&!dailyCompleted('n4special'))markDailyComplete('n4special','N4 별도 단어',{module:'n4special'})}n4SpecialSession.idx++;n4SpecialSession.stage='jp';n4SpecialSession.stage1Ok=null;n4SpecialSession.stage2Ok=null;n4SpecialSession.lastCycleClean=null;state.n4SpecialSession=n4SpecialSession;touchStudyDay('jlpt');saveState();updateN4SpecialHome();renderN4SpecialQuiz()
+}
+function exitN4SpecialQuiz(){saveN4SpecialSession();showView('n4SpecialView');renderN4SpecialHub();updateHome()}
+function resumeN4Special(){if(!state.n4SpecialSession)return startN4SpecialInfinite(false);n4SpecialSession=state.n4SpecialSession;showView('n4SpecialQuizView');renderN4SpecialQuiz()}
